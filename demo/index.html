@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula del Futuro - Recorrido 3D</title>
+
+  <!-- A-Frame: local first, CDN fallback -->
+  <script src="lib/aframe.min.js"></script>
+  <script>
+    if (typeof AFRAME === 'undefined') {
+      document.write('<script src="https://aframe.io/releases/1.6.0/aframe.min.js"><\/script>');
+    }
+  </script>
+
+  <style>
+    body { margin: 0; overflow: hidden; }
+
+    /* ---------- welcome overlay ---------- */
+    #overlay {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      z-index: 999; color: white;
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      cursor: pointer; user-select: none;
+    }
+    #overlay h1 {
+      font-size: 3rem; margin: 0 0 0.25rem;
+      letter-spacing: 0.08em;
+    }
+    #overlay .subtitle {
+      font-size: 1.25rem; opacity: 0.85;
+      margin-bottom: 2.5rem;
+    }
+    #overlay .keys { font-size: 1rem; margin: 0.3rem 0; opacity: 0.9; }
+    #overlay .start {
+      margin-top: 2rem; opacity: 0.55;
+      font-size: 0.95rem;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 0.4; }
+      50%     { opacity: 0.9; }
+    }
+
+    /* ---------- nav button ---------- */
+    #nav-btn {
+      position: fixed; bottom: 1.2rem; right: 1.2rem;
+      z-index: 998;
+      background: rgba(0,0,0,0.7); color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 8px; padding: 0.6rem 1.1rem;
+      font-size: 0.95rem; font-family: 'Inter', sans-serif;
+      cursor: pointer; text-decoration: none;
+      transition: background 0.2s;
+    }
+    #nav-btn:hover { background: rgba(0,0,0,0.9); }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- WELCOME OVERLAY                                               -->
+<!-- ============================================================ -->
+<div id="overlay" onclick="startExperience()">
+  <h1>Aula del Futuro</h1>
+  <p class="subtitle">Recorrido 3D Interactivo</p>
+  <p class="keys">W A S D &mdash; Moverse</p>
+  <p class="keys">Rat&oacute;n &mdash; Mirar alrededor</p>
+  <p class="start">Click para comenzar</p>
+</div>
+
+<!-- ============================================================ -->
+<!-- NAVIGATION LINK                                               -->
+<!-- ============================================================ -->
+<a id="nav-btn" href="../documento/primaria-secundaria.html" target="_blank">
+  &#x1F4C4; Ver Documento
+</a>
+
+<!-- ============================================================ -->
+<!-- CUSTOM COMPONENTS                                             -->
+<!-- ============================================================ -->
+<script src="components/billboard.js"></script>
+<script src="components/proximity-panel.js"></script>
+<script src="components/zone-label.js"></script>
+
+<!-- ============================================================ -->
+<!-- A-FRAME SCENE                                                 -->
+<!-- ============================================================ -->
+<a-scene vr-mode-ui="enabled: false" renderer="antialias: true; colorManagement: true"
+         fog="type: linear; color: #B3E5FC; near: 25; far: 45">
+
+  <!-- ======= SKY ======= -->
+  <a-sky color="#B3E5FC"></a-sky>
+
+  <!-- ======= CAMERA RIG ======= -->
+  <a-entity id="rig" position="0 0 12">
+    <a-entity id="camera" camera look-controls
+              wasd-controls="acceleration: 30"
+              position="0 1.6 0"></a-entity>
+  </a-entity>
+
+  <!-- ======= GLOBAL LIGHTING ======= -->
+  <a-entity light="type: ambient; color: #E8F0FE; intensity: 0.4"></a-entity>
+  <a-entity light="type: hemisphere; color: #FFF8E1; groundColor: #B3E5FC; intensity: 0.5"></a-entity>
+
+  <!-- ============================================================ -->
+  <!-- ROOM GEOMETRY                                                 -->
+  <!-- ============================================================ -->
+
+  <!-- Floor -->
+  <a-plane position="0 0 -2" rotation="-90 0 0" width="20" height="28"
+           color="#D7CCC8" material="side: double"></a-plane>
+
+  <!-- Ceiling -->
+  <a-plane position="0 3 -2" rotation="90 0 0" width="20" height="28"
+           color="#ECEFF1" material="side: double"></a-plane>
+
+  <!-- Outer Walls -->
+  <!-- Back wall (z = -16) -->
+  <a-plane position="0 1.5 -16" rotation="0 0 0" width="20" height="3"
+           color="#CFD8DC" material="side: double"></a-plane>
+  <!-- Front wall (z = 12) -->
+  <a-plane position="0 1.5 12" rotation="0 180 0" width="20" height="3"
+           color="#CFD8DC" material="side: double"></a-plane>
+  <!-- Left wall (x = -10) -->
+  <a-plane position="-10 1.5 -2" rotation="0 90 0" width="28" height="3"
+           color="#CFD8DC" material="side: double"></a-plane>
+  <!-- Right wall (x = 10) -->
+  <a-plane position="10 1.5 -2" rotation="0 -90 0" width="28" height="3"
+           color="#CFD8DC" material="side: double"></a-plane>
+
+  <!-- ============================================================ -->
+  <!-- INTERNAL DIVIDERS (half-height = 1.5m, gaps for passage)      -->
+  <!-- ============================================================ -->
+
+  <!-- Horizontal divider: separates top row (INVESTIGAR/CREAR) from middle row (INTERCAMBIAR/DESARROLLAR) -->
+  <!-- Left segment -->
+  <a-plane position="-5 0.75 -2" rotation="0 0 0" width="7" height="1.5"
+           color="#B0BEC5" material="side: double"></a-plane>
+  <!-- Right segment -->
+  <a-plane position="5 0.75 -2" rotation="0 0 0" width="7" height="1.5"
+           color="#B0BEC5" material="side: double"></a-plane>
+
+  <!-- Horizontal divider: separates middle row from PRESENTAR -->
+  <!-- Left segment -->
+  <a-plane position="-6 0.75 -10" rotation="0 0 0" width="5" height="1.5"
+           color="#B0BEC5" material="side: double"></a-plane>
+  <!-- Right segment -->
+  <a-plane position="6 0.75 -10" rotation="0 0 0" width="5" height="1.5"
+           color="#B0BEC5" material="side: double"></a-plane>
+
+  <!-- Vertical centre divider (x=0) between left/right zones — top row -->
+  <a-plane position="0 0.75 2" rotation="0 90 0" width="6" height="1.5"
+           color="#B0BEC5" material="side: double"></a-plane>
+
+  <!-- Vertical centre divider (x=0) between left/right zones — middle row -->
+  <a-plane position="0 0.75 -6" rotation="0 90 0" width="6" height="1.5"
+           color="#B0BEC5" material="side: double"></a-plane>
+
+  <!-- Horizontal divider: separates CONECTAR from top row -->
+  <!-- Left segment -->
+  <a-plane position="-6 0.75 6" rotation="0 0 0" width="5" height="1.5"
+           color="#B0BEC5" material="side: double"></a-plane>
+  <!-- Right segment -->
+  <a-plane position="6 0.75 6" rotation="0 0 0" width="5" height="1.5"
+           color="#B0BEC5" material="side: double"></a-plane>
+
+
+  <!-- ============================================================ -->
+  <!-- ZONE 1 — INVESTIGAR  (centre -5, 2)  BLUE #1565C0           -->
+  <!-- ============================================================ -->
+  <a-entity id="zone-investigar">
+
+    <!-- Zone label -->
+    <a-entity zone-label="text: INVESTIGAR; color: #1565C0" position="-5 0 2"></a-entity>
+
+    <!-- Per-zone light -->
+    <a-entity light="type: point; color: #FFFFFF; intensity: 0.7; distance: 10"
+              position="-5 2.8 2"></a-entity>
+
+    <!-- Furniture: 3 desks -->
+    <a-box position="-7 0.4 1" width="1.8" height="0.08" depth="0.9"
+           color="#1565C0" material="side: double"></a-box>
+    <a-box position="-5 0.4 1" width="1.8" height="0.08" depth="0.9"
+           color="#1976D2" material="side: double"></a-box>
+    <a-box position="-3 0.4 1" width="1.8" height="0.08" depth="0.9"
+           color="#1565C0" material="side: double"></a-box>
+    <!-- desk legs (simple thin boxes) -->
+    <a-box position="-7.7 0.2 1" width="0.06" height="0.4" depth="0.06" color="#5D4037"></a-box>
+    <a-box position="-6.3 0.2 1" width="0.06" height="0.4" depth="0.06" color="#5D4037"></a-box>
+    <a-box position="-5.7 0.2 1" width="0.06" height="0.4" depth="0.06" color="#5D4037"></a-box>
+    <a-box position="-4.3 0.2 1" width="0.06" height="0.4" depth="0.06" color="#5D4037"></a-box>
+    <a-box position="-3.7 0.2 1" width="0.06" height="0.4" depth="0.06" color="#5D4037"></a-box>
+    <a-box position="-2.3 0.2 1" width="0.06" height="0.4" depth="0.06" color="#5D4037"></a-box>
+
+    <!-- Bookshelf against left wall -->
+    <a-box position="-9.5 1 3" width="0.6" height="2" depth="1.5"
+           color="#4E342E" material="side: double"></a-box>
+    <!-- Bookshelf shelves -->
+    <a-box position="-9.5 0.5 3" width="0.55" height="0.04" depth="1.4" color="#6D4C41"></a-box>
+    <a-box position="-9.5 1.0 3" width="0.55" height="0.04" depth="1.4" color="#6D4C41"></a-box>
+    <a-box position="-9.5 1.5 3" width="0.55" height="0.04" depth="1.4" color="#6D4C41"></a-box>
+
+    <!-- Screen on back wall -->
+    <a-box position="-5 1.8 4.9" width="2" height="1.2" depth="0.05"
+           color="#0D47A1" material="side: double"></a-box>
+    <a-box position="-5 1.8 4.92" width="1.85" height="1.05" depth="0.02"
+           color="#42A5F5" material="emissive: #42A5F5; emissiveIntensity: 0.3; side: double"></a-box>
+
+    <!-- Chairs (small boxes) -->
+    <a-box position="-7 0.22 0.2" width="0.4" height="0.44" depth="0.4" color="#1E88E5"></a-box>
+    <a-box position="-5 0.22 0.2" width="0.4" height="0.44" depth="0.4" color="#1E88E5"></a-box>
+    <a-box position="-3 0.22 0.2" width="0.4" height="0.44" depth="0.4" color="#1E88E5"></a-box>
+
+    <!-- Proximity trigger & info panel -->
+    <a-entity position="-5 0 2" proximity-panel="target: #investigar-info; range: 4"></a-entity>
+    <a-entity id="investigar-info" position="-5 2.2 2" visible="false" billboard>
+      <a-plane width="2.8" height="1.4" color="#222"
+               material="opacity: 0.92; transparent: true; side: double">
+        <a-entity text="value: ZONA DE INVESTIGACION\n\nEspacio dedicado a la exploracion\ny el descubrimiento. Equipado con\nrecursos de investigacion,\nmicroscopios, mapas y acceso a\nbibliotecas digitales.;
+                         color: white; width: 2.4; wrapCount: 36; align: center"
+                  position="0 0 0.01"></a-entity>
+      </a-plane>
+    </a-entity>
+  </a-entity>
+
+
+  <!-- ============================================================ -->
+  <!-- ZONE 2 — CREAR  (centre 5, 2)  ORANGE #E65100               -->
+  <!-- ============================================================ -->
+  <a-entity id="zone-crear">
+
+    <a-entity zone-label="text: CREAR; color: #E65100" position="5 0 2"></a-entity>
+
+    <a-entity light="type: point; color: #FFD54F; intensity: 0.7; distance: 10"
+              position="5 2.8 2"></a-entity>
+
+    <!-- 2 work tables -->
+    <a-box position="4 0.45 1" width="2" height="0.08" depth="1"
+           color="#E65100" material="side: double"></a-box>
+    <a-box position="7 0.45 1" width="2" height="0.08" depth="1"
+           color="#EF6C00" material="side: double"></a-box>
+    <!-- table legs -->
+    <a-box position="3.2 0.22 0.6" width="0.06" height="0.45" depth="0.06" color="#5D4037"></a-box>
+    <a-box position="4.8 0.22 0.6" width="0.06" height="0.45" depth="0.06" color="#5D4037"></a-box>
+    <a-box position="3.2 0.22 1.4" width="0.06" height="0.45" depth="0.06" color="#5D4037"></a-box>
+    <a-box position="4.8 0.22 1.4" width="0.06" height="0.45" depth="0.06" color="#5D4037"></a-box>
+    <a-box position="6.2 0.22 0.6" width="0.06" height="0.45" depth="0.06" color="#5D4037"></a-box>
+    <a-box position="7.8 0.22 0.6" width="0.06" height="0.45" depth="0.06" color="#5D4037"></a-box>
+    <a-box position="6.2 0.22 1.4" width="0.06" height="0.45" depth="0.06" color="#5D4037"></a-box>
+    <a-box position="7.8 0.22 1.4" width="0.06" height="0.45" depth="0.06" color="#5D4037"></a-box>
+
+    <!-- 3D printer (small box on table) -->
+    <a-box position="4 0.65 1" width="0.5" height="0.4" depth="0.5"
+           color="#FF6F00" material="side: double"></a-box>
+    <!-- filament spool -->
+    <a-cylinder position="4.4 0.75 1" radius="0.12" height="0.06" rotation="90 0 0"
+                color="#FFB300"></a-cylinder>
+
+    <!-- Tool rack against right wall -->
+    <a-box position="9.5 1 3" width="0.4" height="2" depth="2"
+           color="#4E342E" material="side: double"></a-box>
+    <!-- tool silhouettes (small coloured boxes on the rack) -->
+    <a-box position="9.28 1.4 2.6" width="0.04" height="0.5" depth="0.1" color="#EF6C00"></a-box>
+    <a-box position="9.28 1.4 3.0" width="0.04" height="0.4" depth="0.1" color="#F4511E"></a-box>
+    <a-box position="9.28 1.4 3.4" width="0.04" height="0.6" depth="0.1" color="#FF8F00"></a-box>
+    <a-box position="9.28 0.8 2.8" width="0.04" height="0.3" depth="0.15" color="#BF360C"></a-box>
+
+    <!-- Stools -->
+    <a-cylinder position="4 0.2 0" radius="0.2" height="0.44" color="#E65100"></a-cylinder>
+    <a-cylinder position="7 0.2 0" radius="0.2" height="0.44" color="#E65100"></a-cylinder>
+
+    <!-- Proximity panel -->
+    <a-entity position="5 0 2" proximity-panel="target: #crear-info; range: 4"></a-entity>
+    <a-entity id="crear-info" position="5 2.2 2" visible="false" billboard>
+      <a-plane width="2.8" height="1.4" color="#222"
+               material="opacity: 0.92; transparent: true; side: double">
+        <a-entity text="value: MAKER SPACE / TALLER\n\nTaller de creacion y prototipado.\nLos estudiantes materializan sus\nideas con impresoras 3D,\nherramientas y materiales diversos.;
+                         color: white; width: 2.4; wrapCount: 36; align: center"
+                  position="0 0 0.01"></a-entity>
+      </a-plane>
+    </a-entity>
+  </a-entity>
+
+
+  <!-- ============================================================ -->
+  <!-- ZONE 3 — INTERCAMBIAR  (centre -5, -6)  GREEN #2E7D32       -->
+  <!-- ============================================================ -->
+  <a-entity id="zone-intercambiar">
+
+    <a-entity zone-label="text: INTERCAMBIAR; color: #2E7D32" position="-5 0 -6"></a-entity>
+
+    <a-entity light="type: point; color: #FAFAFA; intensity: 0.65; distance: 10"
+              position="-5 2.8 -6"></a-entity>
+
+    <!-- 4 round table clusters -->
+    <a-cylinder position="-7 0.4 -5" radius="0.6" height="0.06"
+                color="#2E7D32" material="side: double"></a-cylinder>
+    <a-cylinder position="-7 0.2 -5" radius="0.06" height="0.4" color="#5D4037"></a-cylinder>
+
+    <a-cylinder position="-3 0.4 -5" radius="0.6" height="0.06"
+                color="#388E3C" material="side: double"></a-cylinder>
+    <a-cylinder position="-3 0.2 -5" radius="0.06" height="0.4" color="#5D4037"></a-cylinder>
+
+    <a-cylinder position="-7 0.4 -7.5" radius="0.6" height="0.06"
+                color="#2E7D32" material="side: double"></a-cylinder>
+    <a-cylinder position="-7 0.2 -7.5" radius="0.06" height="0.4" color="#5D4037"></a-cylinder>
+
+    <a-cylinder position="-3 0.4 -7.5" radius="0.6" height="0.06"
+                color="#388E3C" material="side: double"></a-cylinder>
+    <a-cylinder position="-3 0.2 -7.5" radius="0.06" height="0.4" color="#5D4037"></a-cylinder>
+
+    <!-- Chairs around tables -->
+    <a-box position="-7.7 0.22 -5" width="0.35" height="0.44" depth="0.35" color="#43A047"></a-box>
+    <a-box position="-6.3 0.22 -5" width="0.35" height="0.44" depth="0.35" color="#43A047"></a-box>
+    <a-box position="-7 0.22 -4.3" width="0.35" height="0.44" depth="0.35" color="#43A047"></a-box>
+    <a-box position="-7 0.22 -5.7" width="0.35" height="0.44" depth="0.35" color="#43A047"></a-box>
+
+    <a-box position="-3.7 0.22 -5" width="0.35" height="0.44" depth="0.35" color="#43A047"></a-box>
+    <a-box position="-2.3 0.22 -5" width="0.35" height="0.44" depth="0.35" color="#43A047"></a-box>
+    <a-box position="-3 0.22 -4.3" width="0.35" height="0.44" depth="0.35" color="#43A047"></a-box>
+    <a-box position="-3 0.22 -5.7" width="0.35" height="0.44" depth="0.35" color="#43A047"></a-box>
+
+    <a-box position="-7.7 0.22 -7.5" width="0.35" height="0.44" depth="0.35" color="#43A047"></a-box>
+    <a-box position="-6.3 0.22 -7.5" width="0.35" height="0.44" depth="0.35" color="#43A047"></a-box>
+
+    <a-box position="-3.7 0.22 -7.5" width="0.35" height="0.44" depth="0.35" color="#43A047"></a-box>
+    <a-box position="-2.3 0.22 -7.5" width="0.35" height="0.44" depth="0.35" color="#43A047"></a-box>
+
+    <!-- Whiteboard on divider wall -->
+    <a-box position="-5 1.3 -2.05" width="2.5" height="1.2" depth="0.04"
+           color="#FAFAFA" material="side: double"></a-box>
+    <a-box position="-5 1.3 -2.08" width="2.6" height="1.3" depth="0.02"
+           color="#37474F" material="side: double"></a-box>
+
+    <!-- Proximity panel -->
+    <a-entity position="-5 0 -6" proximity-panel="target: #intercambiar-info; range: 4"></a-entity>
+    <a-entity id="intercambiar-info" position="-5 2.2 -6" visible="false" billboard>
+      <a-plane width="2.8" height="1.4" color="#222"
+               material="opacity: 0.92; transparent: true; side: double">
+        <a-entity text="value: ZONA DE INTERCAMBIO\n\nZona de trabajo colaborativo.\nMesas grupales y pizarras\ncompartidas para construir\nconocimiento entre pares.;
+                         color: white; width: 2.4; wrapCount: 36; align: center"
+                  position="0 0 0.01"></a-entity>
+      </a-plane>
+    </a-entity>
+  </a-entity>
+
+
+  <!-- ============================================================ -->
+  <!-- ZONE 4 — DESARROLLAR  (centre 5, -6)  PURPLE #6A1B9A        -->
+  <!-- ============================================================ -->
+  <a-entity id="zone-desarrollar">
+
+    <a-entity zone-label="text: DESARROLLAR; color: #6A1B9A" position="5 0 -6"></a-entity>
+
+    <a-entity light="type: point; color: #FFB74D; intensity: 0.45; distance: 8"
+              position="5 2.5 -6"></a-entity>
+
+    <!-- 3 bean bags (rounded small boxes) -->
+    <a-box position="4 0.25 -5" width="0.7" height="0.5" depth="0.7"
+           color="#7B1FA2" material="side: double"></a-box>
+    <a-box position="5.5 0.25 -5.5" width="0.7" height="0.5" depth="0.7"
+           color="#8E24AA" material="side: double"></a-box>
+    <a-box position="6.5 0.25 -4.8" width="0.7" height="0.5" depth="0.7"
+           color="#6A1B9A" material="side: double"></a-box>
+
+    <!-- Bookshelf against right wall -->
+    <a-box position="9.5 1 -6" width="0.6" height="2" depth="1.5"
+           color="#4E342E" material="side: double"></a-box>
+    <a-box position="9.5 0.5 -6" width="0.55" height="0.04" depth="1.4" color="#6D4C41"></a-box>
+    <a-box position="9.5 1.0 -6" width="0.55" height="0.04" depth="1.4" color="#6D4C41"></a-box>
+    <a-box position="9.5 1.5 -6" width="0.55" height="0.04" depth="1.4" color="#6D4C41"></a-box>
+
+    <!-- Plants (green cylinders) -->
+    <a-cylinder position="3.5 0.35 -7.5" radius="0.2" height="0.7"
+                color="#2E7D32"></a-cylinder>
+    <a-cylinder position="3.5 0.85 -7.5" radius="0.35" height="0.4"
+                color="#43A047" material="side: double"></a-cylinder>
+
+    <a-cylinder position="7 0.3 -8" radius="0.15" height="0.6"
+                color="#33691E"></a-cylinder>
+    <a-cylinder position="7 0.7 -8" radius="0.28" height="0.3"
+                color="#558B2F" material="side: double"></a-cylinder>
+
+    <!-- Soft rug (flat cylinder on floor) -->
+    <a-cylinder position="5.2 0.02 -5.5" radius="2" height="0.04"
+                color="#CE93D8" material="side: double"></a-cylinder>
+
+    <!-- Proximity panel -->
+    <a-entity position="5 0 -6" proximity-panel="target: #desarrollar-info; range: 4"></a-entity>
+    <a-entity id="desarrollar-info" position="5 2.2 -6" visible="false" billboard>
+      <a-plane width="2.8" height="1.5" color="#222"
+               material="opacity: 0.92; transparent: true; side: double">
+        <a-entity text="value: ESPACIO DE REFLEXION\n\nEspacio de reflexion y aprendizaje\nautonomo. Ambiente calido con\niluminacion suave para la lectura,\nescritura y metacognicion.;
+                         color: white; width: 2.4; wrapCount: 36; align: center"
+                  position="0 0 0.01"></a-entity>
+      </a-plane>
+    </a-entity>
+  </a-entity>
+
+
+  <!-- ============================================================ -->
+  <!-- ZONE 5 — PRESENTAR  (centre 0, -13)  RED #C62828            -->
+  <!-- ============================================================ -->
+  <a-entity id="zone-presentar">
+
+    <a-entity zone-label="text: PRESENTAR; color: #C62828" position="0 0 -13"></a-entity>
+
+    <!-- Spot light on centre stage -->
+    <a-entity light="type: spot; color: #FFFFFF; intensity: 1; angle: 50; penumbra: 0.4; distance: 8; decay: 1.5"
+              position="0 2.95 -13" rotation="-90 0 0"></a-entity>
+    <a-entity light="type: point; color: #FFCDD2; intensity: 0.3; distance: 8"
+              position="0 2.5 -13"></a-entity>
+
+    <!-- Central stage circle -->
+    <a-cylinder position="0 0.08 -13" radius="1.5" height="0.16"
+                color="#C62828" material="side: double"></a-cylinder>
+
+    <!-- Concentric stepped seating — 3 tiers -->
+    <!-- Tier 1 (innermost) -->
+    <a-cylinder position="0 0.15 -13" radius="3" height="0.3"
+                color="#D32F2F" material="side: double"
+                open-ended="false" theta-length="360"></a-cylinder>
+    <!-- Tier 2 -->
+    <a-cylinder position="0 0.25 -13" radius="4.2" height="0.5"
+                color="#E53935" material="side: double"></a-cylinder>
+    <!-- Tier 3 (outermost) -->
+    <a-cylinder position="0 0.35 -13" radius="5.2" height="0.7"
+                color="#EF5350" material="side: double"></a-cylinder>
+
+    <!-- Proximity panel -->
+    <a-entity position="0 0 -13" proximity-panel="target: #presentar-info; range: 5"></a-entity>
+    <a-entity id="presentar-info" position="0 2.2 -13" visible="false" billboard>
+      <a-plane width="3" height="1.6" color="#222"
+               material="opacity: 0.92; transparent: true; side: double">
+        <a-entity text="value: FORO / ANFITEATRO\n\nForo de presentacion sin 'frente'.\nAnfiteatro circular donde cualquiera\npuede presentar desde el centro,\nrompiendo la jerarquia espacial\ntradicional.;
+                         color: white; width: 2.6; wrapCount: 38; align: center"
+                  position="0 0 0.01"></a-entity>
+      </a-plane>
+    </a-entity>
+  </a-entity>
+
+
+  <!-- ============================================================ -->
+  <!-- ZONE 6 — CONECTAR  (centre 0, 10)  TEAL #00838F             -->
+  <!-- ============================================================ -->
+  <a-entity id="zone-conectar">
+
+    <a-entity zone-label="text: CONECTAR; color: #00838F" position="0 0 10"></a-entity>
+
+    <a-entity light="type: point; color: #4DD0E1; intensity: 0.6; distance: 10"
+              position="0 2.8 10"></a-entity>
+
+    <!-- Welcome display (flat box on front/back wall) -->
+    <a-box position="0 1.6 11.9" width="3.5" height="1.6" depth="0.06"
+           color="#00695C" material="side: double"></a-box>
+    <a-box position="0 1.6 11.87" width="3.3" height="1.4" depth="0.02"
+           color="#4DD0E1" material="emissive: #4DD0E1; emissiveIntensity: 0.25; side: double"></a-box>
+    <!-- Display text -->
+    <a-entity text="value: AULA DEL FUTURO; color: #FFFFFF; width: 3; align: center; font: mozillavr"
+              position="0 1.9 11.84"></a-entity>
+    <a-entity text="value: Bienvenidos; color: #B2EBF2; width: 2; align: center"
+              position="0 1.4 11.84"></a-entity>
+
+    <!-- 2 benches -->
+    <a-box position="-3 0.25 9.5" width="2" height="0.08" depth="0.5"
+           color="#00838F" material="side: double"></a-box>
+    <a-box position="-3.7 0.12 9.5" width="0.08" height="0.25" depth="0.4" color="#5D4037"></a-box>
+    <a-box position="-2.3 0.12 9.5" width="0.08" height="0.25" depth="0.4" color="#5D4037"></a-box>
+
+    <a-box position="3 0.25 9.5" width="2" height="0.08" depth="0.5"
+           color="#00838F" material="side: double"></a-box>
+    <a-box position="2.3 0.12 9.5" width="0.08" height="0.25" depth="0.4" color="#5D4037"></a-box>
+    <a-box position="3.7 0.12 9.5" width="0.08" height="0.25" depth="0.4" color="#5D4037"></a-box>
+
+    <!-- Project display boards (exhibition) -->
+    <a-box position="-4.5 1.2 10.5" width="1" height="1.4" depth="0.04"
+           color="#E0F7FA" material="side: double"></a-box>
+    <a-box position="4.5 1.2 10.5" width="1" height="1.4" depth="0.04"
+           color="#E0F7FA" material="side: double"></a-box>
+    <!-- stands -->
+    <a-cylinder position="-4.5 0.3 10.5" radius="0.04" height="0.6" color="#5D4037"></a-cylinder>
+    <a-cylinder position="4.5 0.3 10.5" radius="0.04" height="0.6" color="#5D4037"></a-cylinder>
+
+    <!-- Proximity panel -->
+    <a-entity position="0 0 10" proximity-panel="target: #conectar-info; range: 4"></a-entity>
+    <a-entity id="conectar-info" position="0 2.2 10" visible="false" billboard>
+      <a-plane width="2.8" height="1.4" color="#222"
+               material="opacity: 0.92; transparent: true; side: double">
+        <a-entity text="value: HALL DE CONEXION\n\nHall de conexion escuela-comunidad.\nExhibicion de proyectos\nestudiantiles y espacio de\nencuentro.;
+                         color: white; width: 2.4; wrapCount: 36; align: center"
+                  position="0 0 0.01"></a-entity>
+      </a-plane>
+    </a-entity>
+  </a-entity>
+
+
+  <!-- ============================================================ -->
+  <!-- FLOOR ZONE MARKERS (subtle coloured circles on the floor)    -->
+  <!-- ============================================================ -->
+  <a-circle position="-5 0.01 2"  rotation="-90 0 0" radius="3.5" color="#1565C0"
+            material="opacity: 0.08; transparent: true; side: double"></a-circle>
+  <a-circle position="5 0.01 2"   rotation="-90 0 0" radius="3.5" color="#E65100"
+            material="opacity: 0.08; transparent: true; side: double"></a-circle>
+  <a-circle position="-5 0.01 -6" rotation="-90 0 0" radius="3.5" color="#2E7D32"
+            material="opacity: 0.08; transparent: true; side: double"></a-circle>
+  <a-circle position="5 0.01 -6"  rotation="-90 0 0" radius="3.5" color="#6A1B9A"
+            material="opacity: 0.08; transparent: true; side: double"></a-circle>
+  <a-circle position="0 0.01 -13" rotation="-90 0 0" radius="5.5" color="#C62828"
+            material="opacity: 0.06; transparent: true; side: double"></a-circle>
+  <a-circle position="0 0.01 10"  rotation="-90 0 0" radius="3.5" color="#00838F"
+            material="opacity: 0.08; transparent: true; side: double"></a-circle>
+
+</a-scene>
+
+<!-- ============================================================ -->
+<!-- START EXPERIENCE SCRIPT                                       -->
+<!-- ============================================================ -->
+<script>
+  function startExperience() {
+    document.getElementById('overlay').style.display = 'none';
+    // Request pointer lock for immersive look-controls
+    var canvas = document.querySelector('a-scene').canvas;
+    if (canvas && canvas.requestPointerLock) {
+      canvas.requestPointerLock();
+    }
+  }
+</script>
+
+</body>
+</html>

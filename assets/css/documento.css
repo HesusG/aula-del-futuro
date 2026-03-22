@@ -1,0 +1,972 @@
+/* ============================================================
+   AULA DEL FUTURO — Shared Academic Document Stylesheet
+   A modern, editorial design for digital academic publications.
+   ============================================================ */
+
+/* ----- Reset & Base ----- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #FAFAFA;
+  color: #212121;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: #00BCD4;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #00897B;
+}
+
+::selection {
+  background: #00BCD4;
+  color: #FFFFFF;
+}
+
+::-moz-selection {
+  background: #00BCD4;
+  color: #FFFFFF;
+}
+
+
+/* ----- Typography ----- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
+  line-height: 1.3;
+  margin-top: 0;
+}
+
+h2 {
+  color: #1A237E;
+  font-size: 1.8rem;
+  border-bottom: 3px solid #00BCD4;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  color: #00897B;
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  color: #1A237E;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+strong {
+  font-weight: 700;
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid #00BCD4;
+  background: #F5F5F5;
+  color: #616161;
+  font-style: italic;
+  border-radius: 0 8px 8px 0;
+}
+
+
+/* ----- Layout ----- */
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+section,
+.section {
+  padding: 3rem 2rem;
+}
+
+section:nth-child(odd),
+.section:nth-child(odd) {
+  background: #FFFFFF;
+}
+
+section:nth-child(even),
+.section:nth-child(even) {
+  background: #F5F5F5;
+}
+
+
+/* ----- Animation Keyframes ----- */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section,
+.section {
+  animation: fadeIn 0.6s ease both;
+}
+
+section:nth-child(2)  { animation-delay: 0.08s; }
+section:nth-child(3)  { animation-delay: 0.16s; }
+section:nth-child(4)  { animation-delay: 0.24s; }
+section:nth-child(5)  { animation-delay: 0.32s; }
+section:nth-child(6)  { animation-delay: 0.40s; }
+section:nth-child(7)  { animation-delay: 0.48s; }
+section:nth-child(8)  { animation-delay: 0.56s; }
+section:nth-child(9)  { animation-delay: 0.64s; }
+section:nth-child(10) { animation-delay: 0.72s; }
+
+
+/* ============================================================
+   1. COVER PAGE
+   ============================================================ */
+
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1A237E 0%, #00838F 50%, #00BCD4 100%);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 3rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle decorative overlay for depth */
+.cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(255,255,255,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.cover h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.cover h2 {
+  color: #FFFFFF;
+  border-bottom: none;
+  font-size: 1.4rem;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.cover p,
+.cover .subtitle {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-bottom: 0.6rem;
+  max-width: 600px;
+}
+
+.cover .placeholder,
+.cover [class*="placeholder"] {
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+  padding-bottom: 2px;
+  font-style: italic;
+}
+
+.cover-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.cover-subtitle {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.cover-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 3rem;
+  font-weight: 900;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.cover-level {
+  font-size: 1.3rem;
+  font-weight: 500;
+  opacity: 0.95;
+  margin-bottom: 2.5rem;
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  padding-bottom: 1rem;
+  display: inline-block;
+}
+
+.cover-meta {
+  text-align: left;
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  backdrop-filter: blur(4px);
+}
+
+.cover-meta p {
+  margin: 0.4rem 0;
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+/* ============================================================
+   2. TABLE OF CONTENTS
+   ============================================================ */
+
+.toc {
+  background: #FFFFFF;
+  border-left: 4px solid #00BCD4;
+  padding: 2rem 2.5rem;
+  border-radius: 0 8px 8px 0;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.toc h2 {
+  margin-top: 0;
+}
+
+.toc ol,
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: toc-counter;
+}
+
+.toc li {
+  counter-increment: toc-counter;
+  margin-bottom: 0.6rem;
+  padding-left: 1.8rem;
+  position: relative;
+}
+
+.toc li::before {
+  content: counter(toc-counter) ".";
+  position: absolute;
+  left: 0;
+  color: #00BCD4;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.toc a {
+  color: #212121;
+  font-weight: 500;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.toc a:hover {
+  color: #00BCD4;
+  padding-left: 4px;
+}
+
+.toc ol ol,
+.toc ul ul {
+  margin-top: 0.4rem;
+  padding-left: 0.5rem;
+}
+
+.toc ol ol li::before,
+.toc ul ul li::before {
+  content: "—";
+  color: #00897B;
+  font-weight: 400;
+}
+
+
+/* ============================================================
+   3. SECTION HEADINGS  (global — see Typography above)
+   ============================================================ */
+
+/* Additional refinements when headings live inside sections */
+section h2:first-child,
+.section h2:first-child {
+  margin-top: 0;
+}
+
+
+/* ============================================================
+   3b. RESULTS LIST (.resultados-lista)
+   ============================================================ */
+
+.resultados-lista {
+  list-style: none;
+  counter-reset: resultado-counter;
+  padding: 0;
+}
+
+.resultados-lista li {
+  counter-increment: resultado-counter;
+  position: relative;
+  padding: 1.2rem 1.5rem 1.2rem 3.5rem;
+  margin-bottom: 1rem;
+  background: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  line-height: 1.7;
+}
+
+.resultados-lista li::before {
+  content: counter(resultado-counter);
+  position: absolute;
+  left: 1rem;
+  top: 1.2rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  background: linear-gradient(135deg, #1A237E, #00BCD4);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.resultados-lista li strong {
+  color: #1A237E;
+}
+
+
+/* ============================================================
+   4. NEED CARDS (.necesidad-card)
+   ============================================================ */
+
+.necesidad-card {
+  background: #FFFFFF;
+  border-left: 4px solid #00BCD4;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.necesidad-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.necesidad-card strong {
+  color: #1A237E;
+}
+
+.necesidad-card p {
+  color: #616161;
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+   5. PROFILE CARDS (.perfil-card)
+   ============================================================ */
+
+.perfiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.perfil-card {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #00BCD4;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.perfil-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Distinct top-border colours for each profile card */
+.perfil-card:nth-child(1) { border-top-color: #1A237E; }
+.perfil-card:nth-child(2) { border-top-color: #00BCD4; }
+.perfil-card:nth-child(3) { border-top-color: #00897B; }
+.perfil-card:nth-child(4) { border-top-color: #3F51B5; }
+.perfil-card:nth-child(5) { border-top-color: #0097A7; }
+.perfil-card:nth-child(6) { border-top-color: #26A69A; }
+
+.perfil-card h4 {
+  margin-top: 0;
+  font-size: 1.05rem;
+}
+
+.perfil-card p {
+  color: #616161;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+   6. STRATEGY CARDS (.estrategia-card)
+   ============================================================ */
+
+.estrategias-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.estrategia-card {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 1.5rem 1.5rem 1.5rem 4.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  counter-increment: estrategia-counter;
+}
+
+.estrategias-grid {
+  counter-reset: estrategia-counter;
+}
+
+.estrategia-card::before {
+  content: counter(estrategia-counter);
+  position: absolute;
+  left: 1rem;
+  top: 1.2rem;
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #00BCD4;
+  opacity: 0.3;
+  line-height: 1;
+}
+
+.estrategia-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.estrategia-card h4 {
+  color: #1A237E;
+  margin-top: 0;
+}
+
+.estrategia-card p {
+  margin-bottom: 0.5rem;
+}
+
+.estrategia-card .fundamentacion,
+.estrategia-card .fundamentación {
+  font-style: italic;
+  font-size: 0.92rem;
+  color: #616161;
+  border-left: 3px solid #00BCD4;
+  padding-left: 1rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+   7. INTERVIEW SECTION (.entrevista)
+   ============================================================ */
+
+.entrevista {
+  background: #FAFAFA;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+}
+
+
+/* ============================================================
+   8. INTERVIEW WARNING (.entrevista-aviso)
+   ============================================================ */
+
+.entrevista-aviso {
+  background: #FFF3E0;
+  border-left: 4px solid #FF9800;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.entrevista-aviso p {
+  margin: 0;
+}
+
+
+/* ============================================================
+   9. INTERVIEW QUESTIONS GUIDE (.preguntas-guia)
+   ============================================================ */
+
+.preguntas-guia {
+  background: #E8F5E9;
+  border-left: 4px solid #4CAF50;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.preguntas-guia ol {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 0;
+}
+
+.preguntas-guia li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+.preguntas-guia li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+   10. VIVENCIA ITEMS (.vivencia-item)
+   ============================================================ */
+
+.vivencia-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-left: 3px solid #00BCD4;
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.vivencia-item:nth-child(2) { border-left-color: #1A237E; }
+.vivencia-item:nth-child(3) { border-left-color: #00897B; }
+.vivencia-item:nth-child(4) { border-left-color: #3F51B5; }
+.vivencia-item:nth-child(5) { border-left-color: #0097A7; }
+.vivencia-item:nth-child(6) { border-left-color: #26A69A; }
+
+.vivencia-item .icon,
+.vivencia-item .emoji {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  line-height: 1;
+  width: 2rem;
+  text-align: center;
+}
+
+.vivencia-item .text,
+.vivencia-item div:last-child {
+  flex: 1;
+}
+
+.vivencia-item strong {
+  color: #1A237E;
+}
+
+
+/* ============================================================
+   11. REFERENCES (.referencias)
+   ============================================================ */
+
+.referencias ul,
+.referencias ol {
+  list-style: none;
+  padding-left: 2.5em;
+}
+
+.referencias li {
+  text-indent: -2.5em;
+  margin-bottom: 0.8em;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.referencias a {
+  color: #00897B;
+  word-break: break-all;
+}
+
+.referencias a:hover {
+  color: #00BCD4;
+}
+
+
+/* ============================================================
+   12. ARCHITECTURE ZONE DESCRIPTION
+   ============================================================ */
+
+.zonas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.zona-card {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #00BCD4;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.zona-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Distinct top-border colours for each zone */
+.zona-card:nth-child(1) { border-top-color: #1A237E; }
+.zona-card:nth-child(2) { border-top-color: #00BCD4; }
+.zona-card:nth-child(3) { border-top-color: #00897B; }
+.zona-card:nth-child(4) { border-top-color: #FF9800; }
+.zona-card:nth-child(5) { border-top-color: #3F51B5; }
+.zona-card:nth-child(6) { border-top-color: #26A69A; }
+
+.zona-card h4,
+.zona-card strong {
+  display: block;
+  color: #1A237E;
+  margin-bottom: 0.5rem;
+}
+
+.zona-card p {
+  color: #616161;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+   13. DEMO LINK (.demo-link)
+   ============================================================ */
+
+.demo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #1A237E 0%, #00838F 60%, #00BCD4 100%);
+  color: #FFFFFF;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1.5rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(26, 35, 126, 0.25);
+  transition: filter 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+  margin: 1.5rem 0;
+}
+
+.demo-link::after {
+  content: "\2192";
+  font-size: 1.3rem;
+  transition: transform 0.2s ease;
+}
+
+.demo-link:hover {
+  color: #FFFFFF;
+  filter: brightness(1.12);
+  box-shadow: 0 8px 28px rgba(26, 35, 126, 0.35);
+  transform: translateY(-2px);
+}
+
+.demo-link:hover::after {
+  transform: translateX(4px);
+}
+
+
+/* ============================================================
+   14. UTILITY CLASSES
+   ============================================================ */
+
+.text-center {
+  text-align: center;
+}
+
+.text-secondary {
+  color: #616161;
+}
+
+.mt-0 { margin-top: 0; }
+.mb-0 { margin-bottom: 0; }
+.mt-1 { margin-top: 0.5rem; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+
+/* Alert / callout boxes */
+.alert {
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+.alert-warning {
+  background: #FFF3E0;
+  border-left: 4px solid #FF9800;
+}
+
+.alert-info {
+  background: #E3F2FD;
+  border-left: 4px solid #2196F3;
+}
+
+.alert-success {
+  background: #E8F5E9;
+  border-left: 4px solid #4CAF50;
+}
+
+/* Tables (general academic tables) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+thead {
+  background: #1A237E;
+  color: #FFFFFF;
+}
+
+th {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+}
+
+td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #E0E0E0;
+  vertical-align: top;
+}
+
+tbody tr:nth-child(even) {
+  background: #F5F5F5;
+}
+
+tbody tr:hover {
+  background: #E0F7FA;
+}
+
+/* Ordered and unordered lists inside sections */
+section ul,
+section ol,
+.section ul,
+.section ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+section li,
+.section li {
+  margin-bottom: 0.4rem;
+}
+
+
+/* ============================================================
+   15. RESPONSIVE — MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  html {
+    font-size: 16px;
+  }
+
+  section,
+  .section {
+    padding: 2rem 1.25rem;
+  }
+
+  .cover {
+    padding: 2rem 1.25rem;
+  }
+
+  .cover h1 {
+    font-size: 1.8rem;
+  }
+
+  .cover h2 {
+    font-size: 1.1rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+  }
+
+  .toc {
+    padding: 1.5rem 1.25rem;
+  }
+
+  /* Stack grids to single column */
+  .perfiles-grid,
+  .zonas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Full-width cards */
+  .necesidad-card,
+  .estrategia-card,
+  .perfil-card,
+  .zona-card {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .estrategia-card {
+    padding-left: 3.5rem;
+  }
+
+  .demo-link {
+    padding: 1.2rem 2rem;
+    font-size: 1rem;
+  }
+
+  .vivencia-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .referencias li {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+  }
+}
+
+
+/* ============================================================
+   16. PRINT STYLES
+   ============================================================ */
+
+@media print {
+
+  * {
+    color: #000000 !important;
+    background: #FFFFFF !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  .cover {
+    min-height: auto;
+    padding: 2rem;
+    page-break-after: always;
+  }
+
+  section,
+  .section {
+    page-break-before: always;
+    padding: 1rem 0;
+    animation: none;
+  }
+
+  section:first-of-type {
+    page-break-before: avoid;
+  }
+
+  h2, h3, h4 {
+    page-break-after: avoid;
+  }
+
+  .necesidad-card,
+  .perfil-card,
+  .estrategia-card,
+  .zona-card {
+    page-break-inside: avoid;
+    border: 1px solid #CCCCCC !important;
+  }
+
+  .demo-link {
+    border: 2px solid #000000 !important;
+    padding: 0.5rem 1rem;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #616161 !important;
+  }
+
+  .toc a[href]::after {
+    content: none;
+  }
+
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+}
