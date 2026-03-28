@@ -33,6 +33,7 @@ jobs:
       # Copy the existing static site (landing, documents, demo, assets) into dist/
       - run: |
           cp index.html dist/
+          cp personas.html dist/
           cp -r assets dist/
           cp -r documento dist/
           cp -r demo dist/

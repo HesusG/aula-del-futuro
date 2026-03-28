@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Personas — Aula del Futuro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #C0C0C0;
+      --white: #FFFFFF;
+      --black: #000000;
+      --platinum: #D4D0C8;
+      --gray: #808080;
+      --teal: #2DD4BF;
+      --coral: #FF6B6B;
+      --purple: #6C5CE7;
+      --green: #2E7D32;
+      --deep-purple: #6A1B9A;
+      --dark-teal: #00695C;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--black);
+      min-height: 100vh;
+      padding: 0;
+    }
+
+    /* Mac OS 7 Window Chrome */
+    .window {
+      max-width: 1200px;
+      margin: 24px auto;
+      border: 2px solid var(--black);
+      background: var(--white);
+      box-shadow: 4px 4px 0px var(--black);
+    }
+
+    .window__titlebar {
+      background: var(--platinum);
+      border-bottom: 2px solid var(--black);
+      padding: 6px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .window__titlebar-btn {
+      width: 12px;
+      height: 12px;
+      border: 1px solid var(--black);
+      background: var(--white);
+    }
+
+    .window__titlebar-text {
+      flex: 1;
+      text-align: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: -0.02em;
+    }
+
+    .window__content {
+      padding: 24px 32px 32px;
+    }
+
+    /* Menu Bar */
+    .menubar {
+      background: var(--platinum);
+      border-bottom: 2px solid var(--black);
+      padding: 4px 16px;
+      display: flex;
+      gap: 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+    }
+
+    .menubar a {
+      color: var(--black);
+      text-decoration: none;
+    }
+
+    .menubar a:hover {
+      text-decoration: underline;
+    }
+
+    /* Page Header */
+    .page-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .page-header h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .page-header p {
+      font-size: 0.9rem;
+      color: var(--gray);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    .pixel-divider {
+      height: 2px;
+      background: repeating-linear-gradient(90deg, var(--black) 0px, var(--black) 4px, transparent 4px, transparent 8px);
+      margin: 16px 0;
+    }
+
+    /* Level Labels */
+    .level-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin: 32px 0 16px;
+      padding: 8px 16px;
+      border: 2px solid var(--black);
+      display: inline-block;
+      box-shadow: 2px 2px 0px var(--black);
+    }
+
+    .level-label--basic { background: rgba(45, 212, 191, 0.2); }
+    .level-label--upper { background: rgba(108, 92, 231, 0.2); }
+
+    /* Persona Card */
+    .persona {
+      border: 2px solid var(--black);
+      background: var(--white);
+      box-shadow: 3px 3px 0px var(--black);
+      margin-bottom: 24px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
+      .persona { grid-template-columns: 1fr; }
+    }
+
+    .persona__sidebar {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      border-right: 2px solid var(--black);
+    }
+
+    .persona__avatar {
+      width: 120px;
+      height: 120px;
+      border: 2px solid var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 2px 2px 0px var(--black);
+      font-size: 3.5rem;
+    }
+
+    .persona__name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    .persona__role {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--gray);
+      text-align: center;
+    }
+
+    .persona__body {
+      padding: 0;
+    }
+
+    .persona__section {
+      padding: 16px 20px;
+      border-bottom: 2px solid var(--black);
+    }
+
+    .persona__section:last-child {
+      border-bottom: none;
+    }
+
+    .persona__section-header {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 10px;
+      display: inline-block;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .persona__section p {
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    .persona__quote {
+      font-style: italic;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      padding: 12px 20px;
+      position: relative;
+    }
+
+    .persona__quote::before {
+      content: '"';
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      opacity: 0.3;
+    }
+
+    .persona__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      padding: 2px 8px;
+      border: 1px solid var(--black);
+      background: var(--platinum);
+    }
+
+    /* Footer */
+    .page-footer {
+      text-align: center;
+      padding: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--gray);
+      border-top: 2px solid var(--black);
+    }
+
+    .page-footer a {
+      color: var(--black);
+    }
+
+    /* Back link */
+    .back-link {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--black);
+      text-decoration: none;
+      padding: 6px 12px;
+      border: 2px solid var(--black);
+      background: var(--platinum);
+      box-shadow: 2px 2px 0px var(--black);
+      margin-bottom: 16px;
+    }
+
+    .back-link:hover {
+      background: var(--white);
+    }
+
+    .back-link:active {
+      box-shadow: none;
+      transform: translate(2px, 2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="window">
+    <div class="window__titlebar">
+      <div class="window__titlebar-btn"></div>
+      <div class="window__titlebar-btn"></div>
+      <span class="window__titlebar-text">User Personas — Aula del Futuro</span>
+      <div class="window__titlebar-btn"></div>
+    </div>
+    <div class="menubar">
+      <a href="index.html">&larr; Inicio</a>
+      <a href="documento/primaria-secundaria.html">Primaria</a>
+      <a href="documento/preparatoria-universidad.html">Universidad</a>
+      <a href="demo/">3D</a>
+      <a href="slides/">Slides</a>
+    </div>
+    <div class="window__content">
+
+      <a href="index.html" class="back-link">&larr; Volver al inicio</a>
+
+      <div class="page-header">
+        <h1>Personas de Usuario</h1>
+        <p>Arquetipos construidos a partir de la literatura revisada. No representan individuos reales, sino perfiles que guían el diseño del Aula del Futuro.</p>
+      </div>
+
+      <div class="pixel-divider"></div>
+
+      <!-- NIVEL BÁSICO -->
+      <span class="level-label level-label--basic">Primaria y Secundaria</span>
+
+      <!-- Valentina -->
+      <div class="persona">
+        <div class="persona__sidebar" style="background: rgba(45, 212, 191, 0.08);">
+          <div class="persona__avatar" style="background: rgba(45, 212, 191, 0.15);">
+            &#x1F9D2;
+          </div>
+          <div class="persona__name">Valentina</div>
+          <div class="persona__role">10 a&ntilde;os &middot; 5.&deg; primaria</div>
+        </div>
+        <div class="persona__body">
+          <div class="persona__section">
+            <div class="persona__section-header" style="background: var(--teal);">Contexto</div>
+            <p>Escuela p&uacute;blica urbana en Puebla. Familia de cuatro integrantes. Usa el celular de su mam&aacute; para hacer tareas. <strong>Curiosa y sociable</strong>, pero se aburre con las filas y la clase expositiva. Le gusta trabajar en equipo y moverse por el sal&oacute;n.</p>
+            <div class="persona__tags">
+              <span class="tag">escuela p&uacute;blica</span>
+              <span class="tag">zona urbana</span>
+              <span class="tag">acceso limitado a tecnolog&iacute;a</span>
+            </div>
+          </div>
+          <div class="persona__section">
+            <div class="persona__section-header" style="background: var(--coral);">Frustraciones</div>
+            <p>No puede moverse durante la clase. Las bancas est&aacute;n fijas al piso. Le piden silencio cuando quiere preguntar algo. <strong>Aprende mejor cuando se mueve y colabora</strong>, pero el espacio f&iacute;sico no lo permite. Siente que el sal&oacute;n es aburrido y no le dan ganas de estar ah&iacute;.</p>
+          </div>
+          <div class="persona__section">
+            <div class="persona__section-header" style="background: var(--teal);">Necesidades</div>
+            <p>Mesas grupales que permitan colaborar. Rincones de lectura c&oacute;modos. Actividades que conecten con su vida diaria. Espacio para moverse sin ser castigada. Materiales visuales y manipulables.</p>
+          </div>
+          <div class="persona__quote" style="background: rgba(45, 212, 191, 0.08);">
+            Me gustar&iacute;a que el sal&oacute;n tuviera mesas donde pudi&eacute;ramos sentarnos juntos.
+          </div>
+        </div>
+      </div>
+
+      <!-- Prof. Miguel -->
+      <div class="persona">
+        <div class="persona__sidebar" style="background: rgba(46, 125, 50, 0.08);">
+          <div class="persona__avatar" style="background: rgba(46, 125, 50, 0.15);">
+            &#x1F468;&#x200D;&#x1F3EB;
+          </div>
+          <div class="persona__name">Prof. Miguel</div>
+          <div class="persona__role">38 a&ntilde;os &middot; Docente primaria</div>
+        </div>
+        <div class="persona__body">
+          <div class="persona__section">
+            <div class="persona__section-header" style="background: var(--green);">Contexto</div>
+            <p>12 a&ntilde;os de experiencia en escuela p&uacute;blica. Se capacit&oacute; en aprendizaje basado en proyectos y asisti&oacute; a talleres de la Nueva Escuela Mexicana. <strong>Quiere transformar su pr&aacute;ctica docente</strong>, pero el aula no coopera: bancas atornilladas al piso, sin rincones de trabajo, un solo pizarr&oacute;n blanco.</p>
+            <div class="persona__tags">
+              <span class="tag">12 a&ntilde;os experiencia</span>
+              <span class="tag">ABP</span>
+              <span class="tag">Nueva Escuela Mexicana</span>
+            </div>
+          </div>
+          <div class="persona__section">
+            <div class="persona__section-header" style="background: var(--coral);">Frustraciones</div>
+            <p>El mobiliario fijo impide crear estaciones de trabajo. Los directivos miden &ldquo;orden&rdquo; por el silencio en el sal&oacute;n. <strong>El espacio contradice todo lo que le ense&ntilde;aron sobre pedagog&iacute;a activa.</strong> Ha intentado mover las bancas pero pesan demasiado y al final de la clase debe regresarlas.</p>
+          </div>
+          <div class="persona__section">
+            <div class="persona__section-header" style="background: var(--green);">Necesidades</div>
+            <p>Mobiliario ligero y reconfigurable. Al menos tres zonas diferenciadas en el aula. Apoyo institucional para m&eacute;todos activos. Tecnolog&iacute;a b&aacute;sica confiable (proyector, bocinas, tablets compartidas).</p>
+          </div>
+          <div class="persona__quote" style="background: rgba(46, 125, 50, 0.08);">
+            Si pudiera mover los muebles tendr&iacute;a tres estaciones de trabajo.
+          </div>
+        </div>
+      </div>
+
+      <div class="pixel-divider"></div>
+
+      <!-- NIVEL SUPERIOR -->
+      <span class="level-label level-label--upper">Preparatoria y Universidad</span>
+
+      <!-- Andrea -->
+      <div class="persona">
+        <div class="persona__sidebar" style="background: rgba(106, 27, 154, 0.08);">
+          <div class="persona__avatar" style="background: rgba(106, 27, 154, 0.15);">
+            &#x1F469;&#x200D;&#x1F393;
+          </div>
+          <div class="persona__name">Andrea</div>
+          <div class="persona__role">20 a&ntilde;os &middot; Pedagog&iacute;a, UPAEP</div>
+        </div>
+        <div class="persona__body">
+          <div class="persona__section">
+            <div class="persona__section-header" style="background: var(--deep-purple);">Contexto</div>
+            <p>Trabaja medio tiempo como asistente en un k&iacute;nder privado. Cursa 5.&deg; semestre de Pedagog&iacute;a en la UPAEP. <strong>Lee sobre innovaci&oacute;n educativa todo el d&iacute;a, pero nunca ha dise&ntilde;ado una intervenci&oacute;n real.</strong> Frustrada por la distancia entre la teor&iacute;a que estudia y la pr&aacute;ctica que observa.</p>
+            <div class="persona__tags">
+              <span class="tag">5.&deg; semestre</span>
+              <span class="tag">medio tiempo</span>
+              <span class="tag">UPAEP</span>
+            </div>
+          </div>
+          <div class="persona__section">
+            <div class="persona__section-header" style="background: var(--coral);">Frustraciones</div>
+            <p>Las materias piden ensayos sobre pedagog&iacute;a pero nunca proyectos reales con estudiantes. <strong>El aula universitaria reproduce la misma clase frontal que critican en los textos.</strong> Siente que su formaci&oacute;n es te&oacute;rica y desconectada del aula real.</p>
+          </div>
+          <div class="persona__section">
+            <div class="persona__section-header" style="background: var(--deep-purple);">Necesidades</div>
+            <p>Espacios para prototipar intervenciones educativas. Proyectos vinculados con escuelas reales. Aulas universitarias que modelen lo que ense&ntilde;an. Acceso a laboratorios de pr&aacute;ctica docente.</p>
+          </div>
+          <div class="persona__quote" style="background: rgba(106, 27, 154, 0.08);">
+            Estudio pedagog&iacute;a pero nunca he dise&ntilde;ado una clase real.
+          </div>
+        </div>
+      </div>
+
+      <!-- Dra. Lucía -->
+      <div class="persona">
+        <div class="persona__sidebar" style="background: rgba(0, 105, 92, 0.08);">
+          <div class="persona__avatar" style="background: rgba(0, 105, 92, 0.15);">
+            &#x1F469;&#x200D;&#x1F52C;
+          </div>
+          <div class="persona__name">Dra. Luc&iacute;a</div>
+          <div class="persona__role">45 a&ntilde;os &middot; Catedr&aacute;tica</div>
+        </div>
+        <div class="persona__body">
+          <div class="persona__section">
+            <div class="persona__section-header" style="background: var(--dark-teal);">Contexto</div>
+            <p>Doctora en educaci&oacute;n con publicaciones sobre aprendizaje activo y dise&ntilde;o de ambientes de aprendizaje. <strong>Da clase frontal a grupos de 60 estudiantes</strong> porque el auditorio escalonado no permite otra configuraci&oacute;n. Quiere cambiar su pr&aacute;ctica sin perder rigor acad&eacute;mico.</p>
+            <div class="persona__tags">
+              <span class="tag">doctorado en educaci&oacute;n</span>
+              <span class="tag">investigadora</span>
+              <span class="tag">60 estudiantes</span>
+            </div>
+          </div>
+          <div class="persona__section">
+            <div class="persona__section-header" style="background: var(--coral);">Frustraciones</div>
+            <p>Investiga sobre aprendizaje activo pero no puede aplicarlo en su propia aula. <strong>La contradicci&oacute;n entre lo que investiga y c&oacute;mo ense&ntilde;a le genera tensi&oacute;n profesional.</strong> El espacio f&iacute;sico es el primer obst&aacute;culo: butacas fijas escalonadas, sin mesas de trabajo grupal, ac&uacute;stica deficiente.</p>
+          </div>
+          <div class="persona__section">
+            <div class="persona__section-header" style="background: var(--dark-teal);">Necesidades</div>
+            <p>Aulas con mobiliario modular para grupos grandes. Tecnolog&iacute;a que facilite la interacci&oacute;n (pantallas compartidas, encuestas en vivo). Espacios que permitan alternar entre ponencia, debate y trabajo grupal sin cambiar de sal&oacute;n.</p>
+          </div>
+          <div class="persona__quote" style="background: rgba(0, 105, 92, 0.08);">
+            La contradicci&oacute;n entre lo que investigo y c&oacute;mo ense&ntilde;o me pesa.
+          </div>
+        </div>
+      </div>
+
+      <div class="pixel-divider"></div>
+
+      <div class="page-footer">
+        Proyecto Final &mdash; Estrategias para la Comprensi&oacute;n &mdash; Maestr&iacute;a en Pedagog&iacute;a, UPAEP &mdash; <a href="index.html">Volver al inicio</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
