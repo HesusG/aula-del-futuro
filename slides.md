@@ -362,110 +362,69 @@ layout: neo-section
 
 ---
 
-<!-- Cuadro 6.1: Pozo (1990) — Estrategias de aprendizaje -->
+<!-- Pozo (1990) — De la memorización al aprendizaje significativo -->
 
-# <div class="i-pixelarticons-chart inline-block w-7 h-7 align-middle" /> Estrategias de Aprendizaje (Pozo, 1990)
+# <div class="i-pixelarticons-chart inline-block w-7 h-7 align-middle" /> De la Memorización al Aprendizaje Significativo
 
 <div class="pixel-divider my-2" />
 
-<p class="text-xs mt-1 mb-2">Cuadro 6.1 de Díaz Barriga y Hernández (2010). Clasificación por tipo de proceso cognitivo, mapeada a nuestra propuesta.</p>
+<p class="text-sm mt-1 mb-3">Pozo (1990) clasifica las estrategias de aprendizaje en un continuo: desde la <strong>repetición superficial</strong> hasta la <strong>reestructuración profunda</strong> del conocimiento. Nuestra propuesta de Aula del Futuro se posiciona del lado del aprendizaje significativo, pero no descarta la recirculación cuando es necesaria.</p>
 
-<table class="w-full text-xs border-2 border-black" style="border-collapse: collapse;">
-  <thead>
-    <tr class="bg-[#2D3436] text-white">
-      <th class="border-2 border-black px-2 py-1 text-left">Proceso</th>
-      <th class="border-2 border-black px-2 py-1 text-left">Tipo de estrategia</th>
-      <th class="border-2 border-black px-2 py-1 text-left">Finalidad u objetivo</th>
-      <th class="border-2 border-black px-2 py-1 text-left">Técnica o habilidad</th>
-      <th class="border-2 border-black px-2 py-1 text-left"><div class="i-pixelarticons-checkbox-on inline-block w-3 h-3 mr-1" /> En el Aula del Futuro</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="bg-[#FF6B6B]/10">
-      <td class="border-2 border-black px-2 py-1 font-bold" rowspan="2">Aprendizaje memorístico</td>
-      <td class="border-2 border-black px-2 py-1" rowspan="2">Recirculación de la información</td>
-      <td class="border-2 border-black px-2 py-1">Repaso simple</td>
-      <td class="border-2 border-black px-2 py-1">Repetición simple y acumulativa</td>
-      <td class="border-2 border-black px-2 py-1" rowspan="2"><strong>Zona Desarrollar:</strong> lectura profunda, ritmo propio. Diarios de aprendizaje como repaso reflexivo.</td>
-    </tr>
-    <tr class="bg-[#FF6B6B]/10">
-      <td class="border-2 border-black px-2 py-1">Apoyo al repaso (seleccionar)</td>
-      <td class="border-2 border-black px-2 py-1">Subrayar, destacar, copiar</td>
-    </tr>
-    <tr class="bg-[#2DD4BF]/10">
-      <td class="border-2 border-black px-2 py-1 font-bold" rowspan="4">Aprendizaje significativo</td>
-      <td class="border-2 border-black px-2 py-1" rowspan="2">Elaboración</td>
-      <td class="border-2 border-black px-2 py-1">Procesamiento simple</td>
-      <td class="border-2 border-black px-2 py-1">Palabra clave, rimas, imágenes mentales, parafraseo</td>
-      <td class="border-2 border-black px-2 py-1" rowspan="2"><strong>Zona Investigar:</strong> exploración guiada. <strong>DUA:</strong> representación múltiple para conectar lo nuevo con lo previo.</td>
-    </tr>
-    <tr class="bg-[#2DD4BF]/10">
-      <td class="border-2 border-black px-2 py-1">Procesamiento complejo</td>
-      <td class="border-2 border-black px-2 py-1">Inferencias, resumen, analogías, elaboración conceptual</td>
-    </tr>
-    <tr class="bg-[#6C5CE7]/10">
-      <td class="border-2 border-black px-2 py-1" rowspan="2">Organización</td>
-      <td class="border-2 border-black px-2 py-1">Clasificación de la información</td>
-      <td class="border-2 border-black px-2 py-1">Uso de categorías</td>
-      <td class="border-2 border-black px-2 py-1" rowspan="2"><strong>Zona Crear:</strong> mapas conceptuales, redes semánticas, artefactos. <strong>Estaciones:</strong> rotar entre zonas estructura el conocimiento.</td>
-    </tr>
-    <tr class="bg-[#6C5CE7]/10">
-      <td class="border-2 border-black px-2 py-1">Jerarquización y organización</td>
-      <td class="border-2 border-black px-2 py-1">Redes semánticas, mapas conceptuales, estructuras textuales</td>
-    </tr>
-  </tbody>
-</table>
+<div class="grid grid-cols-3 gap-3">
+<v-clicks>
+  <div class="neo-card">
+    <div class="bg-[#FF6B6B] px-3 py-1 border-b-2 border-black text-xs font-bold text-white"><div class="i-pixelarticons-file inline-block w-4 h-4 mr-1" /> Recirculación</div>
+    <div class="p-2 text-xs"><strong>Proceso:</strong> repaso, repetición, subrayar, copiar.<br/><strong>En el aula:</strong> la <em>Zona Desarrollar</em> ofrece un espacio de lectura profunda y ritmo propio. Los <em>diarios de aprendizaje</em> funcionan como repaso reflexivo al cierre de cada jornada.</div>
+  </div>
+  <div class="neo-card">
+    <div class="bg-[#2DD4BF] px-3 py-1 border-b-2 border-black text-xs font-bold text-white"><div class="i-pixelarticons-search inline-block w-4 h-4 mr-1" /> Elaboración</div>
+    <div class="p-2 text-xs"><strong>Proceso:</strong> parafraseo, analogías, inferencias, resumen.<br/><strong>En el aula:</strong> la <em>Zona Investigar</em> activa la exploración guiada. El <em>DUA</em> ofrece representación múltiple para vincular lo nuevo con conocimientos previos.</div>
+  </div>
+  <div class="neo-card">
+    <div class="bg-[#6C5CE7] px-3 py-1 border-b-2 border-black text-xs font-bold text-white"><div class="i-pixelarticons-layout-grid inline-block w-4 h-4 mr-1" /> Organización</div>
+    <div class="p-2 text-xs"><strong>Proceso:</strong> categorías, mapas conceptuales, redes semánticas.<br/><strong>En el aula:</strong> la <em>Zona Crear</em> permite construir artefactos que organizan el conocimiento. Las <em>estaciones de aprendizaje</em> estructuran la experiencia al rotar entre zonas.</div>
+  </div>
+</v-clicks>
+</div>
 
 <RefFootnote :sources="['Pozo (1990). En Coll, Palacios y Marchesi (Eds.), Desarrollo psicológico y educación II.', 'Díaz Barriga y Hernández (2010). Estrategias docentes para un aprendizaje significativo (3a ed.).']" />
 
 ---
 
-<!-- Cuadro 6.2: Pozo y Postigo (1994) — Función cognitiva -->
+<!-- Pozo y Postigo (1994) — Función cognitiva -->
 
-# <div class="i-pixelarticons-chart inline-block w-7 h-7 align-middle" /> Estrategias por Función Cognitiva (Pozo y Postigo, 1994)
+# <div class="i-pixelarticons-chart inline-block w-7 h-7 align-middle" /> Estrategias por Función Cognitiva
 
 <div class="pixel-divider my-2" />
 
-<p class="text-xs mt-1 mb-2">Cuadro 6.2 de Díaz Barriga y Hernández (2010). Clasificación según la función cognitiva prevaleciente, mapeada a nuestra propuesta.</p>
+<p class="text-sm mt-1 mb-2">Pozo y Postigo (1994) amplían la clasificación agrupando las estrategias por la <strong>función cognitiva que activan</strong>. Cada una de las seis zonas del aula activa al menos una de estas funciones. Así es como se conectan:</p>
 
-<table class="w-full text-xs border-2 border-black" style="border-collapse: collapse;">
-  <thead>
-    <tr class="bg-[#2D3436] text-white">
-      <th class="border-2 border-black px-2 py-1 text-left w-[20%]">Clase de estrategia</th>
-      <th class="border-2 border-black px-2 py-1 text-left w-[40%]">Estrategias</th>
-      <th class="border-2 border-black px-2 py-1 text-left w-[40%]"><div class="i-pixelarticons-checkbox-on inline-block w-3 h-3 mr-1" /> En el Aula del Futuro</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="bg-white">
-      <td class="border-2 border-black px-2 py-1 font-bold">Adquisición</td>
-      <td class="border-2 border-black px-2 py-1">Observación, búsqueda de información, selección, repaso y retención</td>
-      <td class="border-2 border-black px-2 py-1"><strong>Zona Investigar:</strong> indagación y formulación de hipótesis. <strong>Zona Desarrollar:</strong> lectura profunda y selección de información.</td>
-    </tr>
-    <tr class="bg-[#2DD4BF]/10">
-      <td class="border-2 border-black px-2 py-1 font-bold">Interpretación</td>
-      <td class="border-2 border-black px-2 py-1">Decodificación, aplicación de modelos, uso de analogías y metáforas</td>
-      <td class="border-2 border-black px-2 py-1"><strong>DUA — representación múltiple:</strong> el mismo concepto en visual, auditivo, kinestésico. <strong>Exploración guiada</strong> con andamiaje.</td>
-    </tr>
-    <tr class="bg-white">
-      <td class="border-2 border-black px-2 py-1 font-bold">Análisis y razonamiento</td>
-      <td class="border-2 border-black px-2 py-1">Análisis y comparación de modelos, inferencias, investigación y solución de problemas</td>
-      <td class="border-2 border-black px-2 py-1"><strong>Zona Investigar + Crear:</strong> proyectos con problemas reales de la comunidad. Aprendizaje profundo (Fullan y Langworthy, 2014).</td>
-    </tr>
-    <tr class="bg-[#6C5CE7]/10">
-      <td class="border-2 border-black px-2 py-1 font-bold">Comprensión y organización</td>
-      <td class="border-2 border-black px-2 py-1">Comprensión del discurso oral y escrito, relaciones conceptuales, mapas conceptuales</td>
-      <td class="border-2 border-black px-2 py-1"><strong>Diarios de aprendizaje</strong> y <strong>reflexión guiada</strong> (metacognición). <strong>Zona Crear:</strong> organización conceptual mediante artefactos.</td>
-    </tr>
-    <tr class="bg-[#FF6B6B]/10">
-      <td class="border-2 border-black px-2 py-1 font-bold">Comunicación</td>
-      <td class="border-2 border-black px-2 py-1">Expresión oral, expresión escrita, expresión gráfica/numérica/icónica</td>
-      <td class="border-2 border-black px-2 py-1"><strong>Zona Presentar:</strong> comunicar hallazgos. <strong>Zona Intercambiar:</strong> explicación entre pares. <strong>DUA:</strong> múltiples medios de expresión.</td>
-    </tr>
-  </tbody>
-</table>
+<div class="space-y-2 mt-1">
+<v-clicks>
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
+    <div class="i-pixelarticons-search inline-block w-5 h-5 flex-shrink-0 text-[#2DD4BF]" />
+    <div><strong>Adquisición</strong> (observar, buscar, seleccionar, retener) — En la <em>Zona Investigar</em> los estudiantes formulan hipótesis y buscan información. En la <em>Zona Desarrollar</em> seleccionan y profundizan.</div>
+  </div>
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
+    <div class="i-pixelarticons-image inline-block w-5 h-5 flex-shrink-0 text-[#6C5CE7]" />
+    <div><strong>Interpretación</strong> (decodificar, usar modelos, analogías) — El <em>DUA</em> presenta cada concepto en múltiples formatos. La <em>exploración guiada</em> ofrece andamiaje para que el estudiante interprete por sí mismo.</div>
+  </div>
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
+    <div class="i-pixelarticons-trending-up inline-block w-5 h-5 flex-shrink-0 text-[#FF6B6B]" />
+    <div><strong>Análisis y razonamiento</strong> (comparar, inferir, resolver problemas) — Las zonas <em>Investigar</em> y <em>Crear</em> combinadas permiten proyectos con problemas reales de la comunidad (Fullan y Langworthy, 2014).</div>
+  </div>
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
+    <div class="i-pixelarticons-edit inline-block w-5 h-5 flex-shrink-0 text-[#2DD4BF]" />
+    <div><strong>Comprensión y organización</strong> (relaciones conceptuales, mapas) — Los <em>diarios de aprendizaje</em> y la <em>reflexión guiada</em> activan la metacognición. La <em>Zona Crear</em> materializa la organización en artefactos.</div>
+  </div>
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
+    <div class="i-pixelarticons-message inline-block w-5 h-5 flex-shrink-0 text-[#6C5CE7]" />
+    <div><strong>Comunicación</strong> (expresión oral, escrita, gráfica) — La <em>Zona Presentar</em> obliga a comunicar hallazgos. La <em>Zona Intercambiar</em> activa la explicación entre pares. El <em>DUA</em> ofrece múltiples medios de expresión.</div>
+  </div>
+</v-clicks>
+</div>
 
-<RefFootnote :sources="['Pozo y Postigo (1994). En Coll (Ed.), El aprendizaje y la enseñanza de procedimientos.', 'Díaz Barriga y Hernández (2010). Estrategias docentes para un aprendizaje significativo (3a ed.).']" />
+<RefFootnote :sources="['Pozo y Postigo (1994). En Pozo (Ed.), La solución de problemas.', 'Díaz Barriga y Hernández (2010). Estrategias docentes para un aprendizaje significativo (3a ed.).']" />
 
 ---
 
