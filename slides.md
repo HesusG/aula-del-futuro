@@ -284,7 +284,85 @@ layout: neo-section
 
 ---
 
-<!-- Slide 10: Las 6 Zonas -->
+<!-- Slide 10: Estrategias de Aprendizaje -->
+
+# <div class="i-pixelarticons-zap inline-block w-7 h-7 align-middle" /> Estrategias de Aprendizaje
+
+<div class="pixel-divider my-2" />
+
+<p class="text-xs mt-1 mb-2">Estrategias que el aula activa para que los estudiantes construyan conocimiento de forma profunda y duradera.</p>
+
+<div class="space-y-2">
+<v-clicks>
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
+    <div class="i-pixelarticons-search inline-block w-5 h-5 flex-shrink-0 text-[#2DD4BF]" />
+    <div><strong>Exploración guiada</strong> — El docente plantea preguntas y el estudiante investiga con andamiaje progresivo. Favorece la atención sostenida y la memoria (Darling-Hammond et al., 2020).</div>
+  </div>
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
+    <div class="i-pixelarticons-heart inline-block w-5 h-5 flex-shrink-0 text-[#FF6B6B]" />
+    <div><strong>Autodeterminación</strong> — Satisfacer autonomía, competencia y vinculación genera motivación intrínseca. El espacio debe ofrecer opciones reales (Deci y Ryan, 2000).</div>
+  </div>
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
+    <div class="i-pixelarticons-mood-happy inline-block w-5 h-5 flex-shrink-0 text-[#6C5CE7]" />
+    <div><strong>Aprendizaje socioemocional</strong> — Los programas SEL mejoran el rendimiento académico en 11 puntos percentiles. El aula necesita espacios de calma y colaboración (Durlak et al., 2011).</div>
+  </div>
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
+    <div class="i-pixelarticons-trending-up inline-block w-5 h-5 flex-shrink-0 text-[#2D3436]" />
+    <div><strong>Aprendizaje profundo</strong> — Conectar el aprendizaje con problemas reales de la comunidad. Los estudiantes se comprometen cuando perciben relevancia y propósito (Fullan y Langworthy, 2014).</div>
+  </div>
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
+    <div class="i-pixelarticons-layout-grid inline-block w-5 h-5 flex-shrink-0 text-[#FF6B6B]" />
+    <div><strong>Estaciones de aprendizaje</strong> — Rotación por las 6 zonas del aula (Investigar, Crear, Intercambiar, Desarrollar, Presentar, Interactuar). Múltiples vías de acceso al conocimiento (European Schoolnet, 2017).</div>
+  </div>
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
+    <div class="i-pixelarticons-open inline-block w-5 h-5 flex-shrink-0 text-[#2DD4BF]" />
+    <div><strong>Diseño Universal para el Aprendizaje (DUA)</strong> — Múltiples medios de representación, acción/expresión y participación. Garantiza acceso equitativo sin adaptaciones posteriores (CAST, 2024).</div>
+  </div>
+</v-clicks>
+</div>
+
+---
+
+<!-- Slide 11: Estrategias de Comprensión -->
+
+# <div class="i-pixelarticons-loader inline-block w-7 h-7 align-middle" /> Estrategias de Comprensión
+
+<div class="pixel-divider my-2" />
+
+<p class="text-xs mt-1 mb-2">Estrategias que desarrollan la capacidad del estudiante para <strong>monitorear, regular y profundizar</strong> su propio proceso de comprensión.</p>
+
+<div class="grid grid-cols-2 gap-3 mt-1">
+<v-clicks>
+  <div class="neo-card">
+    <div class="bg-[#6C5CE7] px-3 py-1 border-b-2 border-black text-xs font-bold text-white"><div class="i-pixelarticons-edit inline-block w-4 h-4 mr-1" /> Diarios de aprendizaje</div>
+    <div class="p-2 text-xs">Al inicio y cierre de cada jornada: <em>¿Qué aprendí? ¿Cómo lo aprendí? ¿Qué fue difícil? ¿Qué estrategia me funcionó?</em> Desarrolla la conciencia metacognitiva (Flavell, 1979).</div>
+  </div>
+  <div class="neo-card">
+    <div class="bg-[#2DD4BF] px-3 py-1 border-b-2 border-black text-xs font-bold text-white"><div class="i-pixelarticons-message inline-block w-4 h-4 mr-1" /> Reflexión guiada</div>
+    <div class="p-2 text-xs">El docente plantea preguntas metacognitivas durante la actividad: <em>¿Por qué elegiste esa estrategia? ¿Qué harías diferente?</em> Activa la regulación en tiempo real (Schraw y Dennison, 1994).</div>
+  </div>
+  <div class="neo-card">
+    <div class="bg-[#FF6B6B] px-3 py-1 border-b-2 border-black text-xs font-bold text-white"><div class="i-pixelarticons-image inline-block w-4 h-4 mr-1" /> Representación múltiple</div>
+    <div class="p-2 text-xs">El mismo concepto se presenta de forma visual, auditiva, kinestésica y social. El estudiante elige la vía que mejor le funciona y puede comparar representaciones (CAST, 2024 — DUA).</div>
+  </div>
+  <div class="neo-card">
+    <div class="bg-[#C0C0C0] px-3 py-1 border-b-2 border-black text-xs font-bold"><div class="i-pixelarticons-users inline-block w-4 h-4 mr-1" /> Explicación entre pares</div>
+    <div class="p-2 text-xs">Los estudiantes explican conceptos a compañeros en la zona de Intercambiar. Verbalizar obliga a reorganizar el conocimiento y detectar lagunas de comprensión.</div>
+  </div>
+  <div class="neo-card">
+    <div class="bg-[#2D3436] px-3 py-1 border-b-2 border-black text-xs font-bold text-white"><div class="i-pixelarticons-monitor inline-block w-4 h-4 mr-1" /> Presentación y retroalimentación</div>
+    <div class="p-2 text-xs">En la zona de Presentar, los estudiantes comunican hallazgos y reciben preguntas. La retroalimentación externa actúa como espejo de comprensión.</div>
+  </div>
+  <div class="neo-card">
+    <div class="bg-[#6C5CE7] px-3 py-1 border-b-2 border-black text-xs font-bold text-white"><div class="i-pixelarticons-chart inline-block w-4 h-4 mr-1" /> Autoevaluación con MAI</div>
+    <div class="p-2 text-xs">El Metacognitive Awareness Inventory (Schraw y Dennison, 1994) se adapta como herramienta de autodiagnóstico: los estudiantes identifican sus fortalezas y áreas de mejora metacognitiva.</div>
+  </div>
+</v-clicks>
+</div>
+
+---
+
+<!-- Slide 12: Las 6 Zonas -->
 
 # <div class="i-pixelarticons-layout-grid inline-block w-7 h-7 align-middle" /> Las 6 Zonas del Aula del Futuro
 
