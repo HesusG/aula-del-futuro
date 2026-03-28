@@ -362,59 +362,110 @@ layout: neo-section
 
 ---
 
-<!-- Clasificación Díaz Barriga / Pozo -->
+<!-- Cuadro 6.1: Pozo (1990) — Estrategias de aprendizaje -->
 
-# <div class="i-pixelarticons-chart inline-block w-7 h-7 align-middle" /> Clasificación de Estrategias de Aprendizaje
+# <div class="i-pixelarticons-chart inline-block w-7 h-7 align-middle" /> Estrategias de Aprendizaje (Pozo, 1990)
 
 <div class="pixel-divider my-2" />
 
-<p class="text-xs mt-1 mb-2">Taxonomía de Pozo (1990, como se citó en Díaz Barriga y Hernández, 2010) aplicada a nuestra propuesta de Aula del Futuro.</p>
+<p class="text-xs mt-1 mb-2">Cuadro 6.1 de Díaz Barriga y Hernández (2010). Clasificación por tipo de proceso cognitivo, mapeada a nuestra propuesta.</p>
 
-<div class="overflow-auto">
 <table class="w-full text-xs border-2 border-black" style="border-collapse: collapse;">
   <thead>
     <tr class="bg-[#2D3436] text-white">
-      <th class="border-2 border-black px-2 py-1 text-left w-[22%]"><div class="i-pixelarticons-list inline-block w-3 h-3 mr-1" /> Categoría</th>
-      <th class="border-2 border-black px-2 py-1 text-left w-[18%]">Proceso cognitivo</th>
-      <th class="border-2 border-black px-2 py-1 text-left w-[60%]"><div class="i-pixelarticons-checkbox-on inline-block w-3 h-3 mr-1" /> En nuestra propuesta</th>
+      <th class="border-2 border-black px-2 py-1 text-left">Proceso</th>
+      <th class="border-2 border-black px-2 py-1 text-left">Tipo de estrategia</th>
+      <th class="border-2 border-black px-2 py-1 text-left">Finalidad u objetivo</th>
+      <th class="border-2 border-black px-2 py-1 text-left">Técnica o habilidad</th>
+      <th class="border-2 border-black px-2 py-1 text-left"><div class="i-pixelarticons-checkbox-on inline-block w-3 h-3 mr-1" /> En el Aula del Futuro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="bg-[#FF6B6B]/10">
+      <td class="border-2 border-black px-2 py-1 font-bold" rowspan="2">Aprendizaje memorístico</td>
+      <td class="border-2 border-black px-2 py-1" rowspan="2">Recirculación de la información</td>
+      <td class="border-2 border-black px-2 py-1">Repaso simple</td>
+      <td class="border-2 border-black px-2 py-1">Repetición simple y acumulativa</td>
+      <td class="border-2 border-black px-2 py-1" rowspan="2"><strong>Zona Desarrollar:</strong> lectura profunda, ritmo propio. Diarios de aprendizaje como repaso reflexivo.</td>
+    </tr>
+    <tr class="bg-[#FF6B6B]/10">
+      <td class="border-2 border-black px-2 py-1">Apoyo al repaso (seleccionar)</td>
+      <td class="border-2 border-black px-2 py-1">Subrayar, destacar, copiar</td>
+    </tr>
+    <tr class="bg-[#2DD4BF]/10">
+      <td class="border-2 border-black px-2 py-1 font-bold" rowspan="4">Aprendizaje significativo</td>
+      <td class="border-2 border-black px-2 py-1" rowspan="2">Elaboración</td>
+      <td class="border-2 border-black px-2 py-1">Procesamiento simple</td>
+      <td class="border-2 border-black px-2 py-1">Palabra clave, rimas, imágenes mentales, parafraseo</td>
+      <td class="border-2 border-black px-2 py-1" rowspan="2"><strong>Zona Investigar:</strong> exploración guiada. <strong>DUA:</strong> representación múltiple para conectar lo nuevo con lo previo.</td>
+    </tr>
+    <tr class="bg-[#2DD4BF]/10">
+      <td class="border-2 border-black px-2 py-1">Procesamiento complejo</td>
+      <td class="border-2 border-black px-2 py-1">Inferencias, resumen, analogías, elaboración conceptual</td>
+    </tr>
+    <tr class="bg-[#6C5CE7]/10">
+      <td class="border-2 border-black px-2 py-1" rowspan="2">Organización</td>
+      <td class="border-2 border-black px-2 py-1">Clasificación de la información</td>
+      <td class="border-2 border-black px-2 py-1">Uso de categorías</td>
+      <td class="border-2 border-black px-2 py-1" rowspan="2"><strong>Zona Crear:</strong> mapas conceptuales, redes semánticas, artefactos. <strong>Estaciones:</strong> rotar entre zonas estructura el conocimiento.</td>
+    </tr>
+    <tr class="bg-[#6C5CE7]/10">
+      <td class="border-2 border-black px-2 py-1">Jerarquización y organización</td>
+      <td class="border-2 border-black px-2 py-1">Redes semánticas, mapas conceptuales, estructuras textuales</td>
+    </tr>
+  </tbody>
+</table>
+
+<RefFootnote :sources="['Pozo (1990). En Coll, Palacios y Marchesi (Eds.), Desarrollo psicológico y educación II.', 'Díaz Barriga y Hernández (2010). Estrategias docentes para un aprendizaje significativo (3a ed.).']" />
+
+---
+
+<!-- Cuadro 6.2: Pozo y Postigo (1994) — Función cognitiva -->
+
+# <div class="i-pixelarticons-chart inline-block w-7 h-7 align-middle" /> Estrategias por Función Cognitiva (Pozo y Postigo, 1994)
+
+<div class="pixel-divider my-2" />
+
+<p class="text-xs mt-1 mb-2">Cuadro 6.2 de Díaz Barriga y Hernández (2010). Clasificación según la función cognitiva prevaleciente, mapeada a nuestra propuesta.</p>
+
+<table class="w-full text-xs border-2 border-black" style="border-collapse: collapse;">
+  <thead>
+    <tr class="bg-[#2D3436] text-white">
+      <th class="border-2 border-black px-2 py-1 text-left w-[20%]">Clase de estrategia</th>
+      <th class="border-2 border-black px-2 py-1 text-left w-[40%]">Estrategias</th>
+      <th class="border-2 border-black px-2 py-1 text-left w-[40%]"><div class="i-pixelarticons-checkbox-on inline-block w-3 h-3 mr-1" /> En el Aula del Futuro</th>
     </tr>
   </thead>
   <tbody>
     <tr class="bg-white">
-      <td class="border-2 border-black px-2 py-1 font-bold">Recirculación</td>
-      <td class="border-2 border-black px-2 py-1">Repaso, repetición</td>
-      <td class="border-2 border-black px-2 py-1"><strong>Zona Desarrollar:</strong> lectura profunda y ritmo propio. Diarios de aprendizaje como repaso reflexivo al cierre de jornada.</td>
+      <td class="border-2 border-black px-2 py-1 font-bold">Adquisición</td>
+      <td class="border-2 border-black px-2 py-1">Observación, búsqueda de información, selección, repaso y retención</td>
+      <td class="border-2 border-black px-2 py-1"><strong>Zona Investigar:</strong> indagación y formulación de hipótesis. <strong>Zona Desarrollar:</strong> lectura profunda y selección de información.</td>
     </tr>
     <tr class="bg-[#2DD4BF]/10">
-      <td class="border-2 border-black px-2 py-1 font-bold">Elaboración</td>
-      <td class="border-2 border-black px-2 py-1">Conexión con saberes previos</td>
-      <td class="border-2 border-black px-2 py-1"><strong>Zona Investigar:</strong> formulación de hipótesis y exploración guiada. <strong>DUA:</strong> representación múltiple para vincular lo nuevo con lo conocido.</td>
+      <td class="border-2 border-black px-2 py-1 font-bold">Interpretación</td>
+      <td class="border-2 border-black px-2 py-1">Decodificación, aplicación de modelos, uso de analogías y metáforas</td>
+      <td class="border-2 border-black px-2 py-1"><strong>DUA — representación múltiple:</strong> el mismo concepto en visual, auditivo, kinestésico. <strong>Exploración guiada</strong> con andamiaje.</td>
     </tr>
     <tr class="bg-white">
-      <td class="border-2 border-black px-2 py-1 font-bold">Organización</td>
-      <td class="border-2 border-black px-2 py-1">Clasificación, jerarquización</td>
-      <td class="border-2 border-black px-2 py-1"><strong>Zona Crear:</strong> mapas conceptuales, diseño de artefactos, producción multimedia. <strong>Estaciones de aprendizaje:</strong> rotar entre zonas estructura el conocimiento.</td>
+      <td class="border-2 border-black px-2 py-1 font-bold">Análisis y razonamiento</td>
+      <td class="border-2 border-black px-2 py-1">Análisis y comparación de modelos, inferencias, investigación y solución de problemas</td>
+      <td class="border-2 border-black px-2 py-1"><strong>Zona Investigar + Crear:</strong> proyectos con problemas reales de la comunidad. Aprendizaje profundo (Fullan y Langworthy, 2014).</td>
     </tr>
     <tr class="bg-[#6C5CE7]/10">
-      <td class="border-2 border-black px-2 py-1 font-bold">Recuperación</td>
-      <td class="border-2 border-black px-2 py-1">Evocación</td>
-      <td class="border-2 border-black px-2 py-1"><strong>Zona Presentar:</strong> comunicar hallazgos obliga a recuperar y reorganizar. <strong>Zona Intercambiar:</strong> explicación entre pares como evocación activa.</td>
-    </tr>
-    <tr class="bg-white">
-      <td class="border-2 border-black px-2 py-1 font-bold">Metacognitivas</td>
-      <td class="border-2 border-black px-2 py-1">Planificación, supervisión, evaluación</td>
-      <td class="border-2 border-black px-2 py-1"><strong>Diarios de aprendizaje</strong> (planificación y evaluación). <strong>Reflexión guiada</strong> (supervisión en tiempo real). <strong>Autoevaluación MAI</strong> (Schraw y Dennison, 1994).</td>
+      <td class="border-2 border-black px-2 py-1 font-bold">Comprensión y organización</td>
+      <td class="border-2 border-black px-2 py-1">Comprensión del discurso oral y escrito, relaciones conceptuales, mapas conceptuales</td>
+      <td class="border-2 border-black px-2 py-1"><strong>Diarios de aprendizaje</strong> y <strong>reflexión guiada</strong> (metacognición). <strong>Zona Crear:</strong> organización conceptual mediante artefactos.</td>
     </tr>
     <tr class="bg-[#FF6B6B]/10">
-      <td class="border-2 border-black px-2 py-1 font-bold">Afectivo-motivacionales</td>
-      <td class="border-2 border-black px-2 py-1">Motivación, autoconcepto</td>
-      <td class="border-2 border-black px-2 py-1"><strong>Autodeterminación</strong> (Deci y Ryan, 2000): autonomía y vinculación. <strong>SEL</strong> (Durlak et al., 2011). Espacios de calma para autorregulación emocional.</td>
+      <td class="border-2 border-black px-2 py-1 font-bold">Comunicación</td>
+      <td class="border-2 border-black px-2 py-1">Expresión oral, expresión escrita, expresión gráfica/numérica/icónica</td>
+      <td class="border-2 border-black px-2 py-1"><strong>Zona Presentar:</strong> comunicar hallazgos. <strong>Zona Intercambiar:</strong> explicación entre pares. <strong>DUA:</strong> múltiples medios de expresión.</td>
     </tr>
   </tbody>
 </table>
-</div>
 
-<RefFootnote :sources="['Pozo (1990). En Coll, Palacios y Marchesi (Eds.), Desarrollo psicológico y educación II.', 'Díaz Barriga y Hernández (2010). Estrategias docentes para un aprendizaje significativo (3a ed.).']" />
+<RefFootnote :sources="['Pozo y Postigo (1994). En Coll (Ed.), El aprendizaje y la enseñanza de procedimientos.', 'Díaz Barriga y Hernández (2010). Estrategias docentes para un aprendizaje significativo (3a ed.).']" />
 
 ---
 
@@ -860,6 +911,8 @@ Helding, K. A. y Fraser, B. J. (2013). Effectiveness of NBC teachers in terms of
 Ley General de Educación Superior. (2021). *Diario Oficial de la Federación*, 20 de abril de 2021. https://www.diputados.gob.mx/LeyesBiblio/pdf/LGES_200421.pdf
 
 Pozo, J. I. (1990). Estrategias de aprendizaje. En C. Coll, J. Palacios y A. Marchesi (Eds.), *Desarrollo psicológico y educación II. Psicología de la educación escolar* (pp. 199–221). Alianza Editorial.
+
+Pozo, J. I. y Postigo, Y. (1994). La solución de problemas como contenido procedimental de la educación obligatoria. En J. I. Pozo (Ed.), *La solución de problemas* (pp. 179–213). Santillana.
 
 OECD. (2017). *The OECD Handbook for Innovative Learning Environments*. OECD Publishing. https://doi.org/10.1787/9789264277274-en
 
