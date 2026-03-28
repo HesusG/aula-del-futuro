@@ -76,18 +76,18 @@ Marzo 2026
 
 <!-- Slide 3: ¿Qué proponemos? -->
 
-# <div class="i-pixelarticons-coin inline-block w-7 h-7 align-middle" /> ¿Qué Proponemos?
+# <div class="i-pixelarticons-checkbox inline-block w-7 h-7 align-middle" /> ¿Qué Proponemos?
 
 <div class="pixel-divider my-2" />
 
 <p class="text-base mt-2 mb-4">Las aulas en México siguen un diseño del siglo XIX: filas de bancas mirando al frente, un pizarrón y un docente que habla. Proponemos <strong>rediseñar el espacio educativo para que responda a cómo aprenden los estudiantes</strong>, no a cómo se administran las escuelas. Una propuesta en dos niveles:</p>
 
-<div class="grid grid-cols-2 gap-6">
+<div class="grid grid-cols-2 gap-4">
   <div class="neo-card">
     <div class="bg-[#2DD4BF] px-3 py-2 border-b-2 border-black font-bold text-white">
       <div class="i-pixelarticons-book-open inline-block w-5 h-5 mr-1" /> Primaria y Secundaria
     </div>
-    <div class="p-4 text-sm space-y-2">
+    <div class="p-3 text-sm space-y-2">
       <p>Estudiantes de <strong>6 a 15 años</strong></p>
       <p>Aprendizaje activo a través del juego, la exploración y el desarrollo socioemocional.</p>
       <p>Espacios reconfigurables que permitan moverse, crear y colaborar.</p>
@@ -97,7 +97,7 @@ Marzo 2026
     <div class="bg-[#6C5CE7] px-3 py-2 border-b-2 border-black font-bold text-white">
       <div class="i-pixelarticons-graduation-cap inline-block w-5 h-5 mr-1" /> Preparatoria y Universidad
     </div>
-    <div class="p-4 text-sm space-y-2">
+    <div class="p-3 text-sm space-y-2">
       <p>Estudiantes de <strong>15 a 25 años</strong></p>
       <p>Pensamiento crítico, autonomía intelectual y proyectos con impacto real.</p>
       <p>Vinculación academia-comunidad-industria.</p>
@@ -164,19 +164,19 @@ layout: neo-section
 
 <div class="space-y-2 mt-1">
 <v-clicks>
-  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[1px_1px_0px_#000] flex items-start gap-2 text-sm">
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] flex items-start gap-2 text-sm">
     <span class="neo-tag bg-grape text-white text-xs flex-shrink-0">2021</span>
     <div><strong>Nuevo contrato social.</strong> Preparar ciudadanos para un futuro pacífico, justo y sostenible. El cambio debe comenzar desde la infancia.</div>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[1px_1px_0px_#000] flex items-start gap-2 text-sm">
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] flex items-start gap-2 text-sm">
     <span class="neo-tag bg-grape text-white text-xs flex-shrink-0">2015a</span>
     <div><strong>Diversidad cultural como recurso.</strong> Integrar los conocimientos comunitarios en el aprendizaje, no solo tolerarlos.</div>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[1px_1px_0px_#000] flex items-start gap-2 text-sm">
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] flex items-start gap-2 text-sm">
     <span class="neo-tag bg-grape text-white text-xs flex-shrink-0">2020</span>
     <div><strong>Post-pandemia.</strong> El cierre escolar agravó las necesidades socioemocionales. El sistema debe priorizar el bienestar.</div>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[1px_1px_0px_#000] flex items-start gap-2 text-sm">
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] flex items-start gap-2 text-sm">
     <span class="neo-tag bg-grape text-white text-xs flex-shrink-0">2023</span>
     <div><strong>Tecnología con propósito.</strong> Sin propósito pedagógico claro, la tecnología no mejora el aprendizaje.</div>
   </div>
@@ -286,7 +286,7 @@ layout: neo-section
 
 <!-- Slide 10: Estrategias de Aprendizaje -->
 
-# <div class="i-pixelarticons-zap inline-block w-7 h-7 align-middle" /> Estrategias de Aprendizaje
+# <div class="i-pixelarticons-checkbox-on inline-block w-7 h-7 align-middle" /> Estrategias de Aprendizaje
 
 <div class="pixel-divider my-2" />
 
@@ -294,27 +294,27 @@ layout: neo-section
 
 <div class="space-y-2">
 <v-clicks>
-  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
     <div class="i-pixelarticons-search inline-block w-5 h-5 flex-shrink-0 text-[#2DD4BF]" />
     <div><strong>Exploración guiada</strong> — El docente plantea preguntas y el estudiante investiga con andamiaje progresivo. Favorece la atención sostenida y la memoria (Darling-Hammond et al., 2020).</div>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
     <div class="i-pixelarticons-heart inline-block w-5 h-5 flex-shrink-0 text-[#FF6B6B]" />
     <div><strong>Autodeterminación</strong> — Satisfacer autonomía, competencia y vinculación genera motivación intrínseca. El espacio debe ofrecer opciones reales (Deci y Ryan, 2000).</div>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
     <div class="i-pixelarticons-mood-happy inline-block w-5 h-5 flex-shrink-0 text-[#6C5CE7]" />
     <div><strong>Aprendizaje socioemocional</strong> — Los programas SEL mejoran el rendimiento académico en 11 puntos percentiles. El aula necesita espacios de calma y colaboración (Durlak et al., 2011).</div>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
     <div class="i-pixelarticons-trending-up inline-block w-5 h-5 flex-shrink-0 text-[#2D3436]" />
     <div><strong>Aprendizaje profundo</strong> — Conectar el aprendizaje con problemas reales de la comunidad. Los estudiantes se comprometen cuando perciben relevancia y propósito (Fullan y Langworthy, 2014).</div>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
     <div class="i-pixelarticons-layout-grid inline-block w-5 h-5 flex-shrink-0 text-[#FF6B6B]" />
     <div><strong>Estaciones de aprendizaje</strong> — Rotación por las 6 zonas del aula (Investigar, Crear, Intercambiar, Desarrollar, Presentar, Interactuar). Múltiples vías de acceso al conocimiento (European Schoolnet, 2017).</div>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
+  <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
     <div class="i-pixelarticons-open inline-block w-5 h-5 flex-shrink-0 text-[#2DD4BF]" />
     <div><strong>Diseño Universal para el Aprendizaje (DUA)</strong> — Múltiples medios de representación, acción/expresión y participación. Garantiza acceso equitativo sin adaptaciones posteriores (CAST, 2024).</div>
   </div>
@@ -325,7 +325,7 @@ layout: neo-section
 
 <!-- Slide 11: Estrategias de Comprensión -->
 
-# <div class="i-pixelarticons-loader inline-block w-7 h-7 align-middle" /> Estrategias de Comprensión
+# <div class="i-pixelarticons-eye inline-block w-7 h-7 align-middle" /> Estrategias de Comprensión
 
 <div class="pixel-divider my-2" />
 
@@ -347,11 +347,11 @@ layout: neo-section
   </div>
   <div class="neo-card">
     <div class="bg-[#C0C0C0] px-3 py-1 border-b-2 border-black text-xs font-bold"><div class="i-pixelarticons-users inline-block w-4 h-4 mr-1" /> Explicación entre pares</div>
-    <div class="p-2 text-xs">Los estudiantes explican conceptos a compañeros en la zona de Intercambiar. Verbalizar obliga a reorganizar el conocimiento y detectar lagunas de comprensión.</div>
+    <div class="p-2 text-xs">Los estudiantes explican conceptos a compañeros en la zona de Intercambiar. Verbalizar obliga a reorganizar el conocimiento y detectar lagunas (Durlak et al., 2011).</div>
   </div>
   <div class="neo-card">
     <div class="bg-[#2D3436] px-3 py-1 border-b-2 border-black text-xs font-bold text-white"><div class="i-pixelarticons-monitor inline-block w-4 h-4 mr-1" /> Presentación y retroalimentación</div>
-    <div class="p-2 text-xs">En la zona de Presentar, los estudiantes comunican hallazgos y reciben preguntas. La retroalimentación externa actúa como espejo de comprensión.</div>
+    <div class="p-2 text-xs">En la zona de Presentar, los estudiantes comunican hallazgos y reciben preguntas. La retroalimentación actúa como espejo de comprensión (Darling-Hammond et al., 2020).</div>
   </div>
   <div class="neo-card">
     <div class="bg-[#6C5CE7] px-3 py-1 border-b-2 border-black text-xs font-bold text-white"><div class="i-pixelarticons-chart inline-block w-4 h-4 mr-1" /> Autoevaluación con MAI</div>
@@ -359,6 +359,62 @@ layout: neo-section
   </div>
 </v-clicks>
 </div>
+
+---
+
+<!-- Clasificación Díaz Barriga / Pozo -->
+
+# <div class="i-pixelarticons-chart inline-block w-7 h-7 align-middle" /> Clasificación de Estrategias de Aprendizaje
+
+<div class="pixel-divider my-2" />
+
+<p class="text-xs mt-1 mb-2">Taxonomía de Pozo (1990, como se citó en Díaz Barriga y Hernández, 2010) aplicada a nuestra propuesta de Aula del Futuro.</p>
+
+<div class="overflow-auto">
+<table class="w-full text-xs border-2 border-black" style="border-collapse: collapse;">
+  <thead>
+    <tr class="bg-[#2D3436] text-white">
+      <th class="border-2 border-black px-2 py-1 text-left w-[22%]"><div class="i-pixelarticons-list inline-block w-3 h-3 mr-1" /> Categoría</th>
+      <th class="border-2 border-black px-2 py-1 text-left w-[18%]">Proceso cognitivo</th>
+      <th class="border-2 border-black px-2 py-1 text-left w-[60%]"><div class="i-pixelarticons-checkbox-on inline-block w-3 h-3 mr-1" /> En nuestra propuesta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="bg-white">
+      <td class="border-2 border-black px-2 py-1 font-bold">Recirculación</td>
+      <td class="border-2 border-black px-2 py-1">Repaso, repetición</td>
+      <td class="border-2 border-black px-2 py-1"><strong>Zona Desarrollar:</strong> lectura profunda y ritmo propio. Diarios de aprendizaje como repaso reflexivo al cierre de jornada.</td>
+    </tr>
+    <tr class="bg-[#2DD4BF]/10">
+      <td class="border-2 border-black px-2 py-1 font-bold">Elaboración</td>
+      <td class="border-2 border-black px-2 py-1">Conexión con saberes previos</td>
+      <td class="border-2 border-black px-2 py-1"><strong>Zona Investigar:</strong> formulación de hipótesis y exploración guiada. <strong>DUA:</strong> representación múltiple para vincular lo nuevo con lo conocido.</td>
+    </tr>
+    <tr class="bg-white">
+      <td class="border-2 border-black px-2 py-1 font-bold">Organización</td>
+      <td class="border-2 border-black px-2 py-1">Clasificación, jerarquización</td>
+      <td class="border-2 border-black px-2 py-1"><strong>Zona Crear:</strong> mapas conceptuales, diseño de artefactos, producción multimedia. <strong>Estaciones de aprendizaje:</strong> rotar entre zonas estructura el conocimiento.</td>
+    </tr>
+    <tr class="bg-[#6C5CE7]/10">
+      <td class="border-2 border-black px-2 py-1 font-bold">Recuperación</td>
+      <td class="border-2 border-black px-2 py-1">Evocación</td>
+      <td class="border-2 border-black px-2 py-1"><strong>Zona Presentar:</strong> comunicar hallazgos obliga a recuperar y reorganizar. <strong>Zona Intercambiar:</strong> explicación entre pares como evocación activa.</td>
+    </tr>
+    <tr class="bg-white">
+      <td class="border-2 border-black px-2 py-1 font-bold">Metacognitivas</td>
+      <td class="border-2 border-black px-2 py-1">Planificación, supervisión, evaluación</td>
+      <td class="border-2 border-black px-2 py-1"><strong>Diarios de aprendizaje</strong> (planificación y evaluación). <strong>Reflexión guiada</strong> (supervisión en tiempo real). <strong>Autoevaluación MAI</strong> (Schraw y Dennison, 1994).</td>
+    </tr>
+    <tr class="bg-[#FF6B6B]/10">
+      <td class="border-2 border-black px-2 py-1 font-bold">Afectivo-motivacionales</td>
+      <td class="border-2 border-black px-2 py-1">Motivación, autoconcepto</td>
+      <td class="border-2 border-black px-2 py-1"><strong>Autodeterminación</strong> (Deci y Ryan, 2000): autonomía y vinculación. <strong>SEL</strong> (Durlak et al., 2011). Espacios de calma para autorregulación emocional.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<RefFootnote :sources="['Pozo (1990). En Coll, Palacios y Marchesi (Eds.), Desarrollo psicológico y educación II.', 'Díaz Barriga y Hernández (2010). Estrategias docentes para un aprendizaje significativo (3a ed.).']" />
 
 ---
 
@@ -425,11 +481,11 @@ layout: neo-section
   <div>
     <h3 class="font-bold mb-1 text-sm"><div class="i-pixelarticons-file inline-block w-4 h-4 mr-1" /> Instrumento base</h3>
 <v-clicks>
-    <div class="border-2 border-black bg-white p-2 shadow-[1px_1px_0px_#000] mb-2 text-xs">
+    <div class="border-2 border-black bg-white p-2 shadow-[2px_2px_0px_#000] mb-2 text-xs">
       <div class="i-pixelarticons-clipboard inline-block w-4 h-4 mr-1 text-[#2DD4BF]" /> <strong>MCI</strong> (My Class Inventory)<br/>
       Fraser (1982) — 25 ítems, 5 escalas — Edades: 8 a 12 años
     </div>
-    <div class="border-2 border-black bg-white p-2 shadow-[1px_1px_0px_#000] text-xs">
+    <div class="border-2 border-black bg-white p-2 shadow-[2px_2px_0px_#000] text-xs">
       <div class="i-pixelarticons-list inline-block w-4 h-4 mr-1 text-[#2DD4BF]" /> <strong>Escalas:</strong> Cohesión, Fricción, Satisfacción, Dificultad, Competitividad
     </div>
 </v-clicks>
@@ -437,13 +493,13 @@ layout: neo-section
   <div>
     <h3 class="font-bold mb-1 text-sm"><div class="i-pixelarticons-open inline-block w-4 h-4 mr-1" /> Principios DUA aplicados</h3>
 <v-clicks>
-    <div class="border-2 border-black bg-[#2DD4BF]/10 p-2 shadow-[1px_1px_0px_#000] mb-2 text-xs">
+    <div class="border-2 border-black bg-[#2DD4BF]/10 p-2 shadow-[2px_2px_0px_#000] mb-2 text-xs">
       <div class="i-pixelarticons-mood-happy inline-block w-4 h-4 mr-1" /> <strong>Participación:</strong> preguntas vinculadas con experiencia diaria. Sin respuestas correctas.
     </div>
-    <div class="border-2 border-black bg-[#6C5CE7]/10 p-2 shadow-[1px_1px_0px_#000] mb-2 text-xs">
+    <div class="border-2 border-black bg-[#6C5CE7]/10 p-2 shadow-[2px_2px_0px_#000] mb-2 text-xs">
       <div class="i-pixelarticons-image inline-block w-4 h-4 mr-1" /> <strong>Representación:</strong> lectura en voz alta + fotos de configuraciones de aula.
     </div>
-    <div class="border-2 border-black bg-[#FF6B6B]/10 p-2 shadow-[1px_1px_0px_#000] text-xs">
+    <div class="border-2 border-black bg-[#FF6B6B]/10 p-2 shadow-[2px_2px_0px_#000] text-xs">
       <div class="i-pixelarticons-edit inline-block w-4 h-4 mr-1" /> <strong>Expresión:</strong> verbal, escrita o dibujo.
     </div>
 </v-clicks>
@@ -462,32 +518,32 @@ layout: neo-section
 
 <div class="space-y-2 mt-2">
 <v-clicks>
-  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
-    <span class="neo-tag bg-banana text-white text-xs">1</span>
+  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
+    <span class="neo-tag bg-banana text-black text-xs">1</span>
     <span><strong>Satisfacción:</strong> ¿Qué es lo que más te gusta de tu salón? ¿Qué cambiarías? <em class="text-xs opacity-60">(MCI: Satisfacción)</em></span>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
-    <span class="neo-tag bg-banana text-white text-xs">2</span>
+  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
+    <span class="neo-tag bg-banana text-black text-xs">2</span>
     <span><strong>Colaboración:</strong> ¿Trabajas con otros compañeros en clase? ¿Cómo lo hacen? <em class="text-xs opacity-60">(MCI: Cohesión)</em></span>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
-    <span class="neo-tag bg-banana text-white text-xs">3</span>
+  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
+    <span class="neo-tag bg-banana text-black text-xs">3</span>
     <span><strong>Espacio físico:</strong> Si pudieras mover los muebles, ¿cómo los pondrías? <em class="text-xs opacity-60">(Diseño de espacios)</em></span>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
-    <span class="neo-tag bg-banana text-white text-xs">4</span>
+  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
+    <span class="neo-tag bg-banana text-black text-xs">4</span>
     <span><strong>Emociones:</strong> ¿Hay momentos en que el salón te hace sentir incómodo? <em class="text-xs opacity-60">(MCI: Fricción)</em></span>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
-    <span class="neo-tag bg-banana text-white text-xs">5</span>
+  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
+    <span class="neo-tag bg-banana text-black text-xs">5</span>
     <span><strong>Tecnología:</strong> ¿Usas computadoras o tabletas en clase? ¿Para qué te gustaría usarlas? <em class="text-xs opacity-60">(Competencia digital)</em></span>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
-    <span class="neo-tag bg-banana text-white text-xs">6</span>
+  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
+    <span class="neo-tag bg-banana text-black text-xs">6</span>
     <span><strong>Aula ideal:</strong> Dibuja cómo sería tu salón perfecto. Explica tu dibujo. <em class="text-xs opacity-60">(Expresión libre — DUA)</em></span>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
-    <span class="neo-tag bg-banana text-white text-xs">7</span>
+  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
+    <span class="neo-tag bg-banana text-black text-xs">7</span>
     <span><strong>Apoyo docente:</strong> ¿Cómo te ayuda tu maestra cuando no entiendes algo? <em class="text-xs opacity-60">(MCI: Dificultad)</em></span>
   </div>
 </v-clicks>
@@ -509,14 +565,14 @@ layout: neo-section
   <div>
     <h3 class="font-bold mb-1 text-sm"><div class="i-pixelarticons-file inline-block w-4 h-4 mr-1" /> Instrumentos base</h3>
 <v-clicks>
-    <div class="border-2 border-black bg-white p-2 shadow-[1px_1px_0px_#000] mb-2 text-xs">
+    <div class="border-2 border-black bg-white p-2 shadow-[2px_2px_0px_#000] mb-2 text-xs">
       <div class="i-pixelarticons-clipboard inline-block w-4 h-4 mr-1 text-[#6C5CE7]" /> <strong>WIHIC</strong> — Fraser (1998) — 56 ítems, 7 escalas<br/>
       Validado en español (Helding y Fraser, 2013)
     </div>
-    <div class="border-2 border-black bg-white p-2 shadow-[1px_1px_0px_#000] mb-2 text-xs">
+    <div class="border-2 border-black bg-white p-2 shadow-[2px_2px_0px_#000] mb-2 text-xs">
       <div class="i-pixelarticons-clipboard inline-block w-4 h-4 mr-1 text-[#6C5CE7]" /> <strong>CUCEI</strong> — Personalización y autonomía universitaria
     </div>
-    <div class="border-2 border-black bg-white p-2 shadow-[1px_1px_0px_#000] text-xs">
+    <div class="border-2 border-black bg-white p-2 shadow-[2px_2px_0px_#000] text-xs">
       <div class="i-pixelarticons-list inline-block w-4 h-4 mr-1 text-[#6C5CE7]" /> <strong>Escalas:</strong> Cohesión, Apoyo docente, Involucramiento, Investigación, Orientación a la tarea, Cooperación, Equidad
     </div>
 </v-clicks>
@@ -524,13 +580,13 @@ layout: neo-section
   <div>
     <h3 class="font-bold mb-1 text-sm"><div class="i-pixelarticons-open inline-block w-4 h-4 mr-1" /> Principios DUA aplicados</h3>
 <v-clicks>
-    <div class="border-2 border-black bg-[#2DD4BF]/10 p-2 shadow-[1px_1px_0px_#000] mb-2 text-xs">
+    <div class="border-2 border-black bg-[#2DD4BF]/10 p-2 shadow-[2px_2px_0px_#000] mb-2 text-xs">
       <div class="i-pixelarticons-mood-happy inline-block w-4 h-4 mr-1" /> <strong>Participación:</strong> preguntas vinculadas con experiencia académica y profesional.
     </div>
-    <div class="border-2 border-black bg-[#6C5CE7]/10 p-2 shadow-[1px_1px_0px_#000] mb-2 text-xs">
+    <div class="border-2 border-black bg-[#6C5CE7]/10 p-2 shadow-[2px_2px_0px_#000] mb-2 text-xs">
       <div class="i-pixelarticons-article inline-block w-4 h-4 mr-1" /> <strong>Representación:</strong> escritas y orales, con ejemplos de configuraciones de aula.
     </div>
-    <div class="border-2 border-black bg-[#FF6B6B]/10 p-2 shadow-[1px_1px_0px_#000] text-xs">
+    <div class="border-2 border-black bg-[#FF6B6B]/10 p-2 shadow-[2px_2px_0px_#000] text-xs">
       <div class="i-pixelarticons-edit inline-block w-4 h-4 mr-1" /> <strong>Expresión:</strong> escrita, verbal grabada o esquema/diagrama.
     </div>
 </v-clicks>
@@ -549,31 +605,31 @@ layout: neo-section
 
 <div class="space-y-2 mt-2">
 <v-clicks>
-  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
+  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
     <span class="neo-tag bg-grape text-white text-xs">1</span>
     <span><strong>Satisfacción y tarea:</strong> ¿Qué aspectos del aula apoyan tu aprendizaje? ¿Cuáles lo dificultan? <em class="text-xs opacity-60">(WIHIC: Orientación a la tarea)</em></span>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
+  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
     <span class="neo-tag bg-grape text-white text-xs">2</span>
     <span><strong>Cooperación:</strong> ¿Cómo son las actividades colaborativas en tu aula? ¿Qué funciona y qué no? <em class="text-xs opacity-60">(WIHIC: Cooperación)</em></span>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
+  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
     <span class="neo-tag bg-grape text-white text-xs">3</span>
     <span><strong>Espacio físico:</strong> ¿El espacio te permite diferentes formas de trabajo? ¿Qué cambiarías? <em class="text-xs opacity-60">(CUCEI: Personalización)</em></span>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
+  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
     <span class="neo-tag bg-grape text-white text-xs">4</span>
     <span><strong>Equidad:</strong> ¿Te sientes cómodo participando y expresando ideas en clase? <em class="text-xs opacity-60">(WIHIC: Equidad)</em></span>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
+  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
     <span class="neo-tag bg-grape text-white text-xs">5</span>
     <span><strong>Tecnología:</strong> ¿Cómo usas la tecnología para aprender? ¿Qué herramientas faltan? <em class="text-xs opacity-60">(WIHIC: Investigación)</em></span>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
+  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
     <span class="neo-tag bg-grape text-white text-xs">6</span>
     <span><strong>Aula ideal:</strong> Describe o dibuja el aula ideal para tu carrera. <em class="text-xs opacity-60">(Expresión libre — DUA)</em></span>
   </div>
-  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[1px_1px_0px_#000] text-xs flex items-start gap-2">
+  <div class="border-2 border-black bg-white p-2 pl-4 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
     <span class="neo-tag bg-grape text-white text-xs">7</span>
     <span><strong>Rol docente:</strong> ¿Qué rol tiene el profesor hoy? ¿Cuál debería tener? <em class="text-xs opacity-60">(WIHIC: Apoyo docente)</em></span>
   </div>
@@ -590,7 +646,7 @@ layout: neo-section
 
 <div class="i-pixelarticons-users inline-block w-16 h-16 mb-4 text-[#6C5CE7]" />
 
-<h1 class="text-white text-5xl font-bold">User Personas</h1>
+<h1 class="text-white text-5xl font-bold">Personas de Usuario</h1>
 
 <p class="text-[#6C5CE7] mt-4 text-xl font-mono">// ¿para quién diseñamos?</p>
 
@@ -769,6 +825,8 @@ layout: neo-section
 
 CAST. (2024). *Universal Design for Learning Guidelines version 3.0*. https://udlguidelines.cast.org/
 
+Díaz Barriga Arceo, F. y Hernández Rojas, G. (2010). *Estrategias docentes para un aprendizaje significativo: Una interpretación constructivista* (3a ed.). McGraw-Hill.
+
 Darling-Hammond, L., Flook, L., Cook-Harvey, C., Barron, B. y Osher, D. (2020). Implications for educational practice of the science of learning and development. *Applied Developmental Science*, *24*(2), 97–140. https://doi.org/10.1080/10888691.2018.1537791
 
 Deci, E. L. y Ryan, R. M. (2000). The "what" and "why" of goal pursuits. *Psychological Inquiry*, *11*(4), 227–268. https://doi.org/10.1207/S15327965PLI1104_01
@@ -801,6 +859,8 @@ Helding, K. A. y Fraser, B. J. (2013). Effectiveness of NBC teachers in terms of
 
 Ley General de Educación Superior. (2021). *Diario Oficial de la Federación*, 20 de abril de 2021. https://www.diputados.gob.mx/LeyesBiblio/pdf/LGES_200421.pdf
 
+Pozo, J. I. (1990). Estrategias de aprendizaje. En C. Coll, J. Palacios y A. Marchesi (Eds.), *Desarrollo psicológico y educación II. Psicología de la educación escolar* (pp. 199–221). Alianza Editorial.
+
 OECD. (2017). *The OECD Handbook for Innovative Learning Environments*. OECD Publishing. https://doi.org/10.1787/9789264277274-en
 
 Schraw, G. y Dennison, R. S. (1994). Assessing metacognitive awareness. *Contemporary Educational Psychology*, *19*(4), 460–475. https://doi.org/10.1006/ceps.1994.1033
@@ -817,4 +877,18 @@ UNESCO. (2021). *Reimaginar juntos nuestros futuros: un nuevo contrato social pa
 
 UNESCO. (2023). *Informe de seguimiento de la educación en el mundo 2023: tecnología en la educación*. https://unesdoc.unesco.org/ark:/48223/pf0000385723
 
+</div>
+
+---
+layout: neo-section
+---
+
+<div class="i-pixelarticons-heart inline-block w-16 h-16 mb-4 text-[#2DD4BF]" />
+
+<h1 class="text-white text-5xl font-bold">Gracias</h1>
+
+<p class="text-[#2DD4BF] mt-4 text-xl font-mono">// ¿preguntas?</p>
+
+<div class="mt-6 text-white/60 text-sm">
+Maestría en Pedagogía · UPAEP · Marzo 2026
 </div>
