@@ -1,0 +1,135 @@
+/* ========================================
+   Demo 3D - Estilos compartidos
+   ======================================== */
+
+body { margin: 0; overflow: hidden; }
+
+/* ---------- Welcome Overlay ---------- */
+#overlay {
+  position: fixed; top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  z-index: 999; color: white;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  cursor: pointer; user-select: none;
+}
+#overlay h1 {
+  font-size: 3rem; margin: 0 0 0.25rem;
+  letter-spacing: 0.08em;
+}
+#overlay .subtitle {
+  font-size: 1.15rem; opacity: 0.7;
+  margin-bottom: 2rem; font-weight: 300;
+}
+#overlay .keys {
+  font-size: 0.95rem; margin: 0.35rem 0; opacity: 0.85;
+  letter-spacing: 0.02em;
+}
+#overlay .start {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.35);
+  padding: 0.7rem 2rem;
+  border-radius: 24px;
+  display: inline-block;
+  animation: pulse 2s ease-in-out infinite;
+}
+#overlay .loading-msg {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  opacity: 0.7;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity: 0.4; }
+  50%     { opacity: 1; }
+}
+
+/* ---------- Back to Hub ---------- */
+#back-hub {
+  position: fixed; top: 1.2rem; left: 1.2rem;
+  z-index: 998;
+  background: rgba(0,0,0,0.7); color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px; padding: 0.5rem 1rem;
+  font-size: 0.85rem; font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+#back-hub:hover { background: rgba(0,0,0,0.9); }
+
+/* ---------- Nav Button (Ver Documento) ---------- */
+#nav-btn {
+  position: fixed; bottom: 1.2rem; right: 1.2rem;
+  z-index: 998;
+  background: rgba(0,0,0,0.7); color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px; padding: 0.6rem 1.1rem;
+  font-size: 0.95rem; font-family: 'Inter', sans-serif;
+  cursor: pointer; text-decoration: none;
+  transition: background 0.2s;
+}
+#nav-btn:hover { background: rgba(0,0,0,0.9); }
+
+/* ---------- Tier Switcher HUD ---------- */
+#tier-switcher {
+  position: fixed; bottom: 1.2rem; left: 1.2rem;
+  z-index: 998;
+  display: flex; gap: 0.5rem;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+.tier-btn {
+  background: rgba(0,0,0,0.6); color: #B0BEC5;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 6px; padding: 0.6rem 1.1rem;
+  font-size: 0.9rem; cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.tier-btn:hover {
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  border-color: rgba(255,255,255,0.5);
+}
+.tier-btn.active {
+  color: #fff;
+  cursor: default;
+}
+/* Tier-specific active colors */
+.tier-btn.active.t1 { background: rgba(120,144,156,0.8); border-color: #90A4AE; }
+.tier-btn.active.t2 { background: rgba(255,179,0,0.8); border-color: #FFB300; }
+.tier-btn.active.t3 { background: rgba(0,150,136,0.8); border-color: #4DD0E1; }
+/* Fallback for unclassed active */
+.tier-btn.active:not(.t1):not(.t2):not(.t3) { background: rgba(0,150,136,0.8); border-color: #4DD0E1; }
+
+/* ---------- Zone HUD (Tier 3) ---------- */
+#zone-hud {
+  position: fixed; top: 1.2rem; left: 50%;
+  transform: translateX(-50%);
+  z-index: 998;
+  background: rgba(0,0,0,0.7); color: #fff;
+  border: 2px solid #4DD0E1;
+  border-radius: 8px; padding: 0.5rem 1.5rem;
+  font-size: 0.95rem; font-family: 'Inter', sans-serif;
+  display: none;
+  transition: border-color 0.3s;
+}
+
+/* ---------- Click-to-move marker ---------- */
+#move-marker {
+  pointer-events: none;
+}
+
+/* ---------- Mobile responsive ---------- */
+@media (max-width: 768px) {
+  #overlay h1 { font-size: 2rem; }
+  #overlay .subtitle { font-size: 1rem; }
+  .tier-btn { padding: 0.7rem 1rem; font-size: 0.9rem; }
+  #nav-btn { padding: 0.7rem 1rem; }
+  #tier-switcher { bottom: 3rem; }
+  #nav-btn { bottom: 3rem; }
+  #zone-hud { font-size: 0.85rem; padding: 0.4rem 1rem; }
+}

@@ -11,6 +11,14 @@
 </head>
 <body data-version="A">
 
+  <nav class="doc-nav">
+    <a href="../">&larr; Inicio</a>
+    <span class="sep">|</span>
+    <a href="preparatoria-universidad.html">Preparatoria y Universidad</a>
+    <span class="sep">|</span>
+    <a href="../demo/">Recorridos 3D</a>
+  </nav>
+
   <article class="document">
 
     <!-- ============================================================
@@ -23,9 +31,11 @@
         <p class="cover-level">Educación Básica: Primaria y Secundaria</p>
         <div class="cover-meta">
           <p><strong>Asignatura:</strong> Estrategias para la Comprensión</p>
-          <p><strong>Estudiante:</strong> [NOMBRE DEL ESTUDIANTE]</p>
-          <p><strong>Institución:</strong> [INSTITUCIÓN]</p>
-          <p><strong>Fecha:</strong> [FECHA]</p>
+          <p><strong>Programa:</strong> Maestría en Pedagogía</p>
+          <p><strong>Maestra:</strong> Socorro Guevara Salazar</p>
+          <p><strong>Integrantes:</strong> Carolina Hernandez Machorro · Rosa Hernandez Machorro · Hesus Garcia Cobos · Pablo Maximiliano Rodriguez Castro</p>
+          <p><strong>Institución:</strong> Universidad Popular Autónoma del Estado de Puebla (UPAEP)</p>
+          <p><strong>Fecha:</strong> Marzo 2026</p>
         </div>
       </div>
     </section>
@@ -41,6 +51,7 @@
         <li><a href="#necesidades">Necesidades del Aula del Futuro</a></li>
         <li><a href="#resultados">Resultados Esperados</a></li>
         <li><a href="#perfil-docente">Redefinir el Perfil del Docente del Aula del Futuro</a></li>
+        <li><a href="#personas">¿Para Quién Diseñamos? Perfiles de Usuario</a></li>
         <li><a href="#caracteristicas">Características del Aula del Futuro</a></li>
         <li><a href="#arquitectura">Arquitectura para el Aprendizaje</a></li>
         <li><a href="#conclusion">Conclusión</a></li>
@@ -57,9 +68,9 @@
 
       <p>Esta propuesta se dirige a la <strong>Educación Básica</strong>, que abarca <strong>Primaria y Secundaria</strong>. Comprende estudiantes de 6 a 15 años en etapas clave de desarrollo cognitivo, socioemocional y psicomotor.</p>
 
-      <p>Se eligió este nivel porque ahí se forman las bases del pensamiento crítico, la curiosidad y los hábitos de aprendizaje. Un estudiante que aprende a investigar, crear y colaborar desde la infancia lleva esas competencias a toda su vida. La UNESCO (2021) señala que la transformación educativa debe comenzar en los primeros años para tener un efecto multiplicador.</p>
+      <p>Se eligió este nivel porque ahí se forman las bases del pensamiento crítico, la curiosidad y los hábitos de aprendizaje. Un estudiante que aprende a investigar, crear y colaborar desde la infancia lleva esas competencias a toda su vida. La UNESCO (2021) señala que el cambio educativo debe comenzar en los primeros años porque las competencias adquiridas en la infancia sostienen todo el aprendizaje posterior.</p>
 
-      <p>La educación básica en América Latina enfrenta retos estructurales: infraestructura insuficiente, modelos pedagógicos rígidos y brechas de equidad (UNESCO, 2020). Estos problemas hacen urgente reimaginar los espacios de aprendizaje desde sus cimientos.</p>
+      <p>La educación básica en América Latina enfrenta retos estructurales: infraestructura insuficiente, modelos pedagógicos rígidos y brechas de equidad (UNESCO, 2020). Estos problemas hacen urgente repensar los espacios de aprendizaje desde sus cimientos.</p>
     </section>
 
     <!-- ============================================================
@@ -69,9 +80,9 @@
       <h2>Contexto</h2>
 
       <h3>Contexto Social</h3>
-      <p>Los estudiantes de educación básica en América Latina son nativos digitales. Sin embargo, su experiencia escolar permanece anclada en modelos del siglo XX. Las estructuras familiares son diversas. Las realidades socioeconómicas son heterogéneas. Las necesidades socioemocionales de la infancia, agravadas tras la pandemia, exigen espacios que prioricen el bienestar integral (UNESCO, 2020).</p>
+      <p>Los estudiantes de educación básica en América Latina son nativos digitales. Sin embargo, su experiencia escolar permanece anclada en modelos del siglo XX. Las estructuras familiares son diversas. Las realidades socioeconómicas son heterogéneas. Las necesidades socioemocionales de la infancia, agravadas tras la pandemia, exigen espacios que prioricen el bienestar emocional y físico (UNESCO, 2020).</p>
 
-      <p>La diversidad cultural es una riqueza que el aula estandarizada invisibiliza. Los niños traen conocimientos comunitarios, lenguas y tradiciones. El aula del futuro debe integrar estos recursos en el aprendizaje, no solo respetarlos (UNESCO, 2015a).</p>
+      <p>La diversidad cultural es una riqueza que el aula estandarizada invisibiliza. Los niños traen conocimientos comunitarios, lenguas y tradiciones. El aula del futuro debe integrar estos recursos en el aprendizaje, no solo respetarlos (UNESCO, 2015a). El Plan de Estudios 2022 de la SEP reconoce esta misma necesidad al colocar los saberes comunitarios como eje de la Nueva Escuela Mexicana (SEP, 2022).</p>
 
       <h3>Contexto Económico</h3>
       <p>La brecha digital es uno de los principales desafíos. Algunas escuelas cuentan con equipamiento tecnológico. Muchas otras carecen de conectividad, mobiliario adecuado o espacios ventilados. Una propuesta de aula del futuro debe ser viable en contextos de recursos limitados. Debe priorizar soluciones de bajo costo y alto impacto pedagógico (UNESCO, 2023).</p>
@@ -79,9 +90,9 @@
       <p>La inversión en educación crece, pero no siempre mejora la experiencia de aprendizaje. Con frecuencia los recursos se destinan a infraestructura sin considerar su diseño pedagógico. Esto produce aulas nuevas pero funcionalmente idénticas a las anteriores (OECD, 2017).</p>
 
       <h3>Contexto Educativo</h3>
-      <p>El modelo predominante sigue siendo la clase magistral. Un docente al frente. Estudiantes en filas. Evaluación mediante exámenes memorísticos. Este modelo fue diseñado para la era industrial. Resulta insuficiente para desarrollar pensamiento crítico, creatividad, colaboración y ciudadanía digital (Fullan y Langworthy, 2014).</p>
+      <p>El modelo predominante sigue siendo la clase magistral. Un docente al frente. Estudiantes en filas. Evaluación mediante exámenes memorísticos. Este modelo fue diseñado para la era industrial. Resulta insuficiente para desarrollar pensamiento crítico, creatividad, colaboración y ciudadanía digital (Fullan y Langworthy, 2014). El Marco Curricular 2022 de México propone superar este modelo mediante aprendizajes situados que vinculen la escuela con la comunidad (SEP, 2022).</p>
 
-      <p>Los indicadores de motivación muestran una tendencia preocupante. Conforme los estudiantes avanzan de primaria a secundaria, su interés por el aprendizaje escolar decrece (UNESCO, 2021). El problema no está en los estudiantes. Está en un sistema que no conecta el aprendizaje con sus intereses y su realidad.</p>
+      <p>Los indicadores de motivación muestran una tendencia preocupante. Conforme los estudiantes avanzan de primaria a secundaria, su interés por el aprendizaje escolar decrece. El problema no está en los estudiantes. Está en un sistema que no conecta el aprendizaje con sus intereses y su realidad.</p>
     </section>
 
     <!-- ============================================================
@@ -90,7 +101,7 @@
     <section id="necesidades">
       <h2>Necesidades del Aula del Futuro</h2>
 
-      <p>El aula del futuro en educación básica debe responder a seis necesidades fundamentales.</p>
+      <p>El aula del futuro en educación básica debe responder a seis necesidades concretas.</p>
 
       <div class="necesidad-card">
         <h3>1. Motivación intrínseca y curiosidad sostenida</h3>
@@ -103,13 +114,13 @@
       </div>
 
       <div class="necesidad-card">
-        <h3>3. Desarrollo socioemocional integral</h3>
-        <p>Proporcionar espacios y prácticas que fortalezcan la autorregulación, la empatía y la resolución de conflictos. El bienestar emocional es prerrequisito del aprendizaje cognitivo (Durlak et al., 2011).</p>
+        <h3>3. Desarrollo socioemocional</h3>
+        <p>Proporcionar espacios y prácticas que fortalezcan la autorregulación, la empatía y la resolución de conflictos. El bienestar emocional favorece el aprendizaje cognitivo: los programas socioemocionales mejoran también el rendimiento académico (Durlak et al., 2011).</p>
       </div>
 
       <div class="necesidad-card">
         <h3>4. Inclusión de diversos estilos y ritmos de aprendizaje</h3>
-        <p>Diseñar experiencias con múltiples vías de acceso al conocimiento: visual, auditivo, kinestésico, social e individual. El Diseño Universal para el Aprendizaje ofrece un marco probado para lograr esta inclusión (CAST, 2024).</p>
+        <p>Diseñar experiencias con múltiples vías de acceso al conocimiento: visual, auditivo, kinestésico, social e individual. El Diseño Universal para el Aprendizaje ofrece un marco probado para lograr esta inclusión (CAST, 2024), alineado con el Objetivo de Desarrollo Sostenible 4 que exige una educación equitativa e inclusiva (UNESCO, 2015b).</p>
       </div>
 
       <div class="necesidad-card">
@@ -118,7 +129,7 @@
       </div>
 
       <div class="necesidad-card">
-        <h3>6. Espacios flexibles para colaboración y autonomía</h3>
+        <h3>6. Espacios reconfigurables para colaboración y autonomía</h3>
         <p>Superar la rigidez del aula tradicional: filas, escritorio frontal y mobiliario fijo. Crear espacios modulares que se adapten a diferentes dinámicas de aprendizaje (OECD, 2017).</p>
       </div>
     </section>
@@ -177,7 +188,7 @@
           <li>Diseño de experiencias de aprendizaje significativas.</li>
           <li>Gamificación y narración pedagógica.</li>
           <li>Mediación de conflictos entre pares.</li>
-          <li>Facilitación de trabajo colaborativo.</li>
+          <li>Coordinación de trabajo colaborativo.</li>
           <li>Comunicación efectiva con familias.</li>
           <li>Evaluación formativa en tiempo real.</li>
           <li>Uso pedagógico de tecnología adaptada a la edad.</li>
@@ -189,7 +200,7 @@
         <ul>
           <li>Manejo de plataformas educativas y herramientas digitales básicas.</li>
           <li>Creación de materiales didácticos lúdicos y manipulativos.</li>
-          <li>Gestión de aulas con dinámicas flexibles y múltiples grupos simultáneos.</li>
+          <li>Gestión de aulas con dinámicas cambiantes y múltiples grupos simultáneos.</li>
           <li>Documentación y sistematización de evidencias de aprendizaje.</li>
           <li>Adaptación curricular para necesidades diversas.</li>
         </ul>
@@ -230,6 +241,45 @@
     </section>
 
     <!-- ============================================================
+         7b. PERSONAS: ¿PARA QUIÉN DISEÑAMOS?
+         ============================================================ -->
+    <section id="personas">
+      <h2>¿Para Quién Diseñamos? Perfiles de Usuario</h2>
+
+      <p>Las siguientes personas son arquetipos construidos a partir de la literatura revisada y las dimensiones del MCI (Fraser, 1982). No representan individuos reales. Su propósito es anclar el diseño del aula del futuro en necesidades concretas de quienes la habitarán.</p>
+
+      <div class="perfil-card" style="border-top: 4px solid #1565C0;">
+        <h3>Valentina · 10 años · Estudiante de 5.° de primaria</h3>
+        <p><strong>Contexto:</strong> Escuela pública urbana en Puebla. Grupo de 35 estudiantes. Aula con filas fijas orientadas al pizarrón. Una computadora de escritorio para todo el grupo.</p>
+        <p><strong>Meta:</strong> Aprender cosas que pueda usar fuera de la escuela. Quiere hacer experimentos, no solo copiar del pizarrón.</p>
+        <p><strong>Frustraciones:</strong> Se aburre cuando solo escucha. Le gusta moverse pero le piden que se quede sentada. No puede trabajar con sus amigas porque los pupitres están fijos.</p>
+        <p><strong>Necesidades:</strong></p>
+        <ul>
+          <li>Espacios donde pueda moverse y trabajar con las manos</li>
+          <li>Actividades conectadas con su colonia y su vida cotidiana</li>
+          <li>Formas de mostrar lo que aprende sin depender solo de exámenes escritos</li>
+          <li>Momentos de calma cuando se siente abrumada</li>
+        </ul>
+        <p><em>"Me gustaría que el salón tuviera mesas donde pudiéramos sentarnos juntos y un rincón para leer cuando estoy cansada."</em></p>
+      </div>
+
+      <div class="perfil-card" style="border-top: 4px solid #2E7D32;">
+        <h3>Profesor Miguel · 38 años · Docente de primaria</h3>
+        <p><strong>Contexto:</strong> 12 años de experiencia. Comenzó en escuela multigrado rural. Ahora trabaja en primaria urbana. Grupo de 35 estudiantes con necesidades diversas.</p>
+        <p><strong>Meta:</strong> Que sus estudiantes piensen por sí mismos, no que memoricen respuestas. Quiere usar proyectos y trabajo colaborativo pero el espacio no se lo permite.</p>
+        <p><strong>Frustraciones:</strong> El mobiliario es pesado y fijo. No tiene tiempo de capacitación. Las evaluaciones estandarizadas no miden lo que él enseña con proyectos.</p>
+        <p><strong>Necesidades:</strong></p>
+        <ul>
+          <li>Mobiliario ligero que se pueda reorganizar en minutos</li>
+          <li>Formación práctica en pedagogías activas y evaluación formativa</li>
+          <li>Tecnología básica confiable (proyector, tabletas compartidas)</li>
+          <li>Espacios diferenciados dentro del aula para trabajo simultáneo en grupos</li>
+        </ul>
+        <p><em>"Si pudiera mover los muebles tendría tres estaciones de trabajo en lugar de cinco filas mirando al frente."</em></p>
+      </div>
+    </section>
+
+    <!-- ============================================================
          8. CARACTERÍSTICAS DEL AULA
          ============================================================ -->
     <section id="caracteristicas">
@@ -247,42 +297,51 @@
       <!-- 8b. Voces de los Estudiantes -->
       <h3>Voces de los Estudiantes: Entrevistas</h3>
 
+      <h4>Fundamento del instrumento</h4>
+      <p>La guía de entrevista se construyó a partir de ítems adaptados del <em>My Class Inventory</em> (MCI) de Fraser (1982), un instrumento validado para medir la percepción del ambiente de aprendizaje en estudiantes de 8 a 12 años. El MCI mide cinco dimensiones: cohesión entre estudiantes, fricción, satisfacción, dificultad y competitividad. Se seleccionaron los ítems más relevantes para el diseño de espacios y se reformularon como preguntas abiertas.</p>
+      <p>El protocolo sigue los tres principios del Diseño Universal para el Aprendizaje (CAST, 2024): <strong>múltiples medios de participación</strong> (preguntas conectadas con la experiencia cotidiana del estudiante, sin respuestas correctas o incorrectas), <strong>múltiples medios de representación</strong> (preguntas leídas en voz alta, acompañadas de imágenes de salones diferentes) y <strong>múltiples medios de acción y expresión</strong> (el estudiante responde de forma verbal, escrita o mediante dibujo).</p>
+
+      <h4>Guía de entrevista</h4>
+      <div class="preguntas-guia">
+        <ol>
+          <li><strong>Satisfacción:</strong> ¿Qué es lo que más te gusta de tu salón? ¿Qué cambiarías? <em>(MCI: Satisfacción)</em></li>
+          <li><strong>Colaboración:</strong> ¿Trabajas con otros compañeros en clase? ¿Cómo lo hacen? <em>(MCI: Cohesión)</em></li>
+          <li><strong>Espacio físico:</strong> Si pudieras mover los muebles de tu salón, ¿cómo los pondrías? ¿Por qué? <em>(Diseño de espacios)</em></li>
+          <li><strong>Emociones:</strong> ¿Hay momentos en que el salón te hace sentir incómodo o nervioso? ¿Cuándo? <em>(MCI: Fricción)</em></li>
+          <li><strong>Tecnología:</strong> ¿Usas computadoras o tabletas en clase? ¿Para qué te gustaría usarlas? <em>(Competencia digital)</em></li>
+          <li><strong>Salón ideal:</strong> Dibuja cómo sería tu salón perfecto. Explícame tu dibujo. <em>(Expresión libre — UDL)</em></li>
+          <li><strong>Maestro:</strong> ¿Cómo te ayuda tu maestra cuando no entiendes algo? ¿Cómo te gustaría que te ayudara? <em>(MCI: Dificultad)</em></li>
+        </ol>
+      </div>
+
+      <h4>Respuestas</h4>
+
       <div class="entrevista">
         <h4>Entrevista 1</h4>
         <div class="entrevista-aviso">
-          ⚠️ PENDIENTE: Insertar respuesta del estudiante de primaria o secundaria.
-          <br>Formatos aceptados: transcripción escrita, audio (enlace), o dibujo (imagen).
+          Instrucciones: Sustituir este bloque con la transcripción, enlace de audio o imagen del dibujo del estudiante entrevistado. Indicar nombre (o pseudónimo), grado y modalidad de respuesta. Eliminar este aviso después de insertar el contenido.
         </div>
-        <div class="preguntas-guia">
-          <p><strong>Preguntas guía sugeridas:</strong></p>
-          <ol>
-            <li>¿Cómo te imaginas tu salón de clases ideal? ¿Puedes dibujarlo?</li>
-            <li>¿Qué es lo que más te gusta y lo que menos te gusta de tu salón hoy?</li>
-            <li>¿Qué cosas te gustaría hacer en la escuela que hoy no puedes?</li>
-            <li>Si tuvieras poderes mágicos para cambiar tu escuela, ¿qué harías?</li>
-          </ol>
+        <div class="entrevista-respuesta">
+          <p><strong>Estudiante:</strong> [Nombre, grado]</p>
+          <p><strong>Modalidad:</strong> [Verbal / Escrita / Dibujo]</p>
+          <blockquote><p>[Insertar transcripción o descripción del dibujo]</p></blockquote>
         </div>
       </div>
 
       <div class="entrevista">
         <h4>Entrevista 2</h4>
         <div class="entrevista-aviso">
-          ⚠️ PENDIENTE: Insertar respuesta del estudiante de primaria o secundaria.
-          <br>Formatos aceptados: transcripción escrita, audio (enlace), o dibujo (imagen).
+          Instrucciones: Sustituir este bloque con la transcripción, enlace de audio o imagen del dibujo del estudiante entrevistado. Indicar nombre (o pseudónimo), grado y modalidad de respuesta. Eliminar este aviso después de insertar el contenido.
         </div>
-        <div class="preguntas-guia">
-          <p><strong>Preguntas guía sugeridas:</strong></p>
-          <ol>
-            <li>¿Cómo te imaginas tu salón de clases ideal? ¿Puedes dibujarlo?</li>
-            <li>¿Qué es lo que más te gusta y lo que menos te gusta de tu salón hoy?</li>
-            <li>¿Qué cosas te gustaría hacer en la escuela que hoy no puedes?</li>
-            <li>Si tuvieras poderes mágicos para cambiar tu escuela, ¿qué harías?</li>
-          </ol>
+        <div class="entrevista-respuesta">
+          <p><strong>Estudiante:</strong> [Nombre, grado]</p>
+          <p><strong>Modalidad:</strong> [Verbal / Escrita / Dibujo]</p>
+          <blockquote><p>[Insertar transcripción o descripción del dibujo]</p></blockquote>
         </div>
       </div>
 
-      <!-- 8c. Estrategias Innovadoras -->
-      <h3>Estrategias Innovadoras</h3>
+      <!-- 8c. Estrategias Didácticas -->
+      <h3>Estrategias Didácticas</h3>
 
       <div class="estrategia-card">
         <h4>1. Unidades Temáticas Integradas sobre Problemas Reales</h4>
@@ -299,7 +358,7 @@
       <div class="estrategia-card">
         <h4>3. Desarrollo Metacognitivo mediante Diarios de Aprendizaje</h4>
         <p>Al inicio y cierre de cada jornada, los estudiantes dedican 10 a 15 minutos a reflexionar: ¿Qué aprendí hoy? ¿Cómo lo aprendí? ¿Qué fue difícil? ¿Qué estrategia me funcionó? ¿Qué quiero explorar mañana? En primaria baja se adapta con dibujos y emojis. Esta práctica desarrolla la metacognición y la autorregulación de forma progresiva.</p>
-        <p><em>Fundamentación:</em> La investigación sobre metacognición demuestra que los estudiantes que reflexionan sobre sus procesos logran mayor transferencia de conocimientos (Flavell, 1979). También desarrollan estrategias de estudio más efectivas (Schraw y Dennison, 1994).</p>
+        <p><em>Fundamentación:</em> La investigación sobre metacognición demuestra que los estudiantes que reflexionan sobre sus procesos desarrollan estrategias de estudio más efectivas y mayor conciencia de su propio aprendizaje (Flavell, 1979; Schraw y Dennison, 1994).</p>
       </div>
     </section>
 
@@ -312,7 +371,7 @@
       <!-- Infraestructura Física -->
       <h3>Infraestructura Física: Las 6 Zonas del Aula del Futuro</h3>
 
-      <p>El modelo se inspira en el Future Classroom Lab de European Schoolnet (2017) y los principios de la UNESCO (2021) para espacios educativos. El aula se organiza en seis zonas funcionales. Cada zona facilita un tipo diferente de experiencia de aprendizaje.</p>
+      <p>El modelo se inspira en el Future Classroom Lab de European Schoolnet (2017). El aula se organiza en seis zonas funcionales. Cada zona propicia un tipo diferente de experiencia de aprendizaje.</p>
 
       <ol>
         <li><strong>INVESTIGAR:</strong> Espacio de indagación, búsqueda de información y formulación de hipótesis.</li>
@@ -320,7 +379,7 @@
         <li><strong>INTERCAMBIAR:</strong> Zona de diálogo, debate y trabajo colaborativo.</li>
         <li><strong>DESARROLLAR:</strong> Espacio para trabajo autónomo, lectura profunda y desarrollo de habilidades al propio ritmo.</li>
         <li><strong>PRESENTAR:</strong> Escenario para comunicar hallazgos, exhibir proyectos y recibir retroalimentación.</li>
-        <li><strong>CONECTAR:</strong> Punto de enlace con el mundo exterior: tecnología, videoconferencias, expertos invitados y comunidades.</li>
+        <li><strong>INTERACTUAR:</strong> Punto de enlace con el mundo exterior: tecnología, videoconferencias, expertos invitados y comunidades.</li>
       </ol>
 
       <p>Explora el aula del futuro en 3D:</p>
@@ -329,16 +388,16 @@
       <!-- Principios de Diseño del Espacio -->
       <h3>Principios de Diseño del Espacio</h3>
       <ul>
-        <li><strong>Mobiliario modular y flexible:</strong> Mesas y sillas ligeras que permiten pasar del trabajo individual al grupal en minutos. Superficies escribibles, cojines, gradas y rincones de lectura.</li>
-        <li><strong>Diseño biofílico:</strong> Luz natural, plantas de interior, materiales naturales como madera y corcho. La investigación asocia estos elementos con menor estrés y mejor concentración (OECD, 2017).</li>
+        <li><strong>Mobiliario modular y reconfigurable:</strong> Mesas y sillas ligeras que permiten pasar del trabajo individual al grupal en minutos. Superficies escribibles, cojines, gradas y rincones de lectura.</li>
+        <li><strong>Diseño biofílico:</strong> Luz natural, plantas de interior, materiales naturales como madera y corcho. La investigación en psicología ambiental asocia estos elementos con menor estrés y mejor concentración.</li>
         <li><strong>Diseño acústico:</strong> Materiales absorbentes y zonificación acústica. El aprendizaje colaborativo genera ruido productivo que no debe interferir con el trabajo concentrado.</li>
-        <li><strong>Accesibilidad universal:</strong> Espacios transitables para sillas de ruedas, señalización inclusiva, iluminación ajustable y mobiliario adaptable (CAST, 2024).</li>
+        <li><strong>Accesibilidad universal:</strong> Espacios transitables para sillas de ruedas, señalización inclusiva, iluminación ajustable y mobiliario adaptable.</li>
       </ul>
 
       <!-- Infraestructura Tecnológica -->
       <h3>Infraestructura Tecnológica</h3>
       <ul>
-        <li><strong>Tecnología como herramienta, no como centro:</strong> Cada dispositivo tiene un propósito pedagógico claro. No se trata de tener la última innovación (UNESCO, 2023).</li>
+        <li><strong>Tecnología como herramienta, no como centro:</strong> Cada dispositivo tiene un propósito pedagógico claro. No se trata de tener el dispositivo más reciente (UNESCO, 2023).</li>
         <li><strong>Dispositivos compartidos y equidad digital:</strong> Estaciones de cómputo compartidas, tabletas rotativas y acceso equitativo. No depende de que cada estudiante posea su propio dispositivo.</li>
         <li><strong>Plataformas de colaboración:</strong> Herramientas digitales para co-creación de documentos, gestión de proyectos y comunicación entre equipos. Adaptadas a la edad y nivel de los estudiantes.</li>
       </ul>
@@ -387,9 +446,9 @@
 
       <p>El aula del futuro para educación básica responde a necesidades reales. Los estudiantes de primaria y secundaria necesitan moverse, crear, preguntar, colaborar y sentirse parte de algo significativo. Cada elemento de esta propuesta responde a una necesidad identificada en el contexto educativo latinoamericano y respaldada por investigación de la UNESCO (2021) y la OECD (2017).</p>
 
-      <p>Los resultados esperados son transformaciones observables. Estudiantes que preguntan en lugar de solo responder. Que proponen en lugar de solo seguir instrucciones. Que reflexionan sobre cómo aprenden. Que conectan el conocimiento escolar con su vida cotidiana. Estas transformaciones no requieren presupuestos millonarios. Requieren un cambio de paradigma en cómo concebimos el espacio, el tiempo y las relaciones dentro del aula.</p>
+      <p>Los resultados esperados son transformaciones observables. Estudiantes que preguntan en lugar de solo responder. Que proponen en lugar de solo seguir instrucciones. Que reflexionan sobre cómo aprenden. Que conectan el conocimiento escolar con su vida cotidiana. Estas transformaciones no requieren presupuestos millonarios. Requieren cambiar cómo concebimos el espacio, el tiempo y las relaciones dentro del aula.</p>
 
-      <p>Reimaginar el aula en educación básica es un acto de confianza en la infancia. Los niños y jóvenes no son recipientes vacíos. Son seres creativos, curiosos y capaces que merecen espacios diseñados para su potencial. Si un estudiante sale de la educación básica habiendo experimentado la alegría de descubrir, la satisfacción de crear y la fortaleza de trabajar con otros, habremos cumplido el propósito de la educación: hacer del presente una experiencia de aprendizaje plena.</p>
+      <p>Repensar el aula en educación básica es un acto de confianza en la infancia. Los niños y jóvenes no son recipientes vacíos. Son seres creativos, curiosos y capaces que merecen espacios diseñados para lo que pueden lograr. Si un estudiante sale de la educación básica habiendo experimentado la alegría de descubrir, la satisfacción de crear y la fortaleza de trabajar con otros, habremos cumplido el propósito de la educación: hacer del presente una experiencia de aprendizaje plena.</p>
     </section>
 
     <!-- ============================================================
@@ -403,14 +462,21 @@
       <p><a href="../demo/" class="demo-link">Acceder al Recorrido 3D Interactivo →</a></p>
 
       <h3>Anexo B: Evidencias de Entrevistas</h3>
-      <div class="entrevista-aviso">
-        ⚠️ PENDIENTE: Adjuntar transcripciones, audios o dibujos de las entrevistas realizadas a estudiantes de primaria o secundaria.
+      <p>Las entrevistas se realizan con la guía descrita en la sección <a href="#caracteristicas">Voces de los Estudiantes</a>, basada en el MCI (Fraser, 1982). A continuación se incluyen los registros de cada participante.</p>
+
+      <div class="entrevista-respuesta">
+        <p><strong>Estudiante:</strong> [Nombre, grado]</p>
+        <p><strong>Modalidad:</strong> [Verbal / Escrita / Dibujo]</p>
+        <blockquote><p>[Insertar transcripción o descripción del dibujo]</p></blockquote>
       </div>
 
-      <h3>Anexo C: Capturas de Pantalla</h3>
-      <div class="entrevista-aviso">
-        ⚠️ PENDIENTE: Incluir capturas de pantalla del recorrido 3D y de los materiales de apoyo utilizados.
-      </div>
+      <h3>Anexo C: Capturas del Recorrido 3D</h3>
+      <p>El recorrido interactivo del aula del futuro está disponible en tres versiones:</p>
+      <ul>
+        <li><a href="../demo/tier1.html">Salón Típico</a> — aula convencional con filas fijas</li>
+        <li><a href="../demo/tier2.html">Salón Adaptado</a> — mejoras con mobiliario reconfigurable</li>
+        <li><a href="../demo/tier3.html">Aula del Futuro</a> — diseño completo con zonas de aprendizaje</li>
+      </ul>
     </section>
 
     <!-- ============================================================
@@ -425,6 +491,7 @@
         <li>Durlak, J. A., Weissberg, R. P., Dymnicki, A. B., Taylor, R. D. y Schellinger, K. B. (2011). The impact of enhancing students' social and emotional learning: A meta-analysis of school-based universal interventions. <em>Child Development</em>, <em>82</em>(1), 405–432. <a href="https://doi.org/10.1111/j.1467-8624.2010.01564.x">https://doi.org/10.1111/j.1467-8624.2010.01564.x</a></li>
         <li>European Schoolnet. (2017). <em>Future Classroom Lab: Learning Zones</em>. <a href="https://fcl.eun.org/learning-zones">https://fcl.eun.org/learning-zones</a></li>
         <li>Flavell, J. H. (1979). Metacognition and cognitive monitoring: A new area of cognitive-developmental inquiry. <em>American Psychologist</em>, <em>34</em>(10), 906–911. <a href="https://doi.org/10.1037/0003-066X.34.10.906">https://doi.org/10.1037/0003-066X.34.10.906</a></li>
+        <li>Fraser, B. J. (1982). <em>Assessment of Learning Environments: Manual for Learning Environment Inventory (LEI) and My Class Inventory (MCI)</em> (3.ª ed.). ERIC. <a href="https://files.eric.ed.gov/fulltext/ED223649.pdf">https://files.eric.ed.gov/fulltext/ED223649.pdf</a></li>
         <li>Fullan, M. y Langworthy, M. (2014). <em>A rich seam: How new pedagogies find deep learning</em>. Pearson. <a href="https://michaelfullan.ca/wp-content/uploads/2014/01/3897.Rich_Seam_web.pdf">https://michaelfullan.ca/wp-content/uploads/2014/01/3897.Rich_Seam_web.pdf</a></li>
         <li>OECD. (2017). <em>The OECD Handbook for Innovative Learning Environments</em>. OECD Publishing. <a href="https://doi.org/10.1787/9789264277274-en">https://doi.org/10.1787/9789264277274-en</a></li>
         <li>Schraw, G. y Dennison, R. S. (1994). Assessing metacognitive awareness. <em>Contemporary Educational Psychology</em>, <em>19</em>(4), 460–475. <a href="https://doi.org/10.1006/ceps.1994.1033">https://doi.org/10.1006/ceps.1994.1033</a></li>

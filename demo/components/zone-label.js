@@ -7,12 +7,13 @@ AFRAME.registerComponent('zone-label', {
     text: { type: 'string', default: 'ZONA' },
     color: { type: 'color', default: '#FFFFFF' },
     width: { type: 'number', default: 8 },
-    yOffset: { type: 'number', default: 2.8 }
+    yOffset: { type: 'number', default: 2.2 }
   },
 
   init: function () {
     this._camPos = new THREE.Vector3();
     this._labelPos = new THREE.Vector3();
+    this.tick = AFRAME.utils.throttleTick(this.tick, 150, this);
 
     var container = document.createElement('a-entity');
     container.setAttribute('position', '0 ' + this.data.yOffset + ' 0');
@@ -22,7 +23,7 @@ AFRAME.registerComponent('zone-label', {
     bg.setAttribute('width', this.data.text.length * 0.22 + 0.6);
     bg.setAttribute('height', 0.45);
     bg.setAttribute('color', this.data.color);
-    bg.setAttribute('material', 'opacity: 0.2; transparent: true; side: double');
+    bg.setAttribute('material', 'opacity: 0.45; transparent: true; side: double');
 
     // Text
     var label = document.createElement('a-entity');

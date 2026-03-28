@@ -3,6 +3,38 @@
    A modern, editorial design for digital academic publications.
    ============================================================ */
 
+/* ----- Document Nav Bar ----- */
+.doc-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid #E0E0E0;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.85rem;
+}
+.doc-nav a {
+  color: #00897B;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.doc-nav a:hover {
+  color: #00BCD4;
+  text-decoration: underline;
+}
+.doc-nav .sep {
+  color: #BDBDBD;
+}
+@media print {
+  .doc-nav { display: none; }
+}
+
 /* ----- Reset & Base ----- */
 
 *,
@@ -621,8 +653,8 @@ section h2:first-child,
    11. REFERENCES (.referencias)
    ============================================================ */
 
-.referencias ul,
-.referencias ol {
+ul.referencias,
+ol.referencias {
   list-style: none;
   padding-left: 2.5em;
 }

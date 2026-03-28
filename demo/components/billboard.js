@@ -11,6 +11,7 @@ AFRAME.registerComponent('billboard', {
   init: function () {
     this._camPos = new THREE.Vector3();
     this._entityPos = new THREE.Vector3();
+    this.tick = AFRAME.utils.throttleTick(this.tick, 150, this);
   },
 
   tick: function () {

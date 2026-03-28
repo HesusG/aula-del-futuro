@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula del Futuro - Tier 2: Sal&oacute;n Adaptado</title>
+  <script src="lib/aframe.min.js"></script>
+  <script>if (typeof AFRAME === 'undefined') { document.write('<script src="https://aframe.io/releases/1.6.0/aframe.min.js"><\/script>'); }</script>
+  <link rel="stylesheet" href="../assets/css/demo-common.css">
+  <script>
+    function startExperience() {
+      document.getElementById('overlay').style.display = 'none';
+      var canvas = document.querySelector('a-scene canvas');
+      if (canvas) canvas.focus();
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      if ('ontouchstart' in window) {
+        var k = document.querySelectorAll('#overlay .keys');
+        if (k[0]) k[0].textContent = 'Toca el piso para moverte';
+        if (k[1]) k[1].textContent = 'Arrastra con un dedo para mirar';
+      }
+      var scene = document.querySelector('a-scene');
+      if (scene) scene.addEventListener('loaded', function () {
+        var lm = document.querySelector('.loading-msg');
+        var sb = document.querySelector('.start');
+        if (lm) lm.style.display = 'none';
+        if (sb) sb.style.display = '';
+      });
+    });
+  </script>
+</head>
+<body>
+
+<!-- WELCOME OVERLAY -->
+<div id="overlay" tabindex="0" role="button" aria-label="Click para comenzar" onclick="startExperience()" onkeydown="if(event.key==='Enter'||event.key===' ')startExperience()">
+  <h1>Sal&oacute;n Adaptado</h1>
+  <p class="subtitle">Tier 2: Mismo espacio reorganizado con bajo presupuesto</p>
+  <p class="keys">W A S D o Click en el piso para moverse</p>
+  <p class="keys">Rat&oacute;n para mirar alrededor</p>
+  <p class="keys">Ac&eacute;rcate a los objetos para ver informaci&oacute;n</p>
+  <p class="loading-msg">Cargando escena&hellip;</p>
+  <p class="start" style="display:none">Click para comenzar</p>
+</div>
+
+<!-- TIER SWITCHER -->
+<div id="tier-switcher">
+  <a href="tier1.html" class="tier-btn">1. T&iacute;pico</a>
+  <a class="tier-btn active t2">2. Adaptado</a>
+  <a href="tier3.html" class="tier-btn">3. Futuro</a>
+</div>
+
+<!-- BACK TO HUB -->
+<a id="back-hub" href="../index.html">&larr; Inicio</a>
+
+<!-- NAV BUTTON -->
+<a id="nav-btn" href="../documento/primaria-secundaria.html" target="_blank" rel="noopener">&#x1F4C4; Ver Documento</a>
+
+<!-- CUSTOM COMPONENTS -->
+<script src="components/billboard.js"></script>
+<script src="components/proximity-panel.js"></script>
+<script src="components/zone-label.js"></script>
+<script src="components/simple-navmesh-constraint.js"></script>
+<script src="components/click-to-move.js"></script>
+
+<!-- A-FRAME SCENE -->
+<a-scene vr-mode-ui="enabled: false" renderer="antialias: true; colorManagement: true">
+
+  <a-sky color="#FFF8E1"></a-sky>
+
+  <!-- CAMERA RIG -->
+  <a-entity id="rig" position="0 0 2"
+            simple-navmesh-constraint="minX: -3.7; maxX: 3.7; minZ: -2.7; maxZ: 2.7"
+            click-to-move>
+    <a-entity id="camera" camera look-controls
+              wasd-controls="acceleration: 25"
+              position="0 1.6 0">
+      <a-entity cursor="rayOrigin: mouse; fuse: false"
+                raycaster="objects: .walkable; far: 15"></a-entity>
+    </a-entity>
+  </a-entity>
+
+  <!-- LIGHTING: Warmer, more intentional -->
+  <a-entity light="type: ambient; color: #FFF8E1; intensity: 0.35"></a-entity>
+  <a-entity light="type: hemisphere; color: #FFFDE7; groundColor: #D7CCC8; intensity: 0.5"></a-entity>
+  <!-- Warmer fluorescents -->
+  <a-entity light="type: point; color: #FFE0B2; intensity: 0.6; distance: 10" position="-1.5 2.7 0"></a-entity>
+  <a-entity light="type: point; color: #FFE0B2; intensity: 0.6; distance: 10" position="1.5 2.7 0"></a-entity>
+  <!-- Window directional light with shadows -->
+  <a-entity light="type: directional; color: #FFFDE7; intensity: 0.4; castShadow: true;
+                   shadowMapHeight: 1024; shadowMapWidth: 1024"
+            position="0 3 5" rotation="-30 0 0"></a-entity>
+  <!-- Reading corner warm light -->
+  <a-entity light="type: point; color: #FFE082; intensity: 0.4; distance: 4" position="3 2 2"></a-entity>
+
+  <!-- ==================== ROOM GEOMETRY (8m x 6m x 2.8m - SAME room as Tier 1) ==================== -->
+  <!-- Floor (walkable) -->
+  <a-plane class="walkable" position="0 0 0" rotation="-90 0 0" width="8" height="6"
+           color="#D7CCC8"></a-plane>
+  <!-- Ceiling -->
+  <a-plane position="0 2.8 0" rotation="90 0 0" width="8" height="6"
+           color="#F5F5F5"></a-plane>
+
+  <!-- Walls - Lower half (warm yellow - NEW PAINT) -->
+  <!-- Front wall (z = -3) -->
+  <a-plane class="collidable" position="0 0.7 -3" rotation="0 0 0" width="8" height="1.4"
+           color="#FFECB3" material="side: double"></a-plane>
+  <a-plane position="0 2.1 -3" rotation="0 0 0" width="8" height="1.4"
+           color="#FFFDE7" material="side: double"></a-plane>
+  <!-- Back wall (z = 3) -->
+  <a-plane class="collidable" position="0 0.7 3" rotation="0 180 0" width="8" height="1.4"
+           color="#FFECB3" material="side: double"></a-plane>
+  <a-plane position="0 2.1 3" rotation="0 180 0" width="8" height="1.4"
+           color="#FFFDE7" material="side: double"></a-plane>
+  <!-- Left wall (x = -4) -->
+  <a-plane class="collidable" position="-4 0.7 0" rotation="0 90 0" width="6" height="1.4"
+           color="#FFECB3" material="side: double"></a-plane>
+  <a-plane position="-4 2.1 0" rotation="0 90 0" width="6" height="1.4"
+           color="#FFFDE7" material="side: double"></a-plane>
+  <!-- Right wall (x = 4) -->
+  <a-plane class="collidable" position="4 0.7 0" rotation="0 -90 0" width="6" height="1.4"
+           color="#FFECB3" material="side: double"></a-plane>
+  <a-plane position="4 2.1 0" rotation="0 -90 0" width="6" height="1.4"
+           color="#FFFDE7" material="side: double"></a-plane>
+
+  <!-- ==================== FLUORESCENT FIXTURES (same hardware, warmer bulbs) ==================== -->
+  <a-box position="-1.5 2.75 0" width="1.2" height="0.05" depth="0.15"
+         color="#FFFFFF" material="emissive: #FFF8E1; emissiveIntensity: 0.5"></a-box>
+  <a-box position="1.5 2.75 0" width="1.2" height="0.05" depth="0.15"
+         color="#FFFFFF" material="emissive: #FFF8E1; emissiveIntensity: 0.5"></a-box>
+
+  <!-- ==================== WINDOWS (back wall, z = 3) - same but curtains open wider ==================== -->
+  <a-plane position="-2.5 1.8 2.98" width="1.2" height="1.0"
+           color="#E3F2FD" material="emissive: #E3F2FD; emissiveIntensity: 0.5; side: double"></a-plane>
+  <a-plane position="0 1.8 2.98" width="1.2" height="1.0"
+           color="#E3F2FD" material="emissive: #E3F2FD; emissiveIntensity: 0.5; side: double"></a-plane>
+  <a-plane position="2.5 1.8 2.98" width="1.2" height="1.0"
+           color="#E3F2FD" material="emissive: #E3F2FD; emissiveIntensity: 0.5; side: double"></a-plane>
+  <!-- Window frames -->
+  <a-box position="-2.5 1.8 2.97" width="1.3" height="1.1" depth="0.04" color="#78909C"></a-box>
+  <a-box position="0 1.8 2.97" width="1.3" height="1.1" depth="0.04" color="#78909C"></a-box>
+  <a-box position="2.5 1.8 2.97" width="1.3" height="1.1" depth="0.04" color="#78909C"></a-box>
+
+  <!-- ==================== PROJECTOR SCREEN (front wall) ==================== -->
+  <a-plane position="1.5 1.5 -2.97" width="2.0" height="1.3"
+           color="#FAFAFA" material="side: double"></a-plane>
+  <!-- Screen border -->
+  <a-box position="1.5 1.5 -2.96" width="2.1" height="1.4" depth="0.02" color="#424242"></a-box>
+
+  <!-- ==================== MOBILE WHITEBOARD (on stand, near front) ==================== -->
+  <a-box position="-2.0 0.8 -2.3" width="1.2" height="1.0" depth="0.05" color="#FAFAFA"></a-box>
+  <!-- Whiteboard frame -->
+  <a-box position="-2.0 0.8 -2.32" width="1.25" height="1.05" depth="0.03" color="#90A4AE"></a-box>
+  <!-- Stand legs -->
+  <a-box position="-2.35 0.4 -2.3" width="0.04" height="0.8" depth="0.04" color="#757575"></a-box>
+  <a-box position="-1.65 0.4 -2.3" width="0.04" height="0.8" depth="0.04" color="#757575"></a-box>
+  <!-- Wheels -->
+  <a-sphere position="-2.35 0.04 -2.3" radius="0.04" color="#424242"></a-sphere>
+  <a-sphere position="-1.65 0.04 -2.3" radius="0.04" color="#424242"></a-sphere>
+
+  <!-- ==================== TEACHER DESK (moved to side, no longer center) ==================== -->
+  <a-box class="collidable" position="-3.3 0.375 -2.0" width="1.0" height="0.75" depth="0.6"
+         color="#4E342E"></a-box>
+  <!-- Teacher chair -->
+  <a-box position="-3.3 0.25 -1.4" width="0.45" height="0.5" depth="0.4" color="#5D4037"></a-box>
+  <a-box position="-3.3 0.55 -1.25" width="0.45" height="0.35" depth="0.05" color="#5D4037"></a-box>
+
+  <!-- ==================== CLUSTER 1 (4 desks facing each other, left-center) ==================== -->
+  <!-- 2 desks facing south -->
+  <a-box position="-2.0 0.65 -0.9" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="-2.0 0.31 -0.9" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="-1.3 0.65 -0.9" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="-1.3 0.31 -0.9" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <!-- 2 desks facing north (pushed together) -->
+  <a-box position="-2.0 0.65 -0.4" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="-2.0 0.31 -0.4" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="-1.3 0.65 -0.4" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="-1.3 0.31 -0.4" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <!-- 4 chairs for cluster 1 -->
+  <a-box position="-2.0 0.25 -1.3" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="-1.3 0.25 -1.3" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="-2.0 0.25 0.0" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="-1.3 0.25 0.0" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+
+  <!-- ==================== CLUSTER 2 (4 desks, right-center) ==================== -->
+  <a-box position="1.3 0.65 -0.9" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="1.3 0.31 -0.9" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="2.0 0.65 -0.9" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="2.0 0.31 -0.9" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="1.3 0.65 -0.4" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="1.3 0.31 -0.4" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="2.0 0.65 -0.4" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="2.0 0.31 -0.4" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <!-- 4 chairs for cluster 2 -->
+  <a-box position="1.3 0.25 -1.3" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="2.0 0.25 -1.3" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="1.3 0.25 0.0" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="2.0 0.25 0.0" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+
+  <!-- ==================== CLUSTER 3 (4 desks, left-back) ==================== -->
+  <a-box position="-2.0 0.65 1.0" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="-2.0 0.31 1.0" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="-1.3 0.65 1.0" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="-1.3 0.31 1.0" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="-2.0 0.65 1.5" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="-2.0 0.31 1.5" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="-1.3 0.65 1.5" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="-1.3 0.31 1.5" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <!-- 4 chairs for cluster 3 -->
+  <a-box position="-2.0 0.25 0.6" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="-1.3 0.25 0.6" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="-2.0 0.25 1.9" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="-1.3 0.25 1.9" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+
+  <!-- ==================== READING CORNER (right-back) ==================== -->
+  <!-- Small bookshelf -->
+  <a-box class="collidable" position="3.3 0.45 2.3" width="0.8" height="0.9" depth="0.3"
+         color="#8D6E63"></a-box>
+  <!-- Shelf dividers -->
+  <a-box position="3.3 0.3 2.3" width="0.75" height="0.02" depth="0.28" color="#6D4C41"></a-box>
+  <a-box position="3.3 0.6 2.3" width="0.75" height="0.02" depth="0.28" color="#6D4C41"></a-box>
+  <!-- Books on shelf (colorful) -->
+  <a-box position="3.15 0.15 2.3" width="0.12" height="0.2" depth="0.18" color="#E53935"></a-box>
+  <a-box position="3.3 0.15 2.3" width="0.12" height="0.2" depth="0.18" color="#1E88E5"></a-box>
+  <a-box position="3.45 0.15 2.3" width="0.12" height="0.2" depth="0.18" color="#43A047"></a-box>
+  <a-box position="3.15 0.45 2.3" width="0.12" height="0.18" depth="0.18" color="#FB8C00"></a-box>
+  <a-box position="3.3 0.45 2.3" width="0.12" height="0.18" depth="0.18" color="#8E24AA"></a-box>
+  <a-box position="3.45 0.45 2.3" width="0.12" height="0.18" depth="0.18" color="#00ACC1"></a-box>
+
+  <!-- 3 floor cushions (pastel cylinders) -->
+  <a-cylinder position="2.8 0.1 1.5" radius="0.25" height="0.2" color="#F8BBD0"></a-cylinder>
+  <a-cylinder position="3.3 0.1 1.5" radius="0.25" height="0.2" color="#B3E5FC"></a-cylinder>
+  <a-cylinder position="3.0 0.1 1.0" radius="0.25" height="0.2" color="#C8E6C9"></a-cylinder>
+
+  <!-- Small rug under reading area -->
+  <a-plane position="3.0 0.01 1.5" rotation="-90 0 0" width="1.8" height="2.0"
+           color="#BCAAA4" material="side: double"></a-plane>
+
+  <!-- ==================== PLANTS ==================== -->
+  <!-- Plant on windowsill (left) -->
+  <a-cylinder position="-2.5 1.35 2.85" radius="0.1" height="0.15" color="#795548"></a-cylinder>
+  <a-sphere position="-2.5 1.55 2.85" radius="0.18" color="#4CAF50"></a-sphere>
+
+  <!-- Plant on windowsill (center) -->
+  <a-cylinder position="0 1.35 2.85" radius="0.1" height="0.15" color="#795548"></a-cylinder>
+  <a-sphere position="0 1.55 2.85" radius="0.18" color="#66BB6A"></a-sphere>
+
+  <!-- Floor plant (front-right corner) -->
+  <a-cylinder position="3.5 0.2 -2.5" radius="0.15" height="0.4" color="#795548"></a-cylinder>
+  <a-sphere position="3.5 0.55 -2.5" radius="0.3" color="#388E3C"></a-sphere>
+
+  <!-- Floor plant (back-left corner) -->
+  <a-cylinder position="-3.5 0.2 2.5" radius="0.15" height="0.4" color="#795548"></a-cylinder>
+  <a-sphere position="-3.5 0.55 2.5" radius="0.3" color="#2E7D32"></a-sphere>
+
+  <!-- ==================== STUDENT ARTWORK ON WALLS ==================== -->
+  <!-- Art piece 1 (left wall) -->
+  <a-plane position="-3.97 1.6 0.5" rotation="0 90 0" width="0.6" height="0.45"
+           color="#FFAB91" material="side: double"></a-plane>
+  <a-box position="-3.96 1.6 0.5" rotation="0 90 0" width="0.65" height="0.5" depth="0.01"
+         color="#FFFFFF"></a-box>
+
+  <!-- Art piece 2 (left wall) -->
+  <a-plane position="-3.97 1.6 -0.5" rotation="0 90 0" width="0.5" height="0.4"
+           color="#80DEEA" material="side: double"></a-plane>
+  <a-box position="-3.96 1.6 -0.5" rotation="0 90 0" width="0.55" height="0.45" depth="0.01"
+         color="#FFFFFF"></a-box>
+
+  <!-- Art piece 3 (right wall) -->
+  <a-plane position="3.97 1.6 0" rotation="0 -90 0" width="0.7" height="0.5"
+           color="#A5D6A7" material="side: double"></a-plane>
+  <a-box position="3.96 1.6 0" rotation="0 -90 0" width="0.75" height="0.55" depth="0.01"
+         color="#FFFFFF"></a-box>
+
+  <!-- ==================== DOOR (left wall, same position as Tier 1) ==================== -->
+  <a-plane position="-3.98 1.0 -1.5" rotation="0 90 0" width="0.9" height="2.0"
+           color="#795548" material="side: double"></a-plane>
+  <a-sphere position="-3.94 1.0 -1.2" radius="0.04" color="#FFD54F"></a-sphere>
+
+  <!-- ==================== PROXIMITY PANELS ==================== -->
+  <!-- Center clusters -->
+  <a-entity position="0 1.5 -0.6" proximity-panel="target: #t2-info-center; range: 3"></a-entity>
+  <a-entity id="t2-info-center" position="0 2 -0.6" visible="false" billboard>
+    <a-plane width="3.2" height="1.6" color="#222" material="opacity: 0.92; transparent: true; side: double">
+      <a-entity text="value: CLUSTERS COLABORATIVOS\n\nEl mismo salon de Tier 1,\nreorganizado con bajo presupuesto.\nLos pupitres en clusters permiten\ntrabajo colaborativo. El maestro\nse mueve entre grupos.; color: white; width: 2.8; wrapCount: 36; align: center" position="0 0 0.01"></a-entity>
+    </a-plane>
+  </a-entity>
+
+  <!-- Reading corner -->
+  <a-entity position="3.0 1.5 1.5" proximity-panel="target: #t2-info-reading; range: 2.5"></a-entity>
+  <a-entity id="t2-info-reading" position="3.0 2 1.5" visible="false" billboard>
+    <a-plane width="3" height="1.4" color="#222" material="opacity: 0.92; transparent: true; side: double">
+      <a-entity text="value: RINCON DE LECTURA\n\nCreado con cojines y un estante\npequeno. No requiere mobiliario\nnuevo. Los estudiantes eligen\ndonde leer y trabajan a su ritmo.; color: white; width: 2.6; wrapCount: 36; align: center" position="0 0 0.01"></a-entity>
+    </a-plane>
+  </a-entity>
+
+  <!-- Whiteboard area -->
+  <a-entity position="-2.0 1.5 -2.3" proximity-panel="target: #t2-info-board; range: 2.5"></a-entity>
+  <a-entity id="t2-info-board" position="-2.0 2 -2.3" visible="false" billboard>
+    <a-plane width="3" height="1.4" color="#222" material="opacity: 0.92; transparent: true; side: double">
+      <a-entity text="value: PIZARRON MOVIL\n\nPermite reorganizar el frente\nsegun la actividad. La pantalla\nde proyector complementa sin\nreemplazar el pizarron tradicional.; color: white; width: 2.6; wrapCount: 36; align: center" position="0 0 0.01"></a-entity>
+    </a-plane>
+  </a-entity>
+
+  <!-- Plants and changes -->
+  <a-entity position="-3.0 1.5 2.0" proximity-panel="target: #t2-info-changes; range: 2.5"></a-entity>
+  <a-entity id="t2-info-changes" position="-3.0 2 2.0" visible="false" billboard>
+    <a-plane width="3" height="1.2" color="#222" material="opacity: 0.92; transparent: true; side: double">
+      <a-entity text="value: CAMBIOS DE PROCESO\n\nPintura calida, plantas, arte\nestudiantil. Son cambios de\nproceso, no de presupuesto.\nEl espacio refleja a quienes\nlo habitan.; color: white; width: 2.6; wrapCount: 36; align: center" position="0 0 0.01"></a-entity>
+    </a-plane>
+  </a-entity>
+
+</a-scene>
+
+</body>
+</html>

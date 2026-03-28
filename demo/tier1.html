@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula del Futuro - Tier 1: Sal&oacute;n T&iacute;pico</title>
+  <script src="lib/aframe.min.js"></script>
+  <script>if (typeof AFRAME === 'undefined') { document.write('<script src="https://aframe.io/releases/1.6.0/aframe.min.js"><\/script>'); }</script>
+  <link rel="stylesheet" href="../assets/css/demo-common.css">
+  <script>
+    function startExperience() {
+      document.getElementById('overlay').style.display = 'none';
+      var canvas = document.querySelector('a-scene canvas');
+      if (canvas) canvas.focus();
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      if ('ontouchstart' in window) {
+        var k = document.querySelectorAll('#overlay .keys');
+        if (k[0]) k[0].textContent = 'Toca el piso para moverte';
+        if (k[1]) k[1].textContent = 'Arrastra con un dedo para mirar';
+      }
+      var scene = document.querySelector('a-scene');
+      if (scene) scene.addEventListener('loaded', function () {
+        var lm = document.querySelector('.loading-msg');
+        var sb = document.querySelector('.start');
+        if (lm) lm.style.display = 'none';
+        if (sb) sb.style.display = '';
+      });
+    });
+  </script>
+</head>
+<body>
+
+<!-- WELCOME OVERLAY -->
+<div id="overlay" tabindex="0" role="button" aria-label="Click para comenzar" onclick="startExperience()" onkeydown="if(event.key==='Enter'||event.key===' ')startExperience()">
+  <h1>Sal&oacute;n T&iacute;pico</h1>
+  <p class="subtitle">Tier 1: Aula de primaria tal como existe hoy</p>
+  <p class="keys">W A S D o Click en el piso para moverse</p>
+  <p class="keys">Rat&oacute;n para mirar alrededor</p>
+  <p class="keys">Ac&eacute;rcate a los objetos para ver informaci&oacute;n</p>
+  <p class="loading-msg">Cargando escena&hellip;</p>
+  <p class="start" style="display:none">Click para comenzar</p>
+</div>
+
+<!-- TIER SWITCHER -->
+<div id="tier-switcher">
+  <a class="tier-btn active t1">1. T&iacute;pico</a>
+  <a href="tier2.html" class="tier-btn">2. Adaptado</a>
+  <a href="tier3.html" class="tier-btn">3. Futuro</a>
+</div>
+
+<!-- BACK TO HUB -->
+<a id="back-hub" href="../index.html">&larr; Inicio</a>
+
+<!-- NAV BUTTON -->
+<a id="nav-btn" href="../documento/primaria-secundaria.html" target="_blank" rel="noopener">&#x1F4C4; Ver Documento</a>
+
+<!-- CUSTOM COMPONENTS -->
+<script src="components/billboard.js"></script>
+<script src="components/proximity-panel.js"></script>
+<script src="components/zone-label.js"></script>
+<script src="components/simple-navmesh-constraint.js"></script>
+<script src="components/click-to-move.js"></script>
+
+<!-- A-FRAME SCENE -->
+<a-scene vr-mode-ui="enabled: false" renderer="antialias: true; colorManagement: true">
+
+  <a-sky color="#E0E0E0"></a-sky>
+
+  <!-- CAMERA RIG -->
+  <a-entity id="rig" position="0 0 2"
+            simple-navmesh-constraint="minX: -3.7; maxX: 3.7; minZ: -2.7; maxZ: 2.7"
+            click-to-move>
+    <a-entity id="camera" camera look-controls
+              wasd-controls="acceleration: 25"
+              position="0 1.6 0">
+      <a-entity cursor="rayOrigin: mouse; fuse: false"
+                raycaster="objects: .walkable; far: 15"></a-entity>
+    </a-entity>
+  </a-entity>
+
+  <!-- LIGHTING: Harsh, flat, institutional -->
+  <a-entity light="type: ambient; color: #F5F5F5; intensity: 0.5"></a-entity>
+  <a-entity light="type: hemisphere; color: #FFFFFF; groundColor: #E0E0E0; intensity: 0.4"></a-entity>
+  <!-- Fluorescent lights (no shadows - intentionally flat) -->
+  <a-entity light="type: point; color: #F0F0E8; intensity: 0.8; distance: 10" position="-1.5 2.7 0"></a-entity>
+  <a-entity light="type: point; color: #F0F0E8; intensity: 0.8; distance: 10" position="1.5 2.7 0"></a-entity>
+
+  <!-- ==================== ROOM GEOMETRY (8m × 6m × 2.8m) ==================== -->
+  <!-- Floor (walkable) -->
+  <a-plane class="walkable" position="0 0 0" rotation="-90 0 0" width="8" height="6"
+           color="#BDBDBD"></a-plane>
+  <!-- Ceiling -->
+  <a-plane position="0 2.8 0" rotation="90 0 0" width="8" height="6"
+           color="#F5F5F5"></a-plane>
+
+  <!-- Walls - Lower half (institutional green) -->
+  <!-- Front wall (teacher side, z = -3) -->
+  <a-plane class="collidable" position="0 0.7 -3" rotation="0 0 0" width="8" height="1.4"
+           color="#A5D6A7" material="side: double"></a-plane>
+  <a-plane position="0 2.1 -3" rotation="0 0 0" width="8" height="1.4"
+           color="#FAFAFA" material="side: double"></a-plane>
+  <!-- Back wall (z = 3) -->
+  <a-plane class="collidable" position="0 0.7 3" rotation="0 180 0" width="8" height="1.4"
+           color="#A5D6A7" material="side: double"></a-plane>
+  <a-plane position="0 2.1 3" rotation="0 180 0" width="8" height="1.4"
+           color="#FAFAFA" material="side: double"></a-plane>
+  <!-- Left wall (x = -4) -->
+  <a-plane class="collidable" position="-4 0.7 0" rotation="0 90 0" width="6" height="1.4"
+           color="#A5D6A7" material="side: double"></a-plane>
+  <a-plane position="-4 2.1 0" rotation="0 90 0" width="6" height="1.4"
+           color="#FAFAFA" material="side: double"></a-plane>
+  <!-- Right wall (x = 4) -->
+  <a-plane class="collidable" position="4 0.7 0" rotation="0 -90 0" width="6" height="1.4"
+           color="#A5D6A7" material="side: double"></a-plane>
+  <a-plane position="4 2.1 0" rotation="0 -90 0" width="6" height="1.4"
+           color="#FAFAFA" material="side: double"></a-plane>
+
+  <!-- ==================== FLUORESCENT FIXTURES ==================== -->
+  <a-box position="-1.5 2.75 0" width="1.2" height="0.05" depth="0.15"
+         color="#FFFFFF" material="emissive: #FFFFF0; emissiveIntensity: 0.6"></a-box>
+  <a-box position="1.5 2.75 0" width="1.2" height="0.05" depth="0.15"
+         color="#FFFFFF" material="emissive: #FFFFF0; emissiveIntensity: 0.6"></a-box>
+
+  <!-- ==================== WINDOWS (back wall, z = 3) ==================== -->
+  <a-plane position="-2.5 1.8 2.98" width="1.2" height="1.0"
+           color="#E3F2FD" material="emissive: #E3F2FD; emissiveIntensity: 0.4; side: double"></a-plane>
+  <a-plane position="0 1.8 2.98" width="1.2" height="1.0"
+           color="#E3F2FD" material="emissive: #E3F2FD; emissiveIntensity: 0.4; side: double"></a-plane>
+  <a-plane position="2.5 1.8 2.98" width="1.2" height="1.0"
+           color="#E3F2FD" material="emissive: #E3F2FD; emissiveIntensity: 0.4; side: double"></a-plane>
+  <!-- Window frames -->
+  <a-box position="-2.5 1.8 2.97" width="1.3" height="1.1" depth="0.04" color="#78909C"></a-box>
+  <a-box position="0 1.8 2.97" width="1.3" height="1.1" depth="0.04" color="#78909C"></a-box>
+  <a-box position="2.5 1.8 2.97" width="1.3" height="1.1" depth="0.04" color="#78909C"></a-box>
+
+  <!-- ==================== CHALKBOARD (front wall) ==================== -->
+  <a-plane position="1 1.4 -2.97" width="3.0" height="1.2"
+           color="#2E4A3E" material="side: double"></a-plane>
+  <!-- Chalkboard frame -->
+  <a-box position="1 1.4 -2.96" width="3.1" height="1.3" depth="0.03" color="#5D4037"></a-box>
+  <!-- Chalk tray -->
+  <a-box position="1 0.78 -2.92" width="2.8" height="0.04" depth="0.08" color="#5D4037"></a-box>
+
+  <!-- ==================== TEACHER DESK (collidable) ==================== -->
+  <a-box class="collidable" position="-2.5 0.375 -2.5" width="1.4" height="0.75" depth="0.7"
+         color="#4E342E"></a-box>
+  <!-- Teacher chair -->
+  <a-box position="-2.5 0.25 -2.0" width="0.45" height="0.5" depth="0.4" color="#5D4037"></a-box>
+  <a-box position="-2.5 0.55 -1.85" width="0.45" height="0.35" depth="0.05" color="#5D4037"></a-box>
+
+  <!-- ==================== OLD PC (right corner) ==================== -->
+  <a-box position="3.2 0.375 -2.5" width="0.6" height="0.75" depth="0.5" color="#795548"></a-box>
+  <!-- CRT Monitor -->
+  <a-box position="3.2 0.95 -2.5" width="0.4" height="0.35" depth="0.35" color="#9E9E9E"></a-box>
+  <!-- Screen -->
+  <a-plane position="3.2 0.95 -2.32" width="0.3" height="0.22"
+           color="#1B5E20" material="emissive: #1B5E20; emissiveIntensity: 0.2"></a-plane>
+  <!-- Keyboard -->
+  <a-box position="3.2 0.77 -2.2" width="0.35" height="0.02" depth="0.12" color="#BDBDBD"></a-box>
+
+  <!-- ==================== 25 STUDENT DESKS (5 columns × 5 rows) ==================== -->
+  <!-- Grid: columns at x = -2.6, -1.3, 0, 1.3, 2.6 -->
+  <!-- Rows at z = -1.8, -0.8, 0.2, 1.2, 2.2 -->
+
+  <!-- Row 1 (closest to teacher, z = -1.8) -->
+  <a-box position="-2.6 0.65 -1.8" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="-2.6 0.31 -1.8" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="-1.3 0.65 -1.8" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="-1.3 0.31 -1.8" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="0 0.65 -1.8" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="0 0.31 -1.8" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="1.3 0.65 -1.8" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="1.3 0.31 -1.8" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="2.6 0.65 -1.8" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="2.6 0.31 -1.8" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+
+  <!-- Row 2 (z = -0.8) -->
+  <a-box position="-2.6 0.65 -0.8" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="-2.6 0.31 -0.8" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="-1.3 0.65 -0.8" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="-1.3 0.31 -0.8" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="0 0.65 -0.8" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="0 0.31 -0.8" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="1.3 0.65 -0.8" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="1.3 0.31 -0.8" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="2.6 0.65 -0.8" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="2.6 0.31 -0.8" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+
+  <!-- Row 3 (z = 0.2) -->
+  <a-box position="-2.6 0.65 0.2" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="-2.6 0.31 0.2" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="-1.3 0.65 0.2" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="-1.3 0.31 0.2" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="0 0.65 0.2" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="0 0.31 0.2" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="1.3 0.65 0.2" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="1.3 0.31 0.2" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="2.6 0.65 0.2" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="2.6 0.31 0.2" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+
+  <!-- Row 4 (z = 1.2) -->
+  <a-box position="-2.6 0.65 1.2" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="-2.6 0.31 1.2" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="-1.3 0.65 1.2" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="-1.3 0.31 1.2" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="0 0.65 1.2" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="0 0.31 1.2" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="1.3 0.65 1.2" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="1.3 0.31 1.2" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="2.6 0.65 1.2" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="2.6 0.31 1.2" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+
+  <!-- Row 5 (z = 2.2) -->
+  <a-box position="-2.6 0.65 2.2" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="-2.6 0.31 2.2" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="-1.3 0.65 2.2" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="-1.3 0.31 2.2" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="0 0.65 2.2" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="0 0.31 2.2" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="1.3 0.65 2.2" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="1.3 0.31 2.2" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+  <a-box position="2.6 0.65 2.2" width="0.6" height="0.05" depth="0.45" color="#8D6E63"></a-box>
+  <a-box position="2.6 0.31 2.2" width="0.04" height="0.62" depth="0.04" color="#757575"></a-box>
+
+  <!-- ==================== 25 STUDENT CHAIRS ==================== -->
+  <!-- Row 1 chairs (z = -1.4, facing front) -->
+  <a-box position="-2.6 0.25 -1.4" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="-2.6 0.55 -1.25" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+  <a-box position="-1.3 0.25 -1.4" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="-1.3 0.55 -1.25" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+  <a-box position="0 0.25 -1.4" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="0 0.55 -1.25" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+  <a-box position="1.3 0.25 -1.4" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="1.3 0.55 -1.25" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+  <a-box position="2.6 0.25 -1.4" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="2.6 0.55 -1.25" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+
+  <!-- Row 2 chairs (z = -0.4) -->
+  <a-box position="-2.6 0.25 -0.4" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="-2.6 0.55 -0.25" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+  <a-box position="-1.3 0.25 -0.4" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="-1.3 0.55 -0.25" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+  <a-box position="0 0.25 -0.4" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="0 0.55 -0.25" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+  <a-box position="1.3 0.25 -0.4" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="1.3 0.55 -0.25" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+  <a-box position="2.6 0.25 -0.4" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="2.6 0.55 -0.25" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+
+  <!-- Row 3 chairs (z = 0.6) -->
+  <a-box position="-2.6 0.25 0.6" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="-2.6 0.55 0.75" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+  <a-box position="-1.3 0.25 0.6" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="-1.3 0.55 0.75" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+  <a-box position="0 0.25 0.6" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="0 0.55 0.75" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+  <a-box position="1.3 0.25 0.6" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="1.3 0.55 0.75" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+  <a-box position="2.6 0.25 0.6" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="2.6 0.55 0.75" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+
+  <!-- Row 4 chairs (z = 1.6) -->
+  <a-box position="-2.6 0.25 1.6" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="-2.6 0.55 1.75" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+  <a-box position="-1.3 0.25 1.6" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="-1.3 0.55 1.75" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+  <a-box position="0 0.25 1.6" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="0 0.55 1.75" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+  <a-box position="1.3 0.25 1.6" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="1.3 0.55 1.75" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+  <a-box position="2.6 0.25 1.6" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="2.6 0.55 1.75" width="0.35" height="0.3" depth="0.04" color="#5D4037"></a-box>
+
+  <!-- Row 5 chairs (z = 2.6 - pushed to wall, adjusted) -->
+  <a-box position="-2.6 0.25 2.55" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="-1.3 0.25 2.55" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="0 0.25 2.55" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="1.3 0.25 2.55" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+  <a-box position="2.6 0.25 2.55" width="0.35" height="0.5" depth="0.35" color="#5D4037"></a-box>
+
+  <!-- ==================== DOOR (left wall) ==================== -->
+  <a-plane position="-3.98 1.0 -1.5" rotation="0 90 0" width="0.9" height="2.0"
+           color="#795548" material="side: double"></a-plane>
+  <!-- Door handle -->
+  <a-sphere position="-3.94 1.0 -1.2" radius="0.04" color="#FFD54F"></a-sphere>
+
+  <!-- ==================== PROXIMITY PANELS ==================== -->
+  <!-- Center room -->
+  <a-entity position="0 1.5 0" proximity-panel="target: #t1-info-center; range: 3"></a-entity>
+  <a-entity id="t1-info-center" position="0 2 0" visible="false" billboard>
+    <a-plane width="3.2" height="1.6" color="#222" material="opacity: 0.92; transparent: true; side: double">
+      <a-entity text="value: SALON TIPICO\n\n25 pupitres individuales orientados\nal frente. El maestro controla el\nespacio desde el escritorio.\nEste modelo corresponde a la clase\nmagistral que limita la colaboracion.; color: white; width: 2.8; wrapCount: 36; align: center" position="0 0 0.01"></a-entity>
+    </a-plane>
+  </a-entity>
+
+  <!-- Teacher desk area -->
+  <a-entity position="-2.5 1.5 -2.5" proximity-panel="target: #t1-info-teacher; range: 2.5"></a-entity>
+  <a-entity id="t1-info-teacher" position="-2.5 2 -2.5" visible="false" billboard>
+    <a-plane width="3" height="1.4" color="#222" material="opacity: 0.92; transparent: true; side: double">
+      <a-entity text="value: ESCRITORIO DEL MAESTRO\n\nAl frente refuerza la jerarquia\ntradicional. La computadora vieja\nen la esquina rara vez se usa\npor falta de mantenimiento.; color: white; width: 2.6; wrapCount: 36; align: center" position="0 0 0.01"></a-entity>
+    </a-plane>
+  </a-entity>
+
+  <!-- Chalkboard -->
+  <a-entity position="1 1.5 -2.5" proximity-panel="target: #t1-info-board; range: 2.5"></a-entity>
+  <a-entity id="t1-info-board" position="1 2.2 -2.5" visible="false" billboard>
+    <a-plane width="3" height="1.2" color="#222" material="opacity: 0.92; transparent: true; side: double">
+      <a-entity text="value: PIZARRON VERDE\n\nUnico recurso visual del salon.\nNo hay proyector ni pantalla\ninteractiva. La comunicacion\nes unidireccional.; color: white; width: 2.6; wrapCount: 36; align: center" position="0 0 0.01"></a-entity>
+    </a-plane>
+  </a-entity>
+
+  <!-- Old PC -->
+  <a-entity position="3.2 1.5 -2.5" proximity-panel="target: #t1-info-pc; range: 2"></a-entity>
+  <a-entity id="t1-info-pc" position="3.2 2 -2.5" visible="false" billboard>
+    <a-plane width="2.8" height="1.2" color="#222" material="opacity: 0.92; transparent: true; side: double">
+      <a-entity text="value: COMPUTADORA VIEJA\n\nLa unica del salon, frecuentemente\ndescompuesta. La brecha digital\ncomienza aqui.; color: white; width: 2.4; wrapCount: 36; align: center" position="0 0 0.01"></a-entity>
+    </a-plane>
+  </a-entity>
+
+</a-scene>
+
+</body>
+</html>

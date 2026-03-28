@@ -1,0 +1,28 @@
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Backups
+*.bak
+
+# Claude Code
+.claude/
+
+# Dependencies
+node_modules/
+
+# Slidev
+dist/
+.slidev/
+
+# Environment
+.env
+.env.local

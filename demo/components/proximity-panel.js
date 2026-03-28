@@ -11,14 +11,16 @@ AFRAME.registerComponent('proximity-panel', {
 
   init: function () {
     this.panelVisible = false;
+    this._hideTimer = null;
     this._rigPos = new THREE.Vector3();
     this._myPos = new THREE.Vector3();
-    this._camLook = new THREE.Vector3();
 
     if (this.data.target) {
       this.data.target.setAttribute('visible', false);
       this.data.target.setAttribute('scale', '0.01 0.01 0.01');
     }
+
+    this.tick = AFRAME.utils.throttleTick(this.tick, 150, this);
   },
 
   tick: function () {
@@ -34,6 +36,7 @@ AFRAME.registerComponent('proximity-panel', {
     var inRange = dist < this.data.range;
 
     if (inRange && !this.panelVisible) {
+      if (this._hideTimer) { clearTimeout(this._hideTimer); this._hideTimer = null; }
       this.data.target.setAttribute('visible', true);
       this.data.target.removeAttribute('animation');
       this.data.target.setAttribute('animation', {
@@ -54,17 +57,11 @@ AFRAME.registerComponent('proximity-panel', {
         easing: 'easeInQuad'
       });
       var target = this.data.target;
-      setTimeout(function () {
+      this._hideTimer = setTimeout(function () {
         target.setAttribute('visible', false);
       }, 250);
       this.panelVisible = false;
     }
 
-    // Make panel face camera
-    if (this.panelVisible && this.data.target) {
-      this.data.camRig.object3D.getWorldPosition(this._camLook);
-      this._camLook.y = this.data.target.object3D.position.y;
-      this.data.target.object3D.lookAt(this._camLook);
-    }
   }
 });
