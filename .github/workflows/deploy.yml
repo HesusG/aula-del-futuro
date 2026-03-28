@@ -27,7 +27,15 @@ jobs:
 
       - run: npm ci
 
-      - run: npx slidev build --base /aula-del-futuro/
+      # Build Slidev into dist/slides/
+      - run: npx slidev build --base /aula-del-futuro/slides/ --out dist/slides
+
+      # Copy the existing static site (landing, documents, demo, assets) into dist/
+      - run: |
+          cp index.html dist/
+          cp -r assets dist/
+          cp -r documento dist/
+          cp -r demo dist/
 
       - uses: actions/upload-pages-artifact@v3
         with:
