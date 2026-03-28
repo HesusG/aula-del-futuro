@@ -37,7 +37,7 @@ Marzo 2026
 
 <!-- Slide 2: Equipo -->
 
-# Equipo
+# <div class="i-pixelarticons-users inline-block w-7 h-7 align-middle" /> Equipo
 
 <div class="pixel-divider my-2" />
 
@@ -76,11 +76,11 @@ Marzo 2026
 
 <!-- Slide 3: ¿Qué proponemos? -->
 
-# ¿Qué Proponemos?
+# <div class="i-pixelarticons-coin inline-block w-7 h-7 align-middle" /> ¿Qué Proponemos?
 
 <div class="pixel-divider my-2" />
 
-<p class="text-lg mt-2 mb-6">Rediseñar el espacio educativo para que responda a cómo aprenden los estudiantes, no a cómo se administran las escuelas. Una propuesta en dos niveles:</p>
+<p class="text-base mt-2 mb-4">Las aulas en México siguen un diseño del siglo XIX: filas de bancas mirando al frente, un pizarrón y un docente que habla. Proponemos <strong>rediseñar el espacio educativo para que responda a cómo aprenden los estudiantes</strong>, no a cómo se administran las escuelas. Una propuesta en dos niveles:</p>
 
 <div class="grid grid-cols-2 gap-6">
   <div class="neo-card">
@@ -109,7 +109,7 @@ Marzo 2026
 
 <!-- Slide 4: El Problema -->
 
-# El Problema
+# <div class="i-pixelarticons-warning-box inline-block w-7 h-7 align-middle" /> El Problema
 
 <div class="pixel-divider my-2" />
 
@@ -148,15 +148,17 @@ Marzo 2026
 layout: neo-section
 ---
 
-# Fundamentos Teóricos
+<div class="i-pixelarticons-book-open inline-block w-16 h-16 mb-4 text-[#2DD4BF]" />
 
-## ¿En qué nos basamos?
+<h1 class="text-white text-5xl font-bold">Fundamentos Teóricos</h1>
+
+<p class="text-[#2DD4BF] mt-4 text-xl font-mono">// ¿en qué nos basamos?</p>
 
 ---
 
 <!-- Slide 6: UNESCO -->
 
-# Marco Internacional: UNESCO
+# <div class="i-pixelarticons-globe inline-block w-7 h-7 align-middle" /> Marco Internacional: UNESCO
 
 <div class="pixel-divider my-2" />
 
@@ -187,7 +189,7 @@ layout: neo-section
 
 <!-- Slide 7: Marco Nacional -->
 
-# Marco Nacional: México
+# <div class="i-pixelarticons-flag inline-block w-7 h-7 align-middle" /> Marco Nacional: México
 
 <div class="pixel-divider my-2" />
 
@@ -220,26 +222,26 @@ layout: neo-section
 
 <!-- Slide 8: Ciencia del Aprendizaje -->
 
-# Ciencia del Aprendizaje
+# <div class="i-pixelarticons-zap inline-block w-7 h-7 align-middle" /> Ciencia del Aprendizaje
 
 <div class="pixel-divider my-2" />
 
 <div class="grid grid-cols-2 gap-4 mt-2">
 <v-clicks>
   <div class="neo-card">
-    <div class="bg-[#2DD4BF] px-3 py-1 border-b-2 border-black text-sm font-bold text-white">Darling-Hammond et al. (2020)</div>
+    <div class="bg-[#2DD4BF] px-3 py-1 border-b-2 border-black text-sm font-bold text-white"><div class="i-pixelarticons-zap inline-block w-4 h-4 mr-1" /> Darling-Hammond et al. (2020)</div>
     <div class="p-3 text-sm">La motivación intrínseca produce aprendizajes más profundos. La exploración guiada favorece la atención sostenida y la memoria.</div>
   </div>
   <div class="neo-card">
-    <div class="bg-[#6C5CE7] px-3 py-1 border-b-2 border-black text-sm font-bold text-white">Deci y Ryan (2000)</div>
+    <div class="bg-[#6C5CE7] px-3 py-1 border-b-2 border-black text-sm font-bold text-white"><div class="i-pixelarticons-heart inline-block w-4 h-4 mr-1" /> Deci y Ryan (2000)</div>
     <div class="p-3 text-sm">La teoría de la autodeterminación identifica tres necesidades básicas: <strong>autonomía, competencia y vinculación</strong>. Su satisfacción sostiene la motivación intrínseca.</div>
   </div>
   <div class="neo-card">
-    <div class="bg-[#FF6B6B] px-3 py-1 border-b-2 border-black text-sm font-bold text-white">Durlak et al. (2011)</div>
+    <div class="bg-[#FF6B6B] px-3 py-1 border-b-2 border-black text-sm font-bold text-white"><div class="i-pixelarticons-mood-happy inline-block w-4 h-4 mr-1" /> Durlak et al. (2011)</div>
     <div class="p-3 text-sm">Metaanálisis de 213 programas (270,034 estudiantes): los programas socioemocionales mejoran el rendimiento académico en 11 puntos percentiles.</div>
   </div>
   <div class="neo-card">
-    <div class="bg-[#C0C0C0] px-3 py-1 border-b-2 border-black text-sm font-bold">Fullan y Langworthy (2014)</div>
+    <div class="bg-[#C0C0C0] px-3 py-1 border-b-2 border-black text-sm font-bold"><div class="i-pixelarticons-trending-up inline-block w-4 h-4 mr-1" /> Fullan y Langworthy (2014)</div>
     <div class="p-3 text-sm">Las "nuevas pedagogías" conectan el aprendizaje con el mundo real. Los estudiantes se comprometen más cuando perciben relevancia y propósito.</div>
   </div>
 </v-clicks>
@@ -251,7 +253,7 @@ layout: neo-section
 
 <!-- Slide 9: Metacognición y DUA -->
 
-# Metacognición y Diseño Universal
+# <div class="i-pixelarticons-loader inline-block w-7 h-7 align-middle" /> Metacognición y Diseño Universal
 
 <div class="pixel-divider my-2" />
 
@@ -284,36 +286,36 @@ layout: neo-section
 
 <!-- Slide 10: Las 6 Zonas -->
 
-# Las 6 Zonas del Aula del Futuro
+# <div class="i-pixelarticons-layout-grid inline-block w-7 h-7 align-middle" /> Las 6 Zonas del Aula del Futuro
 
 <div class="pixel-divider my-2" />
 
-<p class="text-sm mb-4">Modelo inspirado en el <strong>Future Classroom Lab</strong> de European Schoolnet (2017).</p>
+<p class="text-sm mb-3">El <strong>Future Classroom Lab</strong> de European Schoolnet (2017) propone que un aula no es un solo espacio, sino <strong>seis zonas diferenciadas</strong> que activan distintas competencias. Nuestra propuesta adapta estas zonas al contexto mexicano:</p>
 
 <div class="grid grid-cols-3 gap-3">
 <v-clicks>
   <div class="neo-card">
-    <div class="bg-[#2DD4BF] px-3 py-1 border-b-2 border-black text-sm font-bold text-white">1. Investigar</div>
+    <div class="bg-[#2DD4BF] px-3 py-1 border-b-2 border-black text-sm font-bold text-white"><div class="i-pixelarticons-search inline-block w-4 h-4 mr-1" /> 1. Investigar</div>
     <div class="p-3 text-xs">Indagación, búsqueda de información, formulación de hipótesis.</div>
   </div>
   <div class="neo-card">
-    <div class="bg-[#FF6B6B] px-3 py-1 border-b-2 border-black text-sm font-bold text-white">2. Crear</div>
+    <div class="bg-[#FF6B6B] px-3 py-1 border-b-2 border-black text-sm font-bold text-white"><div class="i-pixelarticons-paint-bucket inline-block w-4 h-4 mr-1" /> 2. Crear</div>
     <div class="p-3 text-xs">Taller: diseñar, construir, programar, producir artefactos.</div>
   </div>
   <div class="neo-card">
-    <div class="bg-[#6C5CE7] px-3 py-1 border-b-2 border-black text-sm font-bold text-white">3. Intercambiar</div>
+    <div class="bg-[#6C5CE7] px-3 py-1 border-b-2 border-black text-sm font-bold text-white"><div class="i-pixelarticons-message inline-block w-4 h-4 mr-1" /> 3. Intercambiar</div>
     <div class="p-3 text-xs">Diálogo, debate y trabajo colaborativo.</div>
   </div>
   <div class="neo-card">
-    <div class="bg-[#C0C0C0] px-3 py-1 border-b-2 border-black text-sm font-bold">4. Desarrollar</div>
+    <div class="bg-[#C0C0C0] px-3 py-1 border-b-2 border-black text-sm font-bold"><div class="i-pixelarticons-file inline-block w-4 h-4 mr-1" /> 4. Desarrollar</div>
     <div class="p-3 text-xs">Trabajo autónomo, lectura profunda, ritmo propio.</div>
   </div>
   <div class="neo-card">
-    <div class="bg-[#2D3436] px-3 py-1 border-b-2 border-black text-sm font-bold text-white">5. Presentar</div>
+    <div class="bg-[#2D3436] px-3 py-1 border-b-2 border-black text-sm font-bold text-white"><div class="i-pixelarticons-monitor inline-block w-4 h-4 mr-1" /> 5. Presentar</div>
     <div class="p-3 text-xs">Comunicar hallazgos, exhibir proyectos, recibir retroalimentación.</div>
   </div>
   <div class="neo-card">
-    <div class="bg-[#FF6B6B] px-3 py-1 border-b-2 border-black text-sm font-bold text-white">6. Interactuar</div>
+    <div class="bg-[#FF6B6B] px-3 py-1 border-b-2 border-black text-sm font-bold text-white"><div class="i-pixelarticons-link inline-block w-4 h-4 mr-1" /> 6. Interactuar</div>
     <div class="p-3 text-xs">Enlace con el exterior: tecnología, expertos invitados, comunidades.</div>
   </div>
 </v-clicks>
@@ -325,33 +327,37 @@ layout: neo-section
 layout: neo-section
 ---
 
-# Metodología
+<div class="i-pixelarticons-clipboard inline-block w-16 h-16 mb-4 text-[#FF6B6B]" />
 
-## ¿Cómo construimos la entrevista?
+<h1 class="text-white text-5xl font-bold">Metodología</h1>
+
+<p class="text-[#FF6B6B] mt-4 text-xl font-mono">// ¿cómo construimos la entrevista?</p>
 
 ---
 
 <!-- Slide 12: Entrevista Primaria -->
 
-# Entrevista: Primaria y Secundaria
+# <div class="i-pixelarticons-notes inline-block w-7 h-7 align-middle" /> Entrevista: Primaria y Secundaria
 
 <div class="pixel-divider my-2" />
 
+<p class="text-xs mt-1 mb-2">Para comprender cómo perciben su aula los niños de primaria, adaptamos el instrumento MCI como guía de entrevista semi-estructurada, aplicando los tres principios del Diseño Universal para el Aprendizaje (CAST, 2024).</p>
+
 <div class="grid grid-cols-[1fr_1fr] gap-4 mt-1">
   <div>
-    <h3 class="font-bold mb-1 text-sm">Instrumento base</h3>
+    <h3 class="font-bold mb-1 text-sm"><div class="i-pixelarticons-file inline-block w-4 h-4 mr-1" /> Instrumento base</h3>
 <v-clicks>
     <div class="border-2 border-black bg-white p-2 shadow-[1px_1px_0px_#000] mb-2 text-xs">
-      <strong>MCI</strong> (My Class Inventory)<br/>
+      <div class="i-pixelarticons-clipboard inline-block w-4 h-4 mr-1 text-[#2DD4BF]" /> <strong>MCI</strong> (My Class Inventory)<br/>
       Fraser (1982) — 25 ítems, 5 escalas — Edades: 8 a 12 años
     </div>
     <div class="border-2 border-black bg-white p-2 shadow-[1px_1px_0px_#000] text-xs">
-      <strong>Escalas:</strong> Cohesión, Fricción, Satisfacción, Dificultad, Competitividad
+      <div class="i-pixelarticons-list inline-block w-4 h-4 mr-1 text-[#2DD4BF]" /> <strong>Escalas:</strong> Cohesión, Fricción, Satisfacción, Dificultad, Competitividad
     </div>
 </v-clicks>
   </div>
   <div>
-    <h3 class="font-bold mb-1 text-sm">Principios DUA aplicados</h3>
+    <h3 class="font-bold mb-1 text-sm"><div class="i-pixelarticons-open inline-block w-4 h-4 mr-1" /> Principios DUA aplicados</h3>
 <v-clicks>
     <div class="border-2 border-black bg-[#2DD4BF]/10 p-2 shadow-[1px_1px_0px_#000] mb-2 text-xs">
       <div class="i-pixelarticons-mood-happy inline-block w-4 h-4 mr-1" /> <strong>Participación:</strong> preguntas vinculadas con experiencia diaria. Sin respuestas correctas.
@@ -372,7 +378,7 @@ layout: neo-section
 
 <!-- Slide 13: 7 Preguntas Primaria -->
 
-# 7 Preguntas — Primaria y Secundaria
+# <div class="i-pixelarticons-list inline-block w-7 h-7 align-middle" /> 7 Preguntas — Primaria y Secundaria
 
 <div class="pixel-divider my-2" />
 
@@ -415,28 +421,30 @@ layout: neo-section
 
 <!-- Slide 14: Entrevista Preparatoria -->
 
-# Entrevista: Preparatoria y Universidad
+# <div class="i-pixelarticons-notes inline-block w-7 h-7 align-middle" /> Entrevista: Preparatoria y Universidad
 
 <div class="pixel-divider my-2" />
 
+<p class="text-xs mt-1 mb-2">Para estudiantes de preparatoria y universidad combinamos dos instrumentos validados internacionalmente: WIHIC y CUCEI, adaptados como entrevista con los mismos principios DUA.</p>
+
 <div class="grid grid-cols-[1fr_1fr] gap-4 mt-1">
   <div>
-    <h3 class="font-bold mb-1 text-sm">Instrumentos base</h3>
+    <h3 class="font-bold mb-1 text-sm"><div class="i-pixelarticons-file inline-block w-4 h-4 mr-1" /> Instrumentos base</h3>
 <v-clicks>
     <div class="border-2 border-black bg-white p-2 shadow-[1px_1px_0px_#000] mb-2 text-xs">
-      <strong>WIHIC</strong> — Fraser (1998) — 56 ítems, 7 escalas<br/>
+      <div class="i-pixelarticons-clipboard inline-block w-4 h-4 mr-1 text-[#6C5CE7]" /> <strong>WIHIC</strong> — Fraser (1998) — 56 ítems, 7 escalas<br/>
       Validado en español (Helding y Fraser, 2013)
     </div>
     <div class="border-2 border-black bg-white p-2 shadow-[1px_1px_0px_#000] mb-2 text-xs">
-      <strong>CUCEI</strong> — Personalización y autonomía universitaria
+      <div class="i-pixelarticons-clipboard inline-block w-4 h-4 mr-1 text-[#6C5CE7]" /> <strong>CUCEI</strong> — Personalización y autonomía universitaria
     </div>
     <div class="border-2 border-black bg-white p-2 shadow-[1px_1px_0px_#000] text-xs">
-      <strong>Escalas:</strong> Cohesión, Apoyo docente, Involucramiento, Investigación, Orientación a la tarea, Cooperación, Equidad
+      <div class="i-pixelarticons-list inline-block w-4 h-4 mr-1 text-[#6C5CE7]" /> <strong>Escalas:</strong> Cohesión, Apoyo docente, Involucramiento, Investigación, Orientación a la tarea, Cooperación, Equidad
     </div>
 </v-clicks>
   </div>
   <div>
-    <h3 class="font-bold mb-1 text-sm">Principios DUA aplicados</h3>
+    <h3 class="font-bold mb-1 text-sm"><div class="i-pixelarticons-open inline-block w-4 h-4 mr-1" /> Principios DUA aplicados</h3>
 <v-clicks>
     <div class="border-2 border-black bg-[#2DD4BF]/10 p-2 shadow-[1px_1px_0px_#000] mb-2 text-xs">
       <div class="i-pixelarticons-mood-happy inline-block w-4 h-4 mr-1" /> <strong>Participación:</strong> preguntas vinculadas con experiencia académica y profesional.
@@ -457,7 +465,7 @@ layout: neo-section
 
 <!-- Slide 15: 7 Preguntas Preparatoria -->
 
-# 7 Preguntas — Preparatoria y Universidad
+# <div class="i-pixelarticons-list inline-block w-7 h-7 align-middle" /> 7 Preguntas — Preparatoria y Universidad
 
 <div class="pixel-divider my-2" />
 
@@ -497,69 +505,176 @@ layout: neo-section
 <div class="mt-3 text-xs opacity-50 text-center">Estado: aún no se ha aplicado</div>
 
 ---
+layout: neo-section
+---
 
-<!-- Slide 16: Personas -->
+<!-- Slide 16: Section Divider — Personas -->
 
-# ¿Para Quién Diseñamos?
+<div class="i-pixelarticons-users inline-block w-16 h-16 mb-4 text-[#6C5CE7]" />
+
+<h1 class="text-white text-5xl font-bold">User Personas</h1>
+
+<p class="text-[#6C5CE7] mt-4 text-xl font-mono">// ¿para quién diseñamos?</p>
+
+---
+
+<!-- Slide 17: Persona — Valentina -->
+
+# <div class="i-pixelarticons-user inline-block w-7 h-7 align-middle" /> Persona: Valentina
 
 <div class="pixel-divider my-2" />
 
-<p class="text-xs mb-3 opacity-60">Arquetipos construidos a partir de la literatura revisada. No representan individuos reales.</p>
-
-<div class="grid grid-cols-2 gap-4">
-  <div class="space-y-3">
-    <div class="text-center font-bold text-sm mb-1">Primaria y Secundaria</div>
-    <div class="border-2 border-black bg-white p-3 shadow-[2px_2px_0px_#000]" style="border-top: 4px solid #2DD4BF">
-      <div class="font-bold text-sm">Valentina · 10 años · 5.° primaria</div>
-      <div class="text-xs mt-1">Escuela pública urbana, Puebla. Curiosa pero aburrida por las filas. Aprende mejor cuando se mueve y colabora.</div>
-      <div class="text-xs mt-1 italic opacity-70">"Me gustaría que el salón tuviera mesas donde pudiéramos sentarnos juntos."</div>
+<div class="grid grid-cols-[200px_1fr] gap-6 mt-3">
+  <div class="flex flex-col items-center">
+    <div class="border-2 border-black bg-[#2DD4BF]/20 w-36 h-36 flex items-center justify-center shadow-[3px_3px_0px_#000]">
+      <div class="i-pixelarticons-user inline-block w-20 h-20 text-[#2DD4BF]" />
     </div>
-    <div class="border-2 border-black bg-white p-3 shadow-[2px_2px_0px_#000]" style="border-top: 4px solid #2E7D32">
-      <div class="font-bold text-sm">Prof. Miguel · 38 años · Docente</div>
-      <div class="text-xs mt-1">12 años de experiencia. Quiere usar proyectos colaborativos pero el mobiliario fijo no se lo permite.</div>
-      <div class="text-xs mt-1 italic opacity-70">"Si pudiera mover los muebles tendría tres estaciones de trabajo."</div>
+    <div class="mt-2 text-center">
+      <div class="font-bold text-sm">Valentina</div>
+      <div class="text-xs opacity-70">10 años · 5.° primaria</div>
     </div>
   </div>
   <div class="space-y-3">
-    <div class="text-center font-bold text-sm mb-1">Preparatoria y Universidad</div>
-    <div class="border-2 border-black bg-white p-3 shadow-[2px_2px_0px_#000]" style="border-top: 4px solid #6A1B9A">
-      <div class="font-bold text-sm">Andrea · 20 años · Pedagogía, UPAEP</div>
-      <div class="text-xs mt-1">Trabaja medio tiempo. Quiere diseñar intervenciones reales, no solo escribir ensayos sobre lo que otros hicieron.</div>
-      <div class="text-xs mt-1 italic opacity-70">"Estudio pedagogía pero nunca he diseñado una clase real."</div>
+    <div class="neo-card">
+      <div class="bg-[#2DD4BF] px-3 py-1 border-b-2 border-black text-sm font-bold text-white"><div class="i-pixelarticons-label inline-block w-4 h-4 mr-1" /> Contexto</div>
+      <div class="p-3 text-sm">Escuela pública urbana en Puebla. Familia de cuatro. Usa el celular de su mamá para tareas. <strong>Curiosa y sociable</strong>, pero se aburre con las filas y la clase expositiva.</div>
     </div>
-    <div class="border-2 border-black bg-white p-3 shadow-[2px_2px_0px_#000]" style="border-top: 4px solid #00695C">
-      <div class="font-bold text-sm">Dra. Lucía · 45 años · Catedrática</div>
-      <div class="text-xs mt-1">Investiga sobre aprendizaje activo pero da clase frontal a 60 estudiantes. Quiere cambiar sin perder rigor.</div>
-      <div class="text-xs mt-1 italic opacity-70">"La contradicción entre lo que investigo y cómo enseño me pesa."</div>
+    <div class="neo-card">
+      <div class="bg-[#FF6B6B] px-3 py-1 border-b-2 border-black text-sm font-bold text-white"><div class="i-pixelarticons-warning-box inline-block w-4 h-4 mr-1" /> Frustraciones</div>
+      <div class="p-3 text-sm">No puede moverse durante la clase. Las bancas están fijas. Le piden silencio cuando quiere preguntar. <strong>Aprende mejor cuando se mueve y colabora</strong>, pero el espacio no lo permite.</div>
+    </div>
+    <div class="border-2 border-black bg-[#2DD4BF]/10 p-3 shadow-[2px_2px_0px_#000]">
+      <div class="i-pixelarticons-message inline-block w-4 h-4 mr-1 text-[#2DD4BF]" /> <em class="text-sm">"Me gustaría que el salón tuviera mesas donde pudiéramos sentarnos juntos."</em>
     </div>
   </div>
 </div>
 
 ---
 
-<!-- Slide 17: Próximos Pasos -->
+<!-- Slide 18: Persona — Prof. Miguel -->
 
-# Próximos Pasos
+# <div class="i-pixelarticons-user inline-block w-7 h-7 align-middle" /> Persona: Prof. Miguel
 
 <div class="pixel-divider my-2" />
 
-<div class="space-y-3 mt-4">
+<div class="grid grid-cols-[200px_1fr] gap-6 mt-3">
+  <div class="flex flex-col items-center">
+    <div class="border-2 border-black bg-[#2E7D32]/20 w-36 h-36 flex items-center justify-center shadow-[3px_3px_0px_#000]">
+      <div class="i-pixelarticons-user inline-block w-20 h-20 text-[#2E7D32]" />
+    </div>
+    <div class="mt-2 text-center">
+      <div class="font-bold text-sm">Prof. Miguel</div>
+      <div class="text-xs opacity-70">38 años · Docente primaria</div>
+    </div>
+  </div>
+  <div class="space-y-3">
+    <div class="neo-card">
+      <div class="bg-[#2E7D32] px-3 py-1 border-b-2 border-black text-sm font-bold text-white"><div class="i-pixelarticons-label inline-block w-4 h-4 mr-1" /> Contexto</div>
+      <div class="p-3 text-sm">12 años de experiencia en escuela pública. Se capacitó en aprendizaje basado en proyectos. <strong>Quiere transformar su práctica</strong>, pero el aula no coopera: bancas atornilladas, sin rincones de trabajo, un solo pizarrón.</div>
+    </div>
+    <div class="neo-card">
+      <div class="bg-[#FF6B6B] px-3 py-1 border-b-2 border-black text-sm font-bold text-white"><div class="i-pixelarticons-warning-box inline-block w-4 h-4 mr-1" /> Frustraciones</div>
+      <div class="p-3 text-sm">El mobiliario fijo impide estaciones de trabajo. Los directivos miden "orden" por el silencio. <strong>El espacio contradice lo que le enseñaron sobre pedagogía activa.</strong></div>
+    </div>
+    <div class="border-2 border-black bg-[#2E7D32]/10 p-3 shadow-[2px_2px_0px_#000]">
+      <div class="i-pixelarticons-message inline-block w-4 h-4 mr-1 text-[#2E7D32]" /> <em class="text-sm">"Si pudiera mover los muebles tendría tres estaciones de trabajo."</em>
+    </div>
+  </div>
+</div>
+
+---
+
+<!-- Slide 19: Persona — Andrea -->
+
+# <div class="i-pixelarticons-user inline-block w-7 h-7 align-middle" /> Persona: Andrea
+
+<div class="pixel-divider my-2" />
+
+<div class="grid grid-cols-[200px_1fr] gap-6 mt-3">
+  <div class="flex flex-col items-center">
+    <div class="border-2 border-black bg-[#6A1B9A]/20 w-36 h-36 flex items-center justify-center shadow-[3px_3px_0px_#000]">
+      <div class="i-pixelarticons-user inline-block w-20 h-20 text-[#6A1B9A]" />
+    </div>
+    <div class="mt-2 text-center">
+      <div class="font-bold text-sm">Andrea</div>
+      <div class="text-xs opacity-70">20 años · Pedagogía, UPAEP</div>
+    </div>
+  </div>
+  <div class="space-y-3">
+    <div class="neo-card">
+      <div class="bg-[#6A1B9A] px-3 py-1 border-b-2 border-black text-sm font-bold text-white"><div class="i-pixelarticons-label inline-block w-4 h-4 mr-1" /> Contexto</div>
+      <div class="p-3 text-sm">Trabaja medio tiempo como asistente en un kínder. Cursa 5.° semestre de Pedagogía. <strong>Lee sobre innovación educativa todo el día, pero nunca ha diseñado una intervención real.</strong> Frustrada por la distancia entre teoría y práctica.</div>
+    </div>
+    <div class="neo-card">
+      <div class="bg-[#FF6B6B] px-3 py-1 border-b-2 border-black text-sm font-bold text-white"><div class="i-pixelarticons-warning-box inline-block w-4 h-4 mr-1" /> Frustraciones</div>
+      <div class="p-3 text-sm">Las materias piden ensayos sobre pedagogía pero nunca proyectos reales. <strong>El aula universitaria reproduce la misma clase frontal que critican en los textos.</strong></div>
+    </div>
+    <div class="border-2 border-black bg-[#6A1B9A]/10 p-3 shadow-[2px_2px_0px_#000]">
+      <div class="i-pixelarticons-message inline-block w-4 h-4 mr-1 text-[#6A1B9A]" /> <em class="text-sm">"Estudio pedagogía pero nunca he diseñado una clase real."</em>
+    </div>
+  </div>
+</div>
+
+---
+
+<!-- Slide 20: Persona — Dra. Lucía -->
+
+# <div class="i-pixelarticons-user inline-block w-7 h-7 align-middle" /> Persona: Dra. Lucía
+
+<div class="pixel-divider my-2" />
+
+<div class="grid grid-cols-[200px_1fr] gap-6 mt-3">
+  <div class="flex flex-col items-center">
+    <div class="border-2 border-black bg-[#00695C]/20 w-36 h-36 flex items-center justify-center shadow-[3px_3px_0px_#000]">
+      <div class="i-pixelarticons-user inline-block w-20 h-20 text-[#00695C]" />
+    </div>
+    <div class="mt-2 text-center">
+      <div class="font-bold text-sm">Dra. Lucía</div>
+      <div class="text-xs opacity-70">45 años · Catedrática</div>
+    </div>
+  </div>
+  <div class="space-y-3">
+    <div class="neo-card">
+      <div class="bg-[#00695C] px-3 py-1 border-b-2 border-black text-sm font-bold text-white"><div class="i-pixelarticons-label inline-block w-4 h-4 mr-1" /> Contexto</div>
+      <div class="p-3 text-sm">Doctora en educación con publicaciones sobre aprendizaje activo. <strong>Da clase frontal a grupos de 60 estudiantes</strong> porque el auditorio escalonado no permite otra configuración. Quiere cambiar sin perder rigor académico.</div>
+    </div>
+    <div class="neo-card">
+      <div class="bg-[#FF6B6B] px-3 py-1 border-b-2 border-black text-sm font-bold text-white"><div class="i-pixelarticons-warning-box inline-block w-4 h-4 mr-1" /> Frustraciones</div>
+      <div class="p-3 text-sm">Investiga sobre aprendizaje activo pero no puede aplicarlo. <strong>La contradicción entre lo que investiga y cómo enseña le genera tensión profesional.</strong> El espacio físico es el primer obstáculo.</div>
+    </div>
+    <div class="border-2 border-black bg-[#00695C]/10 p-3 shadow-[2px_2px_0px_#000]">
+      <div class="i-pixelarticons-message inline-block w-4 h-4 mr-1 text-[#00695C]" /> <em class="text-sm">"La contradicción entre lo que investigo y cómo enseño me pesa."</em>
+    </div>
+  </div>
+</div>
+
+---
+
+<!-- Slide 21: Próximos Pasos -->
+
+# <div class="i-pixelarticons-arrow-right inline-block w-7 h-7 align-middle" /> Próximos Pasos
+
+<div class="pixel-divider my-2" />
+
+<p class="text-sm mt-2 mb-3">Las entrevistas <strong>aún no se han aplicado</strong>. El siguiente paso es llevar los instrumentos al campo y contrastar las personas con datos reales. Este es nuestro plan de trabajo:</p>
+
+<div class="space-y-3 mt-2">
 <v-clicks>
   <div class="border-2 border-black bg-white p-3 shadow-[2px_2px_0px_#000] flex items-center gap-3">
     <span class="neo-tag bg-coral text-white">1</span>
-    <div><strong>Aplicar las entrevistas</strong> con estudiantes reales usando las guías basadas en MCI y WIHIC.</div>
+    <div><div class="i-pixelarticons-message inline-block w-4 h-4 mr-1 align-middle" /> <strong>Aplicar las entrevistas</strong> con estudiantes reales usando las guías basadas en MCI y WIHIC.</div>
   </div>
   <div class="border-2 border-black bg-white p-3 shadow-[2px_2px_0px_#000] flex items-center gap-3">
     <span class="neo-tag bg-banana text-white">2</span>
-    <div><strong>Analizar las respuestas</strong> y refinar las personas (arquetipos) con datos reales.</div>
+    <div><div class="i-pixelarticons-chart inline-block w-4 h-4 mr-1 align-middle" /> <strong>Analizar las respuestas</strong> y refinar las personas (arquetipos) con datos reales.</div>
   </div>
   <div class="border-2 border-black bg-white p-3 shadow-[2px_2px_0px_#000] flex items-center gap-3">
     <span class="neo-tag bg-grape text-white">3</span>
-    <div><strong>Completar ambos documentos académicos</strong> integrando los hallazgos de las entrevistas.</div>
+    <div><div class="i-pixelarticons-file inline-block w-4 h-4 mr-1 align-middle" /> <strong>Completar ambos documentos académicos</strong> integrando los hallazgos de las entrevistas.</div>
   </div>
   <div class="border-2 border-black bg-white p-3 shadow-[2px_2px_0px_#000] flex items-center gap-3">
     <span class="neo-tag bg-ink text-white">4</span>
-    <div><strong>Vincular con el diseño 3D</strong> del aula: conectar con los tres recorridos interactivos.</div>
+    <div><div class="i-pixelarticons-3d-box inline-block w-4 h-4 mr-1 align-middle" /> <strong>Vincular con el diseño 3D</strong> del aula: conectar con los tres recorridos interactivos.</div>
   </div>
 </v-clicks>
 </div>
@@ -568,7 +683,7 @@ layout: neo-section
 
 <!-- Slide 18: Referencias -->
 
-# Referencias
+# <div class="i-pixelarticons-bookmark inline-block w-7 h-7 align-middle" /> Referencias
 
 <div class="pixel-divider my-2" />
 
@@ -596,7 +711,7 @@ Fraser, B. J. (1998). Classroom environment instruments. *Learning Environments 
 
 <!-- Slide 19: Referencias (continuación) -->
 
-# Referencias (continuación)
+# <div class="i-pixelarticons-bookmark inline-block w-7 h-7 align-middle" /> Referencias (continuación)
 
 <div class="pixel-divider my-2" />
 
