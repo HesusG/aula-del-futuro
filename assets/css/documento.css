@@ -185,6 +185,24 @@ section:nth-child(7)  { animation-delay: 0.48s; }
 section:nth-child(8)  { animation-delay: 0.56s; }
 section:nth-child(9)  { animation-delay: 0.64s; }
 section:nth-child(10) { animation-delay: 0.72s; }
+section:nth-child(11) { animation-delay: 0.80s; }
+section:nth-child(12) { animation-delay: 0.88s; }
+section:nth-child(13) { animation-delay: 0.96s; }
+section:nth-child(14) { animation-delay: 1.04s; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #00BCD4;
+  outline-offset: 2px;
+}
 
 
 /* ============================================================

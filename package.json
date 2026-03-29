@@ -4,16 +4,20 @@
   "private": true,
   "scripts": {
     "dev": "slidev --open",
-    "build": "slidev build",
-    "export": "slidev export"
+    "build:refs": "node scripts/render-refs.js",
+    "build": "npm run build:refs && slidev build",
+    "export": "slidev export",
+    "clean": "rm -rf dist .slidev"
   },
   "dependencies": {
+    "@citation-js/core": "^0.7.21",
+    "@citation-js/plugin-csl": "^0.7.22",
     "@iconify-json/pixelarticons": "^1.2.1",
     "@slidev/cli": "^51.4.0",
-    "@slidev/theme-default": "latest",
+    "@slidev/theme-default": "^0.25.0",
     "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@unocss/extractor-mdc": "^66.1.0"
+    "playwright-chromium": "^1.58.2"
   }
 }

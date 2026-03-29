@@ -13,6 +13,9 @@ Desktop.ini
 # Backups
 *.bak
 
+# Exports
+*.docx
+
 # Claude Code
 .claude/
 

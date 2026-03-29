@@ -1,0 +1,293 @@
+/* ========================================
+   Personas Page — Mac OS 7 Style
+   ======================================== */
+
+:root {
+  --bg: #C0C0C0;
+  --white: #FFFFFF;
+  --black: #000000;
+  --platinum: #D4D0C8;
+  --gray: #808080;
+  --teal: #2DD4BF;
+  --coral: #FF6B6B;
+  --purple: #6C5CE7;
+  --green: #2E7D32;
+  --deep-purple: #6A1B9A;
+  --dark-teal: #00695C;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--black);
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* Mac OS 7 Window Chrome */
+.window {
+  max-width: 1200px;
+  margin: 24px auto;
+  border: 2px solid var(--black);
+  background: var(--white);
+  box-shadow: 4px 4px 0px var(--black);
+}
+
+.window__titlebar {
+  background: var(--platinum);
+  border-bottom: 2px solid var(--black);
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.window__titlebar-btn {
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--black);
+  background: var(--white);
+}
+
+.window__titlebar-text {
+  flex: 1;
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: -0.02em;
+}
+
+.window__content {
+  padding: 24px 32px 32px;
+}
+
+/* Menu Bar */
+.menubar {
+  background: var(--platinum);
+  border-bottom: 2px solid var(--black);
+  padding: 4px 16px;
+  display: flex;
+  gap: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+}
+
+.menubar a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.menubar a:hover {
+  text-decoration: underline;
+}
+
+/* Page Header */
+.page-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.page-header h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.pixel-divider {
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--black) 0px, var(--black) 4px, transparent 4px, transparent 8px);
+  margin: 16px 0;
+}
+
+/* Level Labels */
+.level-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 32px 0 16px;
+  padding: 8px 16px;
+  border: 2px solid var(--black);
+  display: inline-block;
+  box-shadow: 2px 2px 0px var(--black);
+}
+
+.level-label--basic { background: rgba(45, 212, 191, 0.2); }
+.level-label--upper { background: rgba(108, 92, 231, 0.2); }
+
+/* Persona Card */
+.persona {
+  border: 2px solid var(--black);
+  background: var(--white);
+  box-shadow: 3px 3px 0px var(--black);
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .persona { grid-template-columns: 1fr; }
+}
+
+.persona__sidebar {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-right: 2px solid var(--black);
+}
+
+.persona__avatar {
+  width: 120px;
+  height: 120px;
+  border: 2px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 0px var(--black);
+  font-size: 3.5rem;
+}
+
+.persona__name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.persona__role {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--gray);
+  text-align: center;
+}
+
+.persona__body {
+  padding: 0;
+}
+
+.persona__section {
+  padding: 16px 20px;
+  border-bottom: 2px solid var(--black);
+}
+
+.persona__section:last-child {
+  border-bottom: none;
+}
+
+.persona__section-header {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  display: inline-block;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.persona__section p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.persona__quote {
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 12px 20px;
+  position: relative;
+}
+
+.persona__quote::before {
+  content: '"';
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  opacity: 0.3;
+}
+
+.persona__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  padding: 2px 8px;
+  border: 1px solid var(--black);
+  background: var(--platinum);
+}
+
+/* Footer */
+.page-footer {
+  text-align: center;
+  padding: 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--gray);
+  border-top: 2px solid var(--black);
+}
+
+.page-footer a {
+  color: var(--black);
+}
+
+/* Back link */
+.back-link {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--black);
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 2px solid var(--black);
+  background: var(--platinum);
+  box-shadow: 2px 2px 0px var(--black);
+  margin-bottom: 16px;
+}
+
+.back-link:hover {
+  background: var(--white);
+}
+
+.back-link:active {
+  box-shadow: none;
+  transform: translate(2px, 2px);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+a:focus-visible,
+button:focus-visible,
+.back-link:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 2px;
+}

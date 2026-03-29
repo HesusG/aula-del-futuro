@@ -1,0 +1,277 @@
+[
+  {
+    "id": "cast-2024",
+    "type": "webpage",
+    "title": "Universal Design for Learning Guidelines version 3.0",
+    "author": [{ "literal": "CAST" }],
+    "issued": { "date-parts": [[2024]] },
+    "URL": "https://udlguidelines.cast.org/"
+  },
+  {
+    "id": "darling-hammond-2020",
+    "type": "article-journal",
+    "title": "Implications for educational practice of the science of learning and development",
+    "author": [
+      { "family": "Darling-Hammond", "given": "Linda" },
+      { "family": "Flook", "given": "Lisa" },
+      { "family": "Cook-Harvey", "given": "Channa" },
+      { "family": "Barron", "given": "Brigid" },
+      { "family": "Osher", "given": "David" }
+    ],
+    "issued": { "date-parts": [[2020]] },
+    "container-title": "Applied Developmental Science",
+    "volume": "24",
+    "issue": "2",
+    "page": "97-140",
+    "DOI": "10.1080/10888691.2018.1537791"
+  },
+  {
+    "id": "deci-ryan-2000",
+    "type": "article-journal",
+    "title": "The \"what\" and \"why\" of goal pursuits: Human needs and the self-determination of behavior",
+    "author": [
+      { "family": "Deci", "given": "Edward L." },
+      { "family": "Ryan", "given": "Richard M." }
+    ],
+    "issued": { "date-parts": [[2000]] },
+    "container-title": "Psychological Inquiry",
+    "volume": "11",
+    "issue": "4",
+    "page": "227-268",
+    "DOI": "10.1207/S15327965PLI1104_01"
+  },
+  {
+    "id": "diaz-barriga-2010",
+    "type": "book",
+    "title": "Estrategias docentes para un aprendizaje significativo: Una interpretación constructivista",
+    "author": [
+      { "family": "Díaz Barriga Arceo", "given": "Frida" },
+      { "family": "Hernández Rojas", "given": "Gerardo" }
+    ],
+    "issued": { "date-parts": [[2010]] },
+    "edition": "3",
+    "publisher": "McGraw-Hill"
+  },
+  {
+    "id": "durlak-2011",
+    "type": "article-journal",
+    "title": "The impact of enhancing students' social and emotional learning: A meta-analysis of school-based universal interventions",
+    "author": [
+      { "family": "Durlak", "given": "Joseph A." },
+      { "family": "Weissberg", "given": "Roger P." },
+      { "family": "Dymnicki", "given": "Allison B." },
+      { "family": "Taylor", "given": "Rebecca D." },
+      { "family": "Schellinger", "given": "Kriston B." }
+    ],
+    "issued": { "date-parts": [[2011]] },
+    "container-title": "Child Development",
+    "volume": "82",
+    "issue": "1",
+    "page": "405-432",
+    "DOI": "10.1111/j.1467-8624.2010.01564.x"
+  },
+  {
+    "id": "european-schoolnet-2017",
+    "type": "webpage",
+    "title": "Future Classroom Lab: Learning Zones",
+    "author": [{ "literal": "European Schoolnet" }],
+    "issued": { "date-parts": [[2017]] },
+    "URL": "https://fcl.eun.org/learning-zones"
+  },
+  {
+    "id": "flavell-1979",
+    "type": "article-journal",
+    "title": "Metacognition and cognitive monitoring: A new area of cognitive-developmental inquiry",
+    "author": [{ "family": "Flavell", "given": "John H." }],
+    "issued": { "date-parts": [[1979]] },
+    "container-title": "American Psychologist",
+    "volume": "34",
+    "issue": "10",
+    "page": "906-911",
+    "DOI": "10.1037/0003-066X.34.10.906"
+  },
+  {
+    "id": "fraser-1982",
+    "type": "book",
+    "title": "Assessment of Learning Environments: Manual for Learning Environment Inventory (LEI) and My Class Inventory (MCI)",
+    "author": [{ "family": "Fraser", "given": "Barry J." }],
+    "issued": { "date-parts": [[1982]] },
+    "edition": "3",
+    "publisher": "ERIC",
+    "URL": "https://files.eric.ed.gov/fulltext/ED223649.pdf"
+  },
+  {
+    "id": "fraser-1998",
+    "type": "article-journal",
+    "title": "Classroom environment instruments: Development, validity and applications",
+    "author": [{ "family": "Fraser", "given": "Barry J." }],
+    "issued": { "date-parts": [[1998]] },
+    "container-title": "Learning Environments Research",
+    "volume": "1",
+    "issue": "1",
+    "page": "7-34",
+    "DOI": "10.1023/A:1009932514731"
+  },
+  {
+    "id": "fullan-langworthy-2014",
+    "type": "book",
+    "title": "A rich seam: How new pedagogies find deep learning",
+    "author": [
+      { "family": "Fullan", "given": "Michael" },
+      { "family": "Langworthy", "given": "Maria" }
+    ],
+    "issued": { "date-parts": [[2014]] },
+    "publisher": "Pearson",
+    "URL": "https://michaelfullan.ca/wp-content/uploads/2014/01/3897.Rich_Seam_web.pdf"
+  },
+  {
+    "id": "helding-fraser-2013",
+    "type": "article-journal",
+    "title": "Effectiveness of National Board Certified (NBC) teachers in terms of classroom environment, attitudes and achievement among secondary science students",
+    "author": [
+      { "family": "Helding", "given": "Karen A." },
+      { "family": "Fraser", "given": "Barry J." }
+    ],
+    "issued": { "date-parts": [[2013]] },
+    "container-title": "Learning Environments Research",
+    "volume": "16",
+    "issue": "2",
+    "page": "267-286",
+    "DOI": "10.1007/s10984-013-9138-6"
+  },
+  {
+    "id": "lges-2021",
+    "type": "legislation",
+    "title": "Ley General de Educación Superior",
+    "container-title": "Diario Oficial de la Federación",
+    "issued": { "date-parts": [[2021, 4, 20]] },
+    "URL": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGES_200421.pdf"
+  },
+  {
+    "id": "oecd-2017",
+    "type": "book",
+    "title": "The OECD Handbook for Innovative Learning Environments",
+    "author": [{ "literal": "OECD" }],
+    "issued": { "date-parts": [[2017]] },
+    "publisher": "OECD Publishing",
+    "DOI": "10.1787/9789264277274-en"
+  },
+  {
+    "id": "oecd-2020",
+    "type": "book",
+    "title": "Back to the Future(s) of Education: Four OECD Scenarios for Schooling",
+    "author": [{ "literal": "OECD" }],
+    "issued": { "date-parts": [[2020]] },
+    "publisher": "OECD Publishing",
+    "DOI": "10.1787/178ef527-en"
+  },
+  {
+    "id": "pozo-1990",
+    "type": "chapter",
+    "title": "Estrategias de aprendizaje",
+    "author": [{ "family": "Pozo", "given": "Juan Ignacio" }],
+    "issued": { "date-parts": [[1990]] },
+    "container-title": "Desarrollo psicológico y educación II. Psicología de la educación escolar",
+    "editor": [
+      { "family": "Coll", "given": "César" },
+      { "family": "Palacios", "given": "Jesús" },
+      { "family": "Marchesi", "given": "Álvaro" }
+    ],
+    "page": "199-221",
+    "publisher": "Alianza Editorial"
+  },
+  {
+    "id": "pozo-postigo-1994",
+    "type": "chapter",
+    "title": "La solución de problemas como contenido procedimental de la educación obligatoria",
+    "author": [
+      { "family": "Pozo", "given": "Juan Ignacio" },
+      { "family": "Postigo", "given": "Yolanda" }
+    ],
+    "issued": { "date-parts": [[1994]] },
+    "container-title": "La solución de problemas",
+    "editor": [{ "family": "Pozo", "given": "Juan Ignacio" }],
+    "page": "179-213",
+    "publisher": "Santillana"
+  },
+  {
+    "id": "schraw-dennison-1994",
+    "type": "article-journal",
+    "title": "Assessing metacognitive awareness",
+    "author": [
+      { "family": "Schraw", "given": "Gregory" },
+      { "family": "Dennison", "given": "Rayne Sperling" }
+    ],
+    "issued": { "date-parts": [[1994]] },
+    "container-title": "Contemporary Educational Psychology",
+    "volume": "19",
+    "issue": "4",
+    "page": "460-475",
+    "DOI": "10.1006/ceps.1994.1033"
+  },
+  {
+    "id": "sep-2022",
+    "type": "book",
+    "title": "Marco curricular y Plan de estudios 2022 de la Educación Básica Mexicana",
+    "author": [{ "literal": "SEP" }],
+    "issued": { "date-parts": [[2022]] },
+    "publisher": "Secretaría de Educación Pública",
+    "URL": "https://www.sep.gob.mx/marcocurricular/"
+  },
+  {
+    "id": "unesco-2015a",
+    "type": "book",
+    "title": "Educación 2030: Declaración de Incheon y Marco de Acción",
+    "author": [{ "literal": "UNESCO" }],
+    "issued": { "date-parts": [[2015]] },
+    "URL": "https://unesdoc.unesco.org/ark:/48223/pf0000245656"
+  },
+  {
+    "id": "unesco-2015b",
+    "type": "book",
+    "title": "Replantear la educación: ¿Hacia un bien común mundial?",
+    "author": [{ "literal": "UNESCO" }],
+    "issued": { "date-parts": [[2015]] },
+    "URL": "https://unesdoc.unesco.org/ark:/48223/pf0000232555"
+  },
+  {
+    "id": "unesco-2018",
+    "type": "book",
+    "title": "Marco de competencias de los docentes en materia de TIC",
+    "author": [{ "literal": "UNESCO" }],
+    "issued": { "date-parts": [[2018]] },
+    "URL": "https://unesdoc.unesco.org/ark:/48223/pf0000265721"
+  },
+  {
+    "id": "unesco-2019",
+    "type": "book",
+    "title": "Inteligencia artificial en la educación: desafíos y oportunidades para el desarrollo sostenible",
+    "author": [{ "literal": "UNESCO" }],
+    "issued": { "date-parts": [[2019]] },
+    "URL": "https://unesdoc.unesco.org/ark:/48223/pf0000366994"
+  },
+  {
+    "id": "unesco-2020",
+    "type": "book",
+    "title": "La educación en un mundo tras la COVID: nueve ideas para la acción pública",
+    "author": [{ "literal": "UNESCO" }],
+    "issued": { "date-parts": [[2020]] },
+    "URL": "https://unesdoc.unesco.org/ark:/48223/pf0000373718"
+  },
+  {
+    "id": "unesco-2021",
+    "type": "book",
+    "title": "Reimaginar juntos nuestros futuros: un nuevo contrato social para la educación",
+    "author": [{ "literal": "UNESCO" }],
+    "issued": { "date-parts": [[2021]] },
+    "URL": "https://unesdoc.unesco.org/ark:/48223/pf0000379707"
+  },
+  {
+    "id": "unesco-2023",
+    "type": "book",
+    "title": "Informe de seguimiento de la educación en el mundo 2023: tecnología en la educación",
+    "author": [{ "literal": "UNESCO" }],
+    "issued": { "date-parts": [[2023]] },
+    "URL": "https://unesdoc.unesco.org/ark:/48223/pf0000385723"
+  }
+]

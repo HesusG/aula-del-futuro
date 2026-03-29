@@ -27,6 +27,9 @@ jobs:
 
       - run: npm ci
 
+      # Generate references from references.json into documents and slides
+      - run: npm run build:refs
+
       # Build Slidev into dist/slides/
       - run: npx slidev build --base /aula-del-futuro/slides/ --out dist/slides
 
@@ -34,6 +37,7 @@ jobs:
       - run: |
           cp index.html dist/
           cp personas.html dist/
+          cp references.json dist/
           cp -r assets dist/
           cp -r documento dist/
           cp -r demo dist/

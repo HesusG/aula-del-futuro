@@ -169,7 +169,7 @@ layout: neo-section
     <div><strong>Nuevo contrato social.</strong> Preparar ciudadanos para un futuro pacífico, justo y sostenible. El cambio debe comenzar desde la infancia.</div>
   </div>
   <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] flex items-start gap-2 text-sm">
-    <span class="neo-tag bg-grape text-white text-xs flex-shrink-0">2015a</span>
+    <span class="neo-tag bg-grape text-white text-xs flex-shrink-0">2015b</span>
     <div><strong>Diversidad cultural como recurso.</strong> Integrar los conocimientos comunitarios en el aprendizaje, no solo tolerarlos.</div>
   </div>
   <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] flex items-start gap-2 text-sm">
@@ -183,7 +183,7 @@ layout: neo-section
 </v-clicks>
 </div>
 
-<RefFootnote :sources="['UNESCO (2021). Reimaginar juntos nuestros futuros.', 'UNESCO (2015a). Replantear la educación.', 'UNESCO (2020). La educación en un mundo tras la COVID.', 'UNESCO (2023). GEM Report: Tecnología en la educación.']" />
+<RefFootnote :sources="['UNESCO (2021). Reimaginar juntos nuestros futuros.', 'UNESCO (2015b). Replantear la educación.', 'UNESCO (2020). La educación en un mundo tras la COVID.', 'UNESCO (2023). GEM Report: Tecnología en la educación.']" />
 
 ---
 
@@ -831,27 +831,33 @@ layout: neo-section
 
 <div class="pixel-divider my-2" />
 
+<!-- REFS:SLIDE1:START -->
 <div class="text-xs space-y-1 mt-2 leading-relaxed">
 
 CAST. (2024). *Universal Design for Learning Guidelines version 3.0*. https://udlguidelines.cast.org/
 
-Díaz Barriga Arceo, F. y Hernández Rojas, G. (2010). *Estrategias docentes para un aprendizaje significativo: Una interpretación constructivista* (3a ed.). McGraw-Hill.
+Darling-Hammond, L., Flook, L., Cook-Harvey, C., Barron, B., y Osher, D. (2020). Implications for educational practice of the science of learning and development. *Applied Developmental Science*, *24*(2), 97–140. https://doi.org/10.1080/10888691.2018.1537791
 
-Darling-Hammond, L., Flook, L., Cook-Harvey, C., Barron, B. y Osher, D. (2020). Implications for educational practice of the science of learning and development. *Applied Developmental Science*, *24*(2), 97–140. https://doi.org/10.1080/10888691.2018.1537791
+Deci, E. L., y Ryan, R. M. (2000). The “what” and “why” of goal pursuits: Human needs and the self-determination of behavior. *Psychological Inquiry*, *11*(4), 227–268. https://doi.org/10.1207/S15327965PLI1104_01
 
-Deci, E. L. y Ryan, R. M. (2000). The "what" and "why" of goal pursuits. *Psychological Inquiry*, *11*(4), 227–268. https://doi.org/10.1207/S15327965PLI1104_01
+Díaz Barriga Arceo, F., y Hernández Rojas, G. (2010). *Estrategias docentes para un aprendizaje significativo: Una interpretación constructivista* (3.ª ed.). McGraw-Hill.
 
-Durlak, J. A., Weissberg, R. P., Dymnicki, A. B., Taylor, R. D. y Schellinger, K. B. (2011). The impact of enhancing students' social and emotional learning. *Child Development*, *82*(1), 405–432. https://doi.org/10.1111/j.1467-8624.2010.01564.x
+Durlak, J. A., Weissberg, R. P., Dymnicki, A. B., Taylor, R. D., y Schellinger, K. B. (2011). The impact of enhancing students’ social and emotional learning: A meta-analysis of school-based universal interventions. *Child Development*, *82*(1), 405–432. https://doi.org/10.1111/j.1467-8624.2010.01564.x
 
 European Schoolnet. (2017). *Future Classroom Lab: Learning Zones*. https://fcl.eun.org/learning-zones
 
-Flavell, J. H. (1979). Metacognition and cognitive monitoring. *American Psychologist*, *34*(10), 906–911. https://doi.org/10.1037/0003-066X.34.10.906
+Flavell, J. H. (1979). Metacognition and cognitive monitoring: A new area of cognitive-developmental inquiry. *American Psychologist*, *34*(10), 906–911. https://doi.org/10.1037/0003-066X.34.10.906
 
-Fraser, B. J. (1982). *Assessment of Learning Environments: Manual for LEI and MCI* (3.ª ed.). ERIC. https://files.eric.ed.gov/fulltext/ED223649.pdf
+Fraser, B. J. (1982). *Assessment of Learning Environments: Manual for Learning Environment Inventory (LEI) and My Class Inventory (MCI)* (3.ª ed.). ERIC. https://files.eric.ed.gov/fulltext/ED223649.pdf
 
-Fraser, B. J. (1998). Classroom environment instruments. *Learning Environments Research*, *1*(1), 7–34. https://doi.org/10.1023/A:1009932514731
+Fraser, B. J. (1998). Classroom environment instruments: Development, validity and applications. *Learning Environments Research*, *1*(1), 7–34. https://doi.org/10.1023/A:1009932514731
+
+Fullan, M., y Langworthy, M. (2014). *A rich seam: How new pedagogies find deep learning*. Pearson. https://michaelfullan.ca/wp-content/uploads/2014/01/3897.Rich_Seam_web.pdf
+
+Helding, K. A., y Fraser, B. J. (2013). Effectiveness of National Board Certified (NBC) teachers in terms of classroom environment, attitudes and achievement among secondary science students. *Learning Environments Research*, *16*(2), 267–286. https://doi.org/10.1007/s10984-013-9138-6
 
 </div>
+<!-- REFS:SLIDE1:END -->
 
 ---
 
@@ -861,27 +867,24 @@ Fraser, B. J. (1998). Classroom environment instruments. *Learning Environments 
 
 <div class="pixel-divider my-2" />
 
+<!-- REFS:SLIDE2:START -->
 <div class="text-xs space-y-1 mt-2 leading-relaxed">
-
-Fullan, M. y Langworthy, M. (2014). *A rich seam: How new pedagogies find deep learning*. Pearson. https://michaelfullan.ca/wp-content/uploads/2014/01/3897.Rich_Seam_web.pdf
-
-Helding, K. A. y Fraser, B. J. (2013). Effectiveness of NBC teachers in terms of classroom environment. *Learning Environments Research*, *16*(2), 267–286. https://doi.org/10.1007/s10984-013-9138-6
 
 Ley General de Educación Superior. (2021). *Diario Oficial de la Federación*, 20 de abril de 2021. https://www.diputados.gob.mx/LeyesBiblio/pdf/LGES_200421.pdf
 
-Pozo, J. I. (1990). Estrategias de aprendizaje. En C. Coll, J. Palacios y A. Marchesi (Eds.), *Desarrollo psicológico y educación II. Psicología de la educación escolar* (pp. 199–221). Alianza Editorial.
-
-Pozo, J. I. y Postigo, Y. (1994). La solución de problemas como contenido procedimental de la educación obligatoria. En J. I. Pozo (Ed.), *La solución de problemas* (pp. 179–213). Santillana.
-
 OECD. (2017). *The OECD Handbook for Innovative Learning Environments*. OECD Publishing. https://doi.org/10.1787/9789264277274-en
 
-Schraw, G. y Dennison, R. S. (1994). Assessing metacognitive awareness. *Contemporary Educational Psychology*, *19*(4), 460–475. https://doi.org/10.1006/ceps.1994.1033
+Pozo, J. I. (1990). Estrategias de aprendizaje. En C. Coll, J. Palacios, y Á. Marchesi (Eds.), *Desarrollo psicológico y educación II. Psicología de la educación escolar* (pp. 199–221). Alianza Editorial.
+
+Pozo, J. I., y Postigo, Y. (1994). La solución de problemas como contenido procedimental de la educación obligatoria. En J. I. Pozo (Ed.), *La solución de problemas* (pp. 179–213). Santillana.
+
+Schraw, G., y Dennison, R. S. (1994). Assessing metacognitive awareness. *Contemporary Educational Psychology*, *19*(4), 460–475. https://doi.org/10.1006/ceps.1994.1033
 
 SEP. (2022). *Marco curricular y Plan de estudios 2022 de la Educación Básica Mexicana*. Secretaría de Educación Pública. https://www.sep.gob.mx/marcocurricular/
 
-UNESCO. (2015a). *Replantear la educación: ¿Hacia un bien común mundial?* https://unesdoc.unesco.org/ark:/48223/pf0000232555
+UNESCO. (2015a). *Educación 2030: Declaración de Incheon y Marco de Acción*. https://unesdoc.unesco.org/ark:/48223/pf0000245656
 
-UNESCO. (2015b). *Educación 2030: Declaración de Incheon y Marco de Acción*. https://unesdoc.unesco.org/ark:/48223/pf0000245656
+UNESCO. (2015b). *Replantear la educación: ¿Hacia un bien común mundial?* https://unesdoc.unesco.org/ark:/48223/pf0000232555
 
 UNESCO. (2020). *La educación en un mundo tras la COVID: nueve ideas para la acción pública*. https://unesdoc.unesco.org/ark:/48223/pf0000373718
 
@@ -890,6 +893,7 @@ UNESCO. (2021). *Reimaginar juntos nuestros futuros: un nuevo contrato social pa
 UNESCO. (2023). *Informe de seguimiento de la educación en el mundo 2023: tecnología en la educación*. https://unesdoc.unesco.org/ark:/48223/pf0000385723
 
 </div>
+<!-- REFS:SLIDE2:END -->
 
 ---
 layout: neo-section
