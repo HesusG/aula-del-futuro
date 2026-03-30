@@ -20,6 +20,9 @@ Desktop.ini
 __pycache__/
 *.pyc
 
+# Textbook PDFs (~30 MB)
+libros/
+
 # Vector DB
 chromadb_data/
 

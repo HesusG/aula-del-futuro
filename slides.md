@@ -130,7 +130,7 @@ Marzo 2026
   <div class="border-2 border-black bg-[#FF6B6B]/10 p-2 pl-3 shadow-[2px_2px_0px_#000] text-sm">
     <div class="flex items-start gap-2">
       <div class="i-pixelarticons-warning-box inline-block w-5 h-5 flex-shrink-0 text-[#FF6B6B]" />
-      <div><strong>Modelo industrial agotado:</strong> Insuficiente para pensamiento crítico, creatividad y colaboración (Fullan y Langworthy, 2014).</div>
+      <div><strong>Modelo industrial agotado:</strong> Insuficiente para pensamiento crítico, creatividad y colaboración (Díaz Barriga, 2006).</div>
     </div>
   </div>
   <div class="border-2 border-black bg-[#FF6B6B]/10 p-2 pl-3 shadow-[2px_2px_0px_#000] text-sm">
@@ -142,7 +142,7 @@ Marzo 2026
 </v-clicks>
 </div>
 
-<RefFootnote :sources="['Fullan y Langworthy (2014). A rich seam: How new pedagogies find deep learning.', 'OECD (2017). The OECD Handbook for Innovative Learning Environments.']" />
+<RefFootnote :sources="['Díaz Barriga (2006). Enseñanza situada: Vínculo entre la escuela y la vida.', 'OECD (2017). The OECD Handbook for Innovative Learning Environments.']" />
 
 ---
 layout: neo-section
@@ -241,13 +241,13 @@ layout: neo-section
     <div class="p-3 text-sm">Metaanálisis de 213 programas (270,034 estudiantes): los programas socioemocionales mejoran el rendimiento académico en 11 puntos percentiles.</div>
   </div>
   <div class="neo-card">
-    <div class="bg-[#C0C0C0] px-3 py-1 border-b-2 border-black text-sm font-bold"><div class="i-pixelarticons-trending-up inline-block w-4 h-4 mr-1" /> Fullan y Langworthy (2014)</div>
-    <div class="p-3 text-sm">Las "nuevas pedagogías" conectan el aprendizaje con el mundo real. Los estudiantes se comprometen más cuando perciben relevancia y propósito.</div>
+    <div class="bg-[#C0C0C0] px-3 py-1 border-b-2 border-black text-sm font-bold"><div class="i-pixelarticons-trending-up inline-block w-4 h-4 mr-1" /> Díaz Barriga (2006)</div>
+    <div class="p-3 text-sm">La enseñanza situada conecta el aprendizaje con el mundo real. Los estudiantes se comprometen más cuando participan en proyectos con relevancia y propósito.</div>
   </div>
 </v-clicks>
 </div>
 
-<RefFootnote :sources="['Darling-Hammond et al. (2020). Applied Developmental Science.', 'Deci y Ryan (2000). Psychological Inquiry.', 'Durlak et al. (2011). Child Development.', 'Fullan y Langworthy (2014). A rich seam.']" />
+<RefFootnote :sources="['Darling-Hammond et al. (2020). Applied Developmental Science.', 'Deci y Ryan (2000). Psychological Inquiry.', 'Durlak et al. (2011). Child Development.', 'Díaz Barriga (2006). Enseñanza situada.']" />
 
 ---
 
@@ -308,7 +308,7 @@ layout: neo-section
   </div>
   <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
     <div class="i-pixelarticons-trending-up inline-block w-5 h-5 flex-shrink-0 text-[#2D3436]" />
-    <div><strong>Aprendizaje profundo</strong> — Conectar el aprendizaje con problemas reales de la comunidad. Los estudiantes se comprometen cuando perciben relevancia y propósito (Fullan y Langworthy, 2014).</div>
+    <div><strong>Aprendizaje profundo</strong> — Conectar el aprendizaje con problemas reales de la comunidad. Los estudiantes se comprometen cuando participan en proyectos situados (Díaz Barriga, 2006).</div>
   </div>
   <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
     <div class="i-pixelarticons-layout-grid inline-block w-5 h-5 flex-shrink-0 text-[#FF6B6B]" />
@@ -411,7 +411,7 @@ layout: neo-section
   </div>
   <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
     <div class="i-pixelarticons-trending-up inline-block w-5 h-5 flex-shrink-0 text-[#FF6B6B]" />
-    <div><strong>Análisis y razonamiento</strong> (comparar, inferir, resolver problemas) — Las zonas <em>Investigar</em> y <em>Crear</em> combinadas permiten proyectos con problemas reales de la comunidad (Fullan y Langworthy, 2014).</div>
+    <div><strong>Análisis y razonamiento</strong> (comparar, inferir, resolver problemas) — Las zonas <em>Investigar</em> y <em>Crear</em> combinadas permiten proyectos situados con problemas reales de la comunidad (Díaz Barriga, 2006).</div>
   </div>
   <div class="border-2 border-black bg-white p-2 pl-3 shadow-[2px_2px_0px_#000] text-xs flex items-start gap-2">
     <div class="i-pixelarticons-edit inline-block w-5 h-5 flex-shrink-0 text-[#2DD4BF]" />
@@ -493,7 +493,7 @@ layout: neo-section
 <v-clicks>
     <div class="border-2 border-black bg-white p-2 shadow-[2px_2px_0px_#000] mb-2 text-xs">
       <div class="i-pixelarticons-clipboard inline-block w-4 h-4 mr-1 text-[#2DD4BF]" /> <strong>MCI</strong> (My Class Inventory)<br/>
-      Fraser (1982) — 25 ítems, 5 escalas — Edades: 8 a 12 años
+      Fraser (1998) — 25 ítems, 5 escalas — Edades: 8 a 12 años
     </div>
     <div class="border-2 border-black bg-white p-2 shadow-[2px_2px_0px_#000] text-xs">
       <div class="i-pixelarticons-list inline-block w-4 h-4 mr-1 text-[#2DD4BF]" /> <strong>Escalas:</strong> Cohesión, Fricción, Satisfacción, Dificultad, Competitividad
@@ -516,7 +516,7 @@ layout: neo-section
   </div>
 </div>
 
-<RefFootnote :sources="['Fraser (1982). Assessment of Learning Environments: Manual for LEI and MCI.', 'CAST (2024). UDL Guidelines 3.0.']" />
+<RefFootnote :sources="['Fraser (1998). Classroom environment instruments. Science Education.', 'CAST (2024). UDL Guidelines 3.0.']" />
 
 ---
 
