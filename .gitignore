@@ -16,6 +16,16 @@ Desktop.ini
 # Exports
 *.docx
 
+# Python
+__pycache__/
+*.pyc
+
+# Vector DB
+chromadb_data/
+
+# Downloaded sources
+fuentes/
+
 # Claude Code
 .claude/
 

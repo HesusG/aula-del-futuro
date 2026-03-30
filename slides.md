@@ -362,13 +362,13 @@ layout: neo-section
 
 ---
 
-<!-- Pozo (1990) — De la memorización al aprendizaje significativo -->
+<!-- Pimienta (2012) — De la memorización al aprendizaje significativo -->
 
 # <div class="i-pixelarticons-chart inline-block w-7 h-7 align-middle" /> De la Memorización al Aprendizaje Significativo
 
 <div class="pixel-divider my-2" />
 
-<p class="text-sm mt-1 mb-3">Pozo (1990) clasifica las estrategias de aprendizaje en un continuo: desde la <strong>repetición superficial</strong> hasta la <strong>reestructuración profunda</strong> del conocimiento. Nuestra propuesta de Aula del Futuro se posiciona del lado del aprendizaje significativo, pero no descarta la recirculación cuando es necesaria.</p>
+<p class="text-sm mt-1 mb-3">Pimienta (2012) clasifica las estrategias de aprendizaje en un continuo: desde la <strong>repetición superficial</strong> hasta la <strong>reestructuración profunda</strong> del conocimiento. Nuestra propuesta de Aula del Futuro se posiciona del lado del aprendizaje significativo, pero no descarta la recirculación cuando es necesaria.</p>
 
 <div class="grid grid-cols-3 gap-3">
 <v-clicks>
@@ -387,17 +387,17 @@ layout: neo-section
 </v-clicks>
 </div>
 
-<RefFootnote :sources="['Pozo (1990). En Coll, Palacios y Marchesi (Eds.), Desarrollo psicológico y educación II.', 'Díaz Barriga y Hernández (2010). Estrategias docentes para un aprendizaje significativo (3a ed.).']" />
+<RefFootnote :sources="['Pimienta (2012). Estrategias de enseñanza-aprendizaje: Docencia universitaria basada en competencias.', 'Díaz Barriga (2006). Enseñanza situada: Vínculo entre la escuela y la vida.']" />
 
 ---
 
-<!-- Pozo y Postigo (1994) — Función cognitiva -->
+<!-- Pimienta (2007) — Función cognitiva -->
 
 # <div class="i-pixelarticons-chart inline-block w-7 h-7 align-middle" /> Estrategias por Función Cognitiva
 
 <div class="pixel-divider my-2" />
 
-<p class="text-sm mt-1 mb-2">Pozo y Postigo (1994) amplían la clasificación agrupando las estrategias por la <strong>función cognitiva que activan</strong>. Cada una de las seis zonas del aula activa al menos una de estas funciones. Así es como se conectan:</p>
+<p class="text-sm mt-1 mb-2">Pimienta (2007) amplía la clasificación agrupando las estrategias por la <strong>función cognitiva que activan</strong>. Cada una de las seis zonas del aula activa al menos una de estas funciones. Así es como se conectan:</p>
 
 <div class="space-y-2 mt-1">
 <v-clicks>
@@ -424,7 +424,7 @@ layout: neo-section
 </v-clicks>
 </div>
 
-<RefFootnote :sources="['Pozo y Postigo (1994). En Pozo (Ed.), La solución de problemas.', 'Díaz Barriga y Hernández (2010). Estrategias docentes para un aprendizaje significativo (3a ed.).']" />
+<RefFootnote :sources="['Pimienta (2007). Metodología constructivista: Guía para la planeación docente.', 'Díaz Barriga (2006). Enseñanza situada: Vínculo entre la escuela y la vida.']" />
 
 ---
 
@@ -559,8 +559,6 @@ layout: neo-section
 </v-clicks>
 </div>
 
-<div class="mt-3 text-xs opacity-50 text-center">Estado: aún no se ha aplicado</div>
-
 ---
 
 <!-- Slide 14: Entrevista Preparatoria -->
@@ -645,8 +643,6 @@ layout: neo-section
   </div>
 </v-clicks>
 </div>
-
-<div class="mt-3 text-xs opacity-50 text-center">Estado: aún no se ha aplicado</div>
 
 ---
 layout: neo-section
@@ -800,25 +796,25 @@ layout: neo-section
 
 <div class="pixel-divider my-2" />
 
-<p class="text-sm mt-2 mb-3">Las entrevistas <strong>aún no se han aplicado</strong>. El siguiente paso es llevar los instrumentos al campo y contrastar las personas con datos reales. Este es nuestro plan de trabajo:</p>
+<p class="text-sm mt-2 mb-3">Se realizaron entrevistas con estudiantes de ambos niveles educativos utilizando las guías basadas en MCI (primaria-secundaria) y WIHIC/CUCEI (preparatoria-universidad). Los hallazgos alimentaron las personas y los documentos académicos. Estos son los pasos siguientes:</p>
 
 <div class="space-y-3 mt-2">
 <v-clicks>
   <div class="border-2 border-black bg-white p-3 shadow-[2px_2px_0px_#000] flex items-center gap-3">
     <span class="neo-tag bg-coral text-white">1</span>
-    <div><div class="i-pixelarticons-message inline-block w-4 h-4 mr-1 align-middle" /> <strong>Aplicar las entrevistas</strong> con estudiantes reales usando las guías basadas en MCI y WIHIC.</div>
+    <div><div class="i-pixelarticons-chart inline-block w-4 h-4 mr-1 align-middle" /> <strong>Analizar patrones</strong> entre las respuestas de los cuatro estudiantes entrevistados y refinar las personas (arquetipos).</div>
   </div>
   <div class="border-2 border-black bg-white p-3 shadow-[2px_2px_0px_#000] flex items-center gap-3">
     <span class="neo-tag bg-banana text-white">2</span>
-    <div><div class="i-pixelarticons-chart inline-block w-4 h-4 mr-1 align-middle" /> <strong>Analizar las respuestas</strong> y refinar las personas (arquetipos) con datos reales.</div>
+    <div><div class="i-pixelarticons-file inline-block w-4 h-4 mr-1 align-middle" /> <strong>Integrar hallazgos</strong> en ambos documentos académicos con citas textuales de las entrevistas.</div>
   </div>
   <div class="border-2 border-black bg-white p-3 shadow-[2px_2px_0px_#000] flex items-center gap-3">
     <span class="neo-tag bg-grape text-white">3</span>
-    <div><div class="i-pixelarticons-file inline-block w-4 h-4 mr-1 align-middle" /> <strong>Completar ambos documentos académicos</strong> integrando los hallazgos de las entrevistas.</div>
+    <div><div class="i-pixelarticons-3d-box inline-block w-4 h-4 mr-1 align-middle" /> <strong>Vincular con el diseño 3D</strong> del aula: conectar con los tres recorridos interactivos.</div>
   </div>
   <div class="border-2 border-black bg-white p-3 shadow-[2px_2px_0px_#000] flex items-center gap-3">
     <span class="neo-tag bg-ink text-white">4</span>
-    <div><div class="i-pixelarticons-3d-box inline-block w-4 h-4 mr-1 align-middle" /> <strong>Vincular con el diseño 3D</strong> del aula: conectar con los tres recorridos interactivos.</div>
+    <div><div class="i-pixelarticons-arrow-right inline-block w-4 h-4 mr-1 align-middle" /> <strong>Presentar el proyecto completo</strong> con documentos, entrevistas, personas y recorridos 3D integrados.</div>
   </div>
 </v-clicks>
 </div>
@@ -840,7 +836,7 @@ Darling-Hammond, L., Flook, L., Cook-Harvey, C., Barron, B., y Osher, D. (2020).
 
 Deci, E. L., y Ryan, R. M. (2000). The “what” and “why” of goal pursuits: Human needs and the self-determination of behavior. *Psychological Inquiry*, *11*(4), 227–268. https://doi.org/10.1207/S15327965PLI1104_01
 
-Díaz Barriga Arceo, F., y Hernández Rojas, G. (2010). *Estrategias docentes para un aprendizaje significativo: Una interpretación constructivista* (3.ª ed.). McGraw-Hill.
+Díaz Barriga Arceo, F. (2006). *Enseñanza situada: Vínculo entre la escuela y la vida*. McGraw-Hill.
 
 Durlak, J. A., Weissberg, R. P., Dymnicki, A. B., Taylor, R. D., y Schellinger, K. B. (2011). The impact of enhancing students’ social and emotional learning: A meta-analysis of school-based universal interventions. *Child Development*, *82*(1), 405–432. https://doi.org/10.1111/j.1467-8624.2010.01564.x
 
@@ -848,13 +844,15 @@ European Schoolnet. (2017). *Future Classroom Lab: Learning Zones*. https://fcl.
 
 Flavell, J. H. (1979). Metacognition and cognitive monitoring: A new area of cognitive-developmental inquiry. *American Psychologist*, *34*(10), 906–911. https://doi.org/10.1037/0003-066X.34.10.906
 
-Fraser, B. J. (1982). *Assessment of Learning Environments: Manual for Learning Environment Inventory (LEI) and My Class Inventory (MCI)* (3.ª ed.). ERIC. https://files.eric.ed.gov/fulltext/ED223649.pdf
-
 Fraser, B. J. (1998). Classroom environment instruments: Development, validity and applications. *Learning Environments Research*, *1*(1), 7–34. https://doi.org/10.1023/A:1009932514731
 
-Fullan, M., y Langworthy, M. (2014). *A rich seam: How new pedagogies find deep learning*. Pearson. https://michaelfullan.ca/wp-content/uploads/2014/01/3897.Rich_Seam_web.pdf
+Guevara Salazar, M. S. (s.f.). *Estrategia de Enseñanza* [Presentación de clase].
 
 Helding, K. A., y Fraser, B. J. (2013). Effectiveness of National Board Certified (NBC) teachers in terms of classroom environment, attitudes and achievement among secondary science students. *Learning Environments Research*, *16*(2), 267–286. https://doi.org/10.1007/s10984-013-9138-6
+
+Ley General de Educación Superior. (2021). *Diario Oficial de la Federación*, 20 de abril de 2021. https://www.diputados.gob.mx/LeyesBiblio/pdf/LGES_200421.pdf
+
+OECD. (2017). *The OECD Handbook for Innovative Learning Environments*. OECD Publishing. https://doi.org/10.1787/9789264277274-en
 
 </div>
 <!-- REFS:SLIDE1:END -->
@@ -870,13 +868,9 @@ Helding, K. A., y Fraser, B. J. (2013). Effectiveness of National Board Certifie
 <!-- REFS:SLIDE2:START -->
 <div class="text-xs space-y-1 mt-2 leading-relaxed">
 
-Ley General de Educación Superior. (2021). *Diario Oficial de la Federación*, 20 de abril de 2021. https://www.diputados.gob.mx/LeyesBiblio/pdf/LGES_200421.pdf
+Pimienta Prieto, J. H. (2007). *Metodología constructivista: Guía para la planeación docente* (2.ª ed.). Pearson Educación.
 
-OECD. (2017). *The OECD Handbook for Innovative Learning Environments*. OECD Publishing. https://doi.org/10.1787/9789264277274-en
-
-Pozo, J. I. (1990). Estrategias de aprendizaje. En C. Coll, J. Palacios, y Á. Marchesi (Eds.), *Desarrollo psicológico y educación II. Psicología de la educación escolar* (pp. 199–221). Alianza Editorial.
-
-Pozo, J. I., y Postigo, Y. (1994). La solución de problemas como contenido procedimental de la educación obligatoria. En J. I. Pozo (Ed.), *La solución de problemas* (pp. 179–213). Santillana.
+Pimienta Prieto, J. H. (2012). *Estrategias de enseñanza-aprendizaje: Docencia universitaria basada en competencias*. Pearson Educación.
 
 Schraw, G., y Dennison, R. S. (1994). Assessing metacognitive awareness. *Contemporary Educational Psychology*, *19*(4), 460–475. https://doi.org/10.1006/ceps.1994.1033
 
@@ -891,6 +885,10 @@ UNESCO. (2020). *La educación en un mundo tras la COVID: nueve ideas para la ac
 UNESCO. (2021). *Reimaginar juntos nuestros futuros: un nuevo contrato social para la educación*. https://unesdoc.unesco.org/ark:/48223/pf0000379707
 
 UNESCO. (2023). *Informe de seguimiento de la educación en el mundo 2023: tecnología en la educación*. https://unesdoc.unesco.org/ark:/48223/pf0000385723
+
+Wiggins, G., y McTighe, J. (2017a). Las seis facetas de la comprensión. En *Enseñar a través de la comprensión*. Trillas.
+
+Wiggins, G., y McTighe, J. (2017b). Planear para el aprendizaje. En *Enseñar a través de la comprensión* (pp. 153–178). Trillas.
 
 </div>
 <!-- REFS:SLIDE2:END -->

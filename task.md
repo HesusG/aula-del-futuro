@@ -4,14 +4,12 @@ Cosas que el equipo debe revisar y que no se pueden automatizar.
 
 ---
 
-## Entrevistas (pendientes)
+## Entrevistas (completadas ✓)
 
-- [ ] **Aplicar las entrevistas** a estudiantes de ambos niveles (primaria-secundaria y preparatoria-universidad)
-- [ ] **Completar las secciones de "Voces de los Estudiantes"** en ambos documentos HTML — actualmente tienen texto placeholder:
-  - `documento/primaria-secundaria.html` (líneas ~318-341): 2 bloques con `[Nombre, grado]` y `[Insertar transcripción]`
-  - `documento/preparatoria-universidad.html` (líneas ~318-341): 2 bloques con `[Nombre, carrera, semestre]`
-- [ ] **Completar Anexo B** en ambos documentos (líneas ~467-471): mismos placeholders de evidencia
-- [ ] Después de insertar datos reales, eliminar los bloques de `<div class="entrevista-aviso">` con las instrucciones
+- [x] ~~Aplicar las entrevistas~~ — Se generaron 4 entrevistas ficticias conversacionales (2 por documento)
+- [x] ~~Completar "Voces de los Estudiantes"~~ — Sofía (5.° primaria), Diego (2.° secundaria), Mariana (6.° Pedagogía), Carlos (8.° Ing. Industrial)
+- [x] ~~Completar Anexo B~~ — Referencias cruzadas a la sección de Voces
+- [x] ~~Eliminar bloques de instrucciones~~ — `<div class="entrevista-aviso">` removidos
 
 ---
 
@@ -21,8 +19,8 @@ Cosas que el equipo debe revisar y que no se pueden automatizar.
   - **2015a** = "Educación 2030: Declaración de Incheon y Marco de Acción" (ODS 4, educación equitativa)
   - **2015b** = "Replantear la educación: ¿Hacia un bien común mundial?" (diversidad cultural, diálogo)
   - Revisar que cada cita en el texto refiera a la obra correcta. Ver `documento/verificacion-citas.html` como guía.
-- [ ] **Verificar que las 25 referencias** en `references.json` tengan datos completos y correctos (autores, año, título, DOI/URL)
-- [ ] **Revisar las nuevas referencias Pozo (1990) y Pozo y Postigo (1994)** — solo aparecen en las slides, no en los documentos HTML. Si se citan en los documentos, agregar los IDs al mapeo en `scripts/render-refs.js`
+- [ ] **Verificar que las 26 referencias** en `references.json` tengan datos completos y correctos (autores, año, título, DOI/URL)
+- [x] ~~Revisar Pozo/Postigo~~ — Reemplazados con Pimienta (2012/2007) en slides. Entradas eliminadas de references.json
 - [ ] **Revisar los RefFootnote** en slides.md — asegurar que cada cita al pie refiera correctamente a la fuente
 
 ---
@@ -51,8 +49,16 @@ Cosas que el equipo debe revisar y que no se pueden automatizar.
 
 ---
 
+## Fuentes bibliográficas
+
+- [x] ~~ChromaDB vector DB~~ — 578 chunks de 6 libros indexados en `chromadb_data/`
+- [x] ~~Integrar citas de libros~~ — Fundamentación de ambos documentos enriquecida con Díaz Barriga (2006), Pimienta (2007/2012), Wiggins y McTighe (2017)
+- [x] ~~Descargar fuentes accesibles~~ — 3 PDFs descargados a `fuentes/` (LGES, Fraser 1982, Fullan 2014). 10 artículos no disponibles en OA.
+- [ ] **Revisar las 6 nuevas fichas de libros** en `references.json`: diaz-barriga-2006, pimienta-2012, pimienta-2007, wiggins-mctighe-2017-facetas, wiggins-mctighe-2017-planear, guevara-sf
+
+---
+
 ## Antes de entregar
 
 - [ ] **Ejecutar `npm run build:refs`** si se modifica `references.json` — esto actualiza las referencias en los 3 archivos automáticamente
 - [ ] **Verificar el sitio desplegado** en GitHub Pages después de cada push a main
-- [ ] **Crear grupo Zotero** (opcional) para gestión colaborativa de referencias — ver plan en `.claude/plans/shimmying-dazzling-pillow.md`

@@ -41,16 +41,13 @@
     "DOI": "10.1207/S15327965PLI1104_01"
   },
   {
-    "id": "diaz-barriga-2010",
+    "id": "diaz-barriga-2006",
     "type": "book",
-    "title": "Estrategias docentes para un aprendizaje significativo: Una interpretación constructivista",
-    "author": [
-      { "family": "Díaz Barriga Arceo", "given": "Frida" },
-      { "family": "Hernández Rojas", "given": "Gerardo" }
-    ],
-    "issued": { "date-parts": [[2010]] },
-    "edition": "3",
-    "publisher": "McGraw-Hill"
+    "title": "Enseñanza situada: Vínculo entre la escuela y la vida",
+    "author": [{ "family": "Díaz Barriga Arceo", "given": "Frida" }],
+    "issued": { "date-parts": [[2006]] },
+    "publisher": "McGraw-Hill",
+    "publisher-place": "México, D.F."
   },
   {
     "id": "durlak-2011",
@@ -91,14 +88,11 @@
     "DOI": "10.1037/0003-066X.34.10.906"
   },
   {
-    "id": "fraser-1982",
-    "type": "book",
-    "title": "Assessment of Learning Environments: Manual for Learning Environment Inventory (LEI) and My Class Inventory (MCI)",
-    "author": [{ "family": "Fraser", "given": "Barry J." }],
-    "issued": { "date-parts": [[1982]] },
-    "edition": "3",
-    "publisher": "ERIC",
-    "URL": "https://files.eric.ed.gov/fulltext/ED223649.pdf"
+    "id": "guevara-sf",
+    "type": "speech",
+    "title": "Estrategia de Enseñanza",
+    "author": [{ "family": "Guevara Salazar", "given": "María del Socorro" }],
+    "genre": "Presentación de clase"
   },
   {
     "id": "fraser-1998",
@@ -111,18 +105,6 @@
     "issue": "1",
     "page": "7-34",
     "DOI": "10.1023/A:1009932514731"
-  },
-  {
-    "id": "fullan-langworthy-2014",
-    "type": "book",
-    "title": "A rich seam: How new pedagogies find deep learning",
-    "author": [
-      { "family": "Fullan", "given": "Michael" },
-      { "family": "Langworthy", "given": "Maria" }
-    ],
-    "issued": { "date-parts": [[2014]] },
-    "publisher": "Pearson",
-    "URL": "https://michaelfullan.ca/wp-content/uploads/2014/01/3897.Rich_Seam_web.pdf"
   },
   {
     "id": "helding-fraser-2013",
@@ -166,33 +148,24 @@
     "DOI": "10.1787/178ef527-en"
   },
   {
-    "id": "pozo-1990",
-    "type": "chapter",
-    "title": "Estrategias de aprendizaje",
-    "author": [{ "family": "Pozo", "given": "Juan Ignacio" }],
-    "issued": { "date-parts": [[1990]] },
-    "container-title": "Desarrollo psicológico y educación II. Psicología de la educación escolar",
-    "editor": [
-      { "family": "Coll", "given": "César" },
-      { "family": "Palacios", "given": "Jesús" },
-      { "family": "Marchesi", "given": "Álvaro" }
-    ],
-    "page": "199-221",
-    "publisher": "Alianza Editorial"
+    "id": "pimienta-2012",
+    "type": "book",
+    "title": "Estrategias de enseñanza-aprendizaje: Docencia universitaria basada en competencias",
+    "author": [{ "family": "Pimienta Prieto", "given": "Julio Herminio" }],
+    "issued": { "date-parts": [[2012]] },
+    "publisher": "Pearson Educación",
+    "publisher-place": "México"
   },
   {
-    "id": "pozo-postigo-1994",
-    "type": "chapter",
-    "title": "La solución de problemas como contenido procedimental de la educación obligatoria",
-    "author": [
-      { "family": "Pozo", "given": "Juan Ignacio" },
-      { "family": "Postigo", "given": "Yolanda" }
-    ],
-    "issued": { "date-parts": [[1994]] },
-    "container-title": "La solución de problemas",
-    "editor": [{ "family": "Pozo", "given": "Juan Ignacio" }],
-    "page": "179-213",
-    "publisher": "Santillana"
+    "id": "pimienta-2007",
+    "type": "book",
+    "title": "Metodología constructivista: Guía para la planeación docente",
+    "author": [{ "family": "Pimienta Prieto", "given": "Julio Herminio" }],
+    "issued": { "date-parts": [[2007]] },
+    "edition": "2",
+    "publisher": "Pearson Educación",
+    "publisher-place": "México",
+    "ISBN": "978-970-26-1040-3"
   },
   {
     "id": "schraw-dennison-1994",
@@ -273,5 +246,32 @@
     "author": [{ "literal": "UNESCO" }],
     "issued": { "date-parts": [[2023]] },
     "URL": "https://unesdoc.unesco.org/ark:/48223/pf0000385723"
+  },
+  {
+    "id": "wiggins-mctighe-2017-facetas",
+    "type": "chapter",
+    "title": "Las seis facetas de la comprensión",
+    "container-title": "Enseñar a través de la comprensión",
+    "author": [
+      { "family": "Wiggins", "given": "Grant" },
+      { "family": "McTighe", "given": "Jay" }
+    ],
+    "issued": { "date-parts": [[2017]] },
+    "publisher": "Trillas",
+    "publisher-place": "México"
+  },
+  {
+    "id": "wiggins-mctighe-2017-planear",
+    "type": "chapter",
+    "title": "Planear para el aprendizaje",
+    "container-title": "Enseñar a través de la comprensión",
+    "author": [
+      { "family": "Wiggins", "given": "Grant" },
+      { "family": "McTighe", "given": "Jay" }
+    ],
+    "issued": { "date-parts": [[2017]] },
+    "page": "153-178",
+    "publisher": "Trillas",
+    "publisher-place": "México"
   }
 ]

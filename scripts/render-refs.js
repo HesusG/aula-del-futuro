@@ -11,29 +11,36 @@ function escapeRe (s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') }
 // Which references appear in each document
 const docRefs = {
   'primaria-secundaria': [
-    'cast-2024', 'darling-hammond-2020', 'durlak-2011', 'european-schoolnet-2017',
-    'flavell-1979', 'fraser-1982', 'fullan-langworthy-2014', 'oecd-2017',
-    'schraw-dennison-1994', 'sep-2022', 'unesco-2015a', 'unesco-2015b',
-    'unesco-2018', 'unesco-2020', 'unesco-2021', 'unesco-2023'
+    'cast-2024', 'darling-hammond-2020', 'diaz-barriga-2006', 'durlak-2011',
+    'european-schoolnet-2017', 'flavell-1979', 'guevara-sf', 'oecd-2017',
+    'pimienta-2007', 'pimienta-2012', 'schraw-dennison-1994', 'sep-2022',
+    'unesco-2015a', 'unesco-2015b', 'unesco-2018', 'unesco-2020', 'unesco-2021',
+    'unesco-2023', 'wiggins-mctighe-2017-facetas', 'wiggins-mctighe-2017-planear'
   ],
   'preparatoria-universidad': [
-    'cast-2024', 'darling-hammond-2020', 'deci-ryan-2000', 'european-schoolnet-2017',
-    'fraser-1998', 'helding-fraser-2013', 'fullan-langworthy-2014', 'lges-2021',
-    'oecd-2017', 'oecd-2020', 'unesco-2015a', 'unesco-2015b', 'unesco-2018',
-    'unesco-2019', 'unesco-2020', 'unesco-2021', 'unesco-2023'
+    'cast-2024', 'darling-hammond-2020', 'deci-ryan-2000', 'diaz-barriga-2006',
+    'european-schoolnet-2017', 'fraser-1998', 'guevara-sf', 'helding-fraser-2013',
+    'lges-2021', 'oecd-2017', 'oecd-2020', 'pimienta-2007', 'pimienta-2012',
+    'unesco-2015a', 'unesco-2015b', 'unesco-2018', 'unesco-2019', 'unesco-2020',
+    'unesco-2021', 'unesco-2023', 'wiggins-mctighe-2017-facetas',
+    'wiggins-mctighe-2017-planear'
   ],
   slides: [
-    'cast-2024', 'diaz-barriga-2010', 'darling-hammond-2020', 'deci-ryan-2000',
-    'durlak-2011', 'european-schoolnet-2017', 'flavell-1979', 'fraser-1982',
-    'fraser-1998', 'fullan-langworthy-2014', 'helding-fraser-2013', 'lges-2021',
-    'pozo-1990', 'pozo-postigo-1994', 'oecd-2017', 'schraw-dennison-1994',
-    'sep-2022', 'unesco-2015a', 'unesco-2015b', 'unesco-2020', 'unesco-2021',
-    'unesco-2023'
+    'cast-2024', 'darling-hammond-2020', 'deci-ryan-2000', 'diaz-barriga-2006',
+    'durlak-2011', 'european-schoolnet-2017', 'flavell-1979', 'fraser-1998',
+    'guevara-sf', 'helding-fraser-2013', 'lges-2021', 'oecd-2017',
+    'pimienta-2007', 'pimienta-2012', 'schraw-dennison-1994', 'sep-2022',
+    'unesco-2015a', 'unesco-2015b', 'unesco-2020', 'unesco-2021', 'unesco-2023',
+    'wiggins-mctighe-2017-facetas', 'wiggins-mctighe-2017-planear'
   ]
 }
 
 // Overrides for entries that citeproc doesn't format well
 const manualOverrides = {
+  'guevara-sf': {
+    html: 'Guevara Salazar, M. S. (s.f.). <i>Estrategia de Enseñanza</i> [Presentación de clase].',
+    text: 'Guevara Salazar, M. S. (s.f.). *Estrategia de Enseñanza* [Presentación de clase].'
+  },
   'lges-2021': {
     html: 'Ley General de Educación Superior. (2021). <i>Diario Oficial de la Federación</i>, 20 de abril de 2021. <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LGES_200421.pdf">https://www.diputados.gob.mx/LeyesBiblio/pdf/LGES_200421.pdf</a>',
     text: 'Ley General de Educación Superior. (2021). *Diario Oficial de la Federación*, 20 de abril de 2021. https://www.diputados.gob.mx/LeyesBiblio/pdf/LGES_200421.pdf'
