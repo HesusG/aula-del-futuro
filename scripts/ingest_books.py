@@ -1,9 +1,21 @@
 """Ingest PDFs from libros/ into a local ChromaDB vector database."""
+import io
 import os
 import sys
 import fitz
 import chromadb
 from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
+
+try:
+    from PIL import Image
+    import pytesseract
+    HAS_OCR = True
+    # Use local tessdata if available (for Spanish OCR)
+    local_tessdata = os.path.join(os.path.expanduser("~"), "tessdata")
+    if os.path.isdir(local_tessdata):
+        os.environ.setdefault("TESSDATA_PREFIX", local_tessdata)
+except ImportError:
+    HAS_OCR = False
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LIBROS_DIR = os.path.join(ROOT, "libros")
@@ -110,15 +122,28 @@ def ingest():
         doc = fitz.open(path)
         num_pages = doc.page_count
         book_chunks = []
+        ocr_used = False
         for page_num in range(num_pages):
             text = doc[page_num].get_text()
+            # If no text found, try OCR on the page image
+            if not text.strip() and HAS_OCR:
+                images = doc[page_num].get_images()
+                if images:
+                    pix = doc[page_num].get_pixmap(dpi=200)
+                    img = Image.open(io.BytesIO(pix.tobytes("png")))
+                    ocr_lang = "spa" if os.path.exists(os.path.join(
+                        os.environ.get("TESSDATA_PREFIX", ""), "spa.traineddata"
+                    )) else "eng"
+                    text = pytesseract.image_to_string(img, lang=ocr_lang)
+                    ocr_used = True
             if not text.strip():
                 continue
             page_chunks = chunk_page(text, page_num + 1, meta)
             book_chunks.extend(page_chunks)
         doc.close()
 
-        print(f"  {meta['id']}: {len(book_chunks)} chunks from {num_pages} pages")
+        suffix = " (OCR)" if ocr_used else ""
+        print(f"  {meta['id']}: {len(book_chunks)} chunks from {num_pages} pages{suffix}")
         all_chunks.extend(book_chunks)
 
     if not all_chunks:
