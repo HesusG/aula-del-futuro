@@ -25,6 +25,10 @@ const docRefs = {
     'unesco-2021', 'unesco-2023', 'wiggins-mctighe-2017-facetas',
     'wiggins-mctighe-2017-planear'
   ],
+  'estrategias-comprension': [
+    'diaz-barriga-2006', 'guevara-sf', 'pimienta-2007', 'pimienta-2012',
+    'wiggins-mctighe-2017-facetas', 'wiggins-mctighe-2017-planear'
+  ],
   slides: [
     'cast-2024', 'darling-hammond-2020', 'deci-ryan-2000', 'diaz-barriga-2006',
     'durlak-2011', 'european-schoolnet-2017', 'flavell-1979', 'fraser-1998',
@@ -172,13 +176,40 @@ function replaceInSlides (filePath, textEntries) {
 // === Main ===
 console.log('Rendering references from references.json...\n')
 
-// HTML documents
+// HTML documents (ul-based references)
 for (const doc of ['primaria-secundaria', 'preparatoria-universidad']) {
   console.log(`  ${doc}.html`)
   const html = formatBibliography(docRefs[doc], 'html')
   const entries = extractEntries(html)
   const filePath = path.join(ROOT, 'documento', `${doc}.html`)
   replaceInHtml(filePath, entries)
+  console.log(`    → ${entries.length} references written`)
+}
+
+// Estrategias-comprension (sentinel marker based)
+{
+  const doc = 'estrategias-comprension'
+  console.log(`  ${doc}.html`)
+  const html = formatBibliography(docRefs[doc], 'html')
+  const entries = extractEntries(html)
+  const filePath = path.join(ROOT, 'documento', `${doc}.html`)
+  let content = fs.readFileSync(filePath, 'utf8')
+  const start = '<!-- REFS:ESTRATEGIAS:START -->'
+  const end = '<!-- REFS:ESTRATEGIAS:END -->'
+  const re = new RegExp(escapeRe(start) + '[\\s\\S]*?' + escapeRe(end))
+  if (!re.test(content)) {
+    console.error(`  ERROR: could not find sentinel markers in ${doc}.html`)
+    process.exit(1)
+  }
+  const items = entries.map(e => {
+    let c = manualOverrides[e.id]?.html ?? e.content
+    c = spanishApa(c)
+    c = linkifyUrls(c)
+    return `        <li>${c}</li>`
+  }).join('\n')
+  const refBlock = `${start}\n      <ul class="referencias">\n${items}\n      </ul>\n      ${end}`
+  content = content.replace(re, refBlock)
+  fs.writeFileSync(filePath, content, 'utf8')
   console.log(`    → ${entries.length} references written`)
 }
 
