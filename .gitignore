@@ -23,6 +23,9 @@ __pycache__/
 # Textbook PDFs (~30 MB)
 libros/
 
+# Class slides (professor's PDFs/DOCX)
+slides/
+
 # Vector DB
 chromadb_data/
 
