@@ -15,6 +15,7 @@ Desktop.ini
 
 # Exports
 *.docx
+!documento/primaria-secundaria-final.docx
 
 # Python
 __pycache__/

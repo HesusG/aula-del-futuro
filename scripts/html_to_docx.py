@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Convert primaria-secundaria-final.html to a Word (.docx) document.
+"""Convert primaria-secundaria.html to a Word (.docx) document.
 
 Usage:
-    python3 scripts/html_to_docx.py
+    python3 scripts/html_to_docx.py [input.html] [output.docx]
 """
 
+import sys
 import re
 from pathlib import Path
 from bs4 import BeautifulSoup, NavigableString, Tag
@@ -17,8 +18,8 @@ from docx.oxml.ns import qn, nsdecls
 from docx.oxml import parse_xml
 
 ROOT = Path(__file__).resolve().parent.parent
-HTML_PATH = ROOT / "documento" / "primaria-secundaria-final.html"
-DOCX_PATH = ROOT / "documento" / "primaria-secundaria-final.docx"
+HTML_PATH = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "documento" / "primaria-secundaria.html"
+DOCX_PATH = Path(sys.argv[2]) if len(sys.argv) > 2 else ROOT / "documento" / "primaria-secundaria-final.docx"
 
 
 def setup_styles(doc):

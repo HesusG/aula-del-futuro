@@ -11,11 +11,12 @@ function escapeRe (s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') }
 // Which references appear in each document
 const docRefs = {
   'primaria-secundaria': [
-    'cast-2024', 'darling-hammond-2020', 'diaz-barriga-2006', 'durlak-2011',
-    'european-schoolnet-2017', 'flavell-1979', 'guevara-sf', 'oecd-2017',
-    'pimienta-2007', 'pimienta-2012', 'schraw-dennison-1994', 'sep-2022',
-    'unesco-2015a', 'unesco-2015b', 'unesco-2018', 'unesco-2020', 'unesco-2021',
-    'unesco-2023', 'wiggins-mctighe-2017-facetas', 'wiggins-mctighe-2017-planear'
+    'cast-2024', 'darling-hammond-2020', 'de-la-cruz-2023', 'diaz-barriga-2006',
+    'durlak-2011', 'european-schoolnet-2017', 'flavell-1979', 'fraser-1998',
+    'guevara-sf', 'oecd-2017', 'pimienta-2007', 'pimienta-2012',
+    'schraw-dennison-1994', 'sep-2022', 'unesco-2015a', 'unesco-2015b',
+    'unesco-2018', 'unesco-2020', 'unesco-2021', 'unesco-2023',
+    'wiggins-mctighe-2017-facetas', 'wiggins-mctighe-2017-planear'
   ],
   'preparatoria-universidad': [
     'cast-2024', 'darling-hammond-2020', 'deci-ryan-2000', 'diaz-barriga-2006',

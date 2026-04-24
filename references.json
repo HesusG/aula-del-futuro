@@ -26,6 +26,21 @@
     "DOI": "10.1080/10888691.2018.1537791"
   },
   {
+    "id": "de-la-cruz-2023",
+    "type": "article-journal",
+    "title": "Contexto de la tecnología educativa en México durante los últimos 10 años",
+    "author": [
+      { "family": "De la Cruz Pérez", "given": "Rosa Karen" },
+      { "family": "Santiago", "given": "Patricia Rosalinda" }
+    ],
+    "issued": { "date-parts": [[2023]] },
+    "container-title": "Ciencia Latina Revista Científica Multidisciplinar",
+    "volume": "7",
+    "issue": "1",
+    "page": "7779-7793",
+    "DOI": "10.37811/cl_rcm.v7i1.5005"
+  },
+  {
     "id": "deci-ryan-2000",
     "type": "article-journal",
     "title": "The \"what\" and \"why\" of goal pursuits: Human needs and the self-determination of behavior",

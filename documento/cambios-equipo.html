@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notas para el Equipo — Cambios al Proyecto Final</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/documento.css">
+</head>
+<body>
+
+  <nav class="doc-nav">
+    <a href="../">&larr; Inicio</a>
+    <span class="sep">|</span>
+    <a href="primaria-secundaria.html">Primaria y Secundaria</a>
+    <span class="sep">|</span>
+    <a href="preparatoria-universidad.html">Preparatoria y Universidad</a>
+    <span class="sep">|</span>
+    <a href="../demo/">Recorridos 3D</a>
+  </nav>
+
+  <article class="document">
+
+    <section class="cover">
+      <div class="cover-content">
+        <p class="cover-subtitle">Proyecto Final</p>
+        <h1 class="cover-title">Notas para el Equipo</h1>
+        <p class="cover-level">Cambios al Proyecto Final — Aula del Futuro</p>
+        <div class="cover-meta">
+          <p><strong>Preparado por:</strong> Hesus Garcia Cobos</p>
+          <p><strong>Fecha:</strong> Abril 2026</p>
+          <p><strong>Propósito:</strong> Documentar qué cambió en el proyecto, por qué, y qué pueden hacer los compañeros del equipo.</p>
+        </div>
+      </div>
+    </section>
+
+    <nav class="toc">
+      <h2>Contenido</h2>
+      <ol>
+        <li><a href="#contexto-rediseno">Contexto del Rediseño</a></li>
+        <li><a href="#tres-fases">Las 3 Fases del Rediseño</a></li>
+        <li><a href="#faltaba">Qué Faltaba en la Entrega Previa</a></li>
+        <li><a href="#cambios">Qué Cambió y Por Qué</a></li>
+        <li><a href="#todo">TODO para el Equipo</a></li>
+        <li><a href="#archivos">Cómo Navegar los Archivos</a></li>
+      </ol>
+    </nav>
+
+    <!-- ============================================================
+         1. CONTEXTO DEL REDISEÑO
+         ============================================================ -->
+    <section id="contexto-rediseno">
+      <h2>Contexto del Rediseño</h2>
+
+      <p>La entrega original del equipo (DOCX) tenía la estructura base del proyecto pero presentaba gaps estructurales: las secciones de Arquitectura, Conclusión y Anexos estaban vacías, el Contexto Educativo contenía un placeholder literal <code>(cita?)</code>, las tablas del instrumento de entrevista estaban diseñadas pero sin datos, y faltaban las tres estrategias innovadoras con fundamentación pedagógica. Las referencias usaban un formato híbrido entre APA y URLs sueltas.</p>
+
+      <p>El rediseño alinea el documento con dos marcos de evaluación: los 10 criterios pedagógicos de la Mtra. Socorro Guevara (backward design, 6 facetas de la comprensión, enseñanza situada, pensamiento evaluador, Nuevo Traje del Profesor) y la rúbrica oficial del curso que asigna 35 puntos distribuidos entre Portada, Nivel Educativo, Contexto, Necesidades, Resultados Esperados, Perfil Docente, Características del Aula, Arquitectura, Conclusión, Anexos y Referencias APA 7. El objetivo fue llevar cada sección a nivel de Maestría en la escala de comprensión que la profesora utiliza.</p>
+    </section>
+
+    <!-- ============================================================
+         2. LAS 3 FASES DEL REDISEÑO
+         ============================================================ -->
+    <section id="tres-fases">
+      <h2>Las 3 Fases del Rediseño</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Área del documento</th>
+            <th>DOCX del Equipo</th>
+            <th>Fase 2: Díaz Barriga / Coco</th>
+            <th>Fase 3: Rúbrica</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Portada</strong></td>
+            <td>Completa con TOC</td>
+            <td>Rediseño visual con CSS</td>
+            <td>Verificación de 5 elementos esenciales</td>
+          </tr>
+          <tr>
+            <td><strong>Nivel Educativo</strong></td>
+            <td>Presente (~200 palabras)</td>
+            <td>Subsumido en "¿Por Qué?"</td>
+            <td>Restaurado como sección dedicada con justificación UNESCO</td>
+          </tr>
+          <tr>
+            <td><strong>Contexto</strong></td>
+            <td>Social/Eco/Edu con placeholder (cita?)</td>
+            <td>No incluido</td>
+            <td>Restaurado sin placeholders, 3 dimensiones completas</td>
+          </tr>
+          <tr>
+            <td><strong>Necesidades</strong></td>
+            <td>6 necesidades listadas</td>
+            <td>No incluido</td>
+            <td>6 necesidades con cards y fundamentación</td>
+          </tr>
+          <tr>
+            <td><strong>Resultados Esperados</strong></td>
+            <td>6 resultados</td>
+            <td>Integrados en sección de facetas</td>
+            <td>Sección propia con mapeo a facetas</td>
+          </tr>
+          <tr>
+            <td><strong>Perfil Docente</strong></td>
+            <td>6 categorías (Conocimientos a Valores)</td>
+            <td>4 competencias Nuevo Traje</td>
+            <td>Ambos: Nuevo Traje + desglose en 6 categorías</td>
+          </tr>
+          <tr>
+            <td><strong>Estrategias Innovadoras</strong></td>
+            <td>No etiquetadas ni fundamentadas</td>
+            <td>No incluidas</td>
+            <td>3 estrategias etiquetadas con fundamentación Díaz Barriga/Pimienta</td>
+          </tr>
+          <tr>
+            <td><strong>Entrevistas</strong></td>
+            <td>Instrumento diseñado, tablas vacías</td>
+            <td>Sofía y Diego contextualizadas</td>
+            <td>Entrevistas completas con conexión al diseño</td>
+          </tr>
+          <tr>
+            <td><strong>Arquitectura</strong></td>
+            <td>Encabezado vacío</td>
+            <td>6 zonas + espacio + ambiente emocional</td>
+            <td>Completa: zonas, principios, tecnología, ambiente, vivencias</td>
+          </tr>
+          <tr>
+            <td><strong>Rúbrica</strong></td>
+            <td>No existía</td>
+            <td>Rúbrica 5×4 (Ingenua a Maestría)</td>
+            <td>Mantenida</td>
+          </tr>
+          <tr>
+            <td><strong>Proyecto Ejemplo</strong></td>
+            <td>No existía</td>
+            <td>"El Agua de Mi Colonia" (5 fases)</td>
+            <td>Mantenido</td>
+          </tr>
+          <tr>
+            <td><strong>Conclusión</strong></td>
+            <td>Encabezado vacío</td>
+            <td>Reflexión del equipo</td>
+            <td>Conclusión reflexiva + Reflexión del equipo separadas</td>
+          </tr>
+          <tr>
+            <td><strong>Anexos</strong></td>
+            <td>Encabezado vacío</td>
+            <td>No incluidos</td>
+            <td>Links a 3D, slides, verificación, snapshot Fase 2</td>
+          </tr>
+          <tr>
+            <td><strong>Referencias</strong></td>
+            <td>13 refs, híbrido APA+URL</td>
+            <td>22 refs, APA 7 via references.json</td>
+            <td>22 refs, APA 7 completo via build:refs</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============================================================
+         3. QUÉ FALTABA EN LA ENTREGA PREVIA
+         ============================================================ -->
+    <section id="faltaba">
+      <h2>Qué Faltaba en la Entrega Previa</h2>
+
+      <p>La entrega original del equipo contenía una base sólida en varias secciones. Los siguientes puntos no son críticas al trabajo del equipo, sino un inventario de lo que el rediseño buscó completar.</p>
+
+      <ul>
+        <li><strong>Secciones vacías:</strong> Arquitectura, Conclusión y Anexos aparecían en la tabla de contenidos pero no tenían contenido desarrollado.</li>
+        <li><strong>Placeholder en Contexto Educativo:</strong> Una oración incluía el texto literal <code>(cita?)</code> en lugar de una referencia bibliográfica.</li>
+        <li><strong>Tablas del instrumento sin datos:</strong> El instrumento de recopilación (4 bloques con indicadores) estaba diseñado correctamente, pero las tablas de respuestas estaban vacías. Las entrevistas no se habían levantado.</li>
+        <li><strong>Estrategias innovadoras sin etiquetar:</strong> No se identificaban explícitamente 3 estrategias innovadoras con nombre, descripción y fundamentación pedagógica.</li>
+        <li><strong>Referencias en formato híbrido:</strong> Algunas referencias seguían formato APA, otras eran solo URLs. Se incluían referencias a Fullan y Fraser (1982) que no correspondían a las fuentes autorizadas del curso.</li>
+        <li><strong>Sin rúbrica de evaluación del aprendizaje:</strong> No se incluía una rúbrica con criterios y niveles para evaluar el desempeño del estudiante en proyectos.</li>
+        <li><strong>Sin proyecto ejemplo:</strong> No había un caso completo que ilustrara cómo se aplica la propuesta en un proyecto concreto.</li>
+        <li><strong>Sin protocolo de metacognición:</strong> No se detallaba cómo se desarrolla la reflexión metacognitiva de forma progresiva.</li>
+      </ul>
+    </section>
+
+    <!-- ============================================================
+         4. QUÉ CAMBIÓ Y POR QUÉ
+         ============================================================ -->
+    <section id="cambios">
+      <h2>Qué Cambió y Por Qué</h2>
+
+      <div class="necesidad-card">
+        <h3>Backward Design como estructura</h3>
+        <p>Todo el documento se reorganizó siguiendo la planeación a la inversa de Wiggins y McTighe (2017): primero los resultados deseados (grandes ideas, facetas), luego la evidencia aceptable (rúbrica 5×4), y finalmente las experiencias de aprendizaje (estrategias, proyecto). Esto responde al criterio 3 de Coco: el documento debe reflejar backward design, no diseño actividad-primero.</p>
+      </div>
+
+      <div class="necesidad-card">
+        <h3>6 Facetas de la Comprensión como criterios transversales</h3>
+        <p>Se integraron las 6 facetas (Explicación, Interpretación, Aplicación, Perspectiva, Empatía, Autoconocimiento) no solo como definiciones, sino mapeadas a zonas del aula, actividades concretas y criterios de evaluación. Cada faceta tiene un lugar visible en el diseño.</p>
+      </div>
+
+      <div class="necesidad-card">
+        <h3>Rúbrica 5×4 con niveles de comprensión</h3>
+        <p>Se diseñó una rúbrica de proyecto comunitario con 5 criterios y 4 niveles (Ingenua/Principiante/Aprendiz/Maestría). Los criterios se derivan de las facetas y de la evaluación auténtica de Díaz Barriga (2006). Esto demuestra pensamiento evaluador, no solo diseño de actividades.</p>
+      </div>
+
+      <div class="necesidad-card">
+        <h3>Proyecto Ejemplo: "El Agua de Mi Colonia"</h3>
+        <p>Se creó un caso completo para 5.° de primaria que recorre las 6 zonas, trabaja 5 facetas y se evalúa con la rúbrica. Esto concretiza la propuesta: pasa de lo teórico a lo aplicable.</p>
+      </div>
+
+      <div class="necesidad-card">
+        <h3>Enseñanza Situada anclada en México</h3>
+        <p>Todas las estrategias, el proyecto ejemplo y las entrevistas se contextualizan en escuelas públicas de Puebla. Se fundamentan en Díaz Barriga (2006) y el Plan de Estudios 2022 de la SEP. El conocimiento no es abstracto: tiene rostro, lugar y comunidad.</p>
+      </div>
+
+      <div class="necesidad-card">
+        <h3>Protocolo de Metacognición progresivo</h3>
+        <p>Se diseñó un protocolo de 4 semanas con preguntas diferenciadas para primaria y secundaria, basado en Flavell (1979) y Schraw y Dennison (1994). Incluye un ejemplo concreto de entrada de diario de Sofía durante el proyecto.</p>
+      </div>
+
+      <div class="necesidad-card">
+        <h3>Perfil Docente dual</h3>
+        <p>Se combinó el marco del Nuevo Traje del Profesor (4 competencias con metáfora textil) con el desglose detallado de 6 categorías (Conocimientos/Habilidades/Destrezas/Actitudes/Hábitos/Valores). Ambos marcos se complementan: el Nuevo Traje da la visión, el desglose da la operatividad.</p>
+      </div>
+
+      <div class="necesidad-card">
+        <h3>Referencias APA 7 centralizadas</h3>
+        <p>Todas las referencias se gestionan desde un archivo único (<code>references.json</code>) y se renderizan automáticamente con <code>npm run build:refs</code>. Esto garantiza consistencia y facilita agregar nuevas fuentes. Se eliminaron las citas a Fullan y Fraser (1982) que no pertenecían a las fuentes del curso.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. TODO PARA EL EQUIPO
+         ============================================================ -->
+    <section id="todo">
+      <h2>TODO para el Equipo</h2>
+
+      <p>Estas son acciones que los integrantes del equipo pueden realizar para fortalecer el proyecto antes de la entrega final.</p>
+
+      <div class="alert alert-warning">
+        <p><strong>Prioridad alta:</strong> Las entrevistas a estudiantes (Sofía y Diego) están contextualizadas con base en las personas del proyecto, pero no son entrevistas reales. Si el equipo puede levantar al menos una entrevista real usando el instrumento de 4 bloques que ya está diseñado, el proyecto gana autenticidad.</p>
+      </div>
+
+      <ol>
+        <li><strong>Levantar entrevistas reales:</strong> Usar el instrumento de 4 bloques (Contexto Tecnológico, Contexto Social/Económico, Percepción/Frustraciones, Cierre) para entrevistar a 1-2 estudiantes reales. Sofía y Diego son placeholders fundamentados que pueden reemplazarse con datos del campo.</li>
+        <li><strong>Fotos del espacio actual:</strong> Tomar fotos del salón de clases actual y contrastarlas con la propuesta de arquitectura. Esto concretiza la brecha entre lo que hay y lo que se propone.</li>
+        <li><strong>Pilotaje de una estrategia:</strong> Si es posible, implementar una de las 3 estrategias innovadoras (por ejemplo, los Diarios de Aprendizaje) en un grupo real durante una o dos semanas. Documentar la experiencia.</li>
+        <li><strong>Validar referencias:</strong> Revisar el archivo <code>references.json</code> y verificar que las citas en el texto coincidan con las entradas de la bibliografía.</li>
+        <li><strong>Revisar la Conclusión:</strong> La conclusión actual fue redactada por Hesus. El equipo puede expandirla con sus propias reflexiones, manteniendo las 3 preguntas de Coco como eje.</li>
+        <li><strong>Convertir a DOCX:</strong> Antes de entregar, ejecutar <code>python3 scripts/html_to_docx.py documento/primaria-secundaria.html docs/primaria-secundaria-final.docx</code> para generar el archivo Word.</li>
+      </ol>
+    </section>
+
+    <!-- ============================================================
+         6. CÓMO NAVEGAR LOS ARCHIVOS
+         ============================================================ -->
+    <section id="archivos">
+      <h2>Cómo Navegar los Archivos</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Archivo</th>
+            <th>Qué es</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="primaria-secundaria.html"><strong>primaria-secundaria.html</strong></a></td>
+            <td>Versión final (Fase 3). Alineada a rúbrica + criterios de Coco. <strong>Esta es la entregable.</strong></td>
+          </tr>
+          <tr>
+            <td><a href="primaria-secundaria-v2-diazbarriga.html">primaria-secundaria-v2-diazbarriga.html</a></td>
+            <td>Snapshot de Fase 2: reestructuración Díaz Barriga / Coco pura, sin ajuste a rúbrica. Conservado para comparar.</td>
+          </tr>
+          <tr>
+            <td><a href="preparatoria-universidad.html">preparatoria-universidad.html</a></td>
+            <td>Documento del nivel Preparatoria y Universidad (otro equipo dentro del mismo proyecto).</td>
+          </tr>
+          <tr>
+            <td><a href="estrategias-comprension.html">estrategias-comprension.html</a></td>
+            <td>Documento de Estrategias de Comprensión: marco teórico con Nuevo Traje, 6 facetas, backward design.</td>
+          </tr>
+          <tr>
+            <td><a href="verificacion-citas.html">verificacion-citas.html</a></td>
+            <td>Tabla de verificación de citas contra los libros de texto del curso.</td>
+          </tr>
+          <tr>
+            <td><a href="../demo/">Recorridos 3D</a></td>
+            <td>Tres modelos interactivos: salón típico, salón adaptado, aula del futuro.</td>
+          </tr>
+          <tr>
+            <td><a href="../slides/">Presentación</a></td>
+            <td>Slides del primer avance del proyecto.</td>
+          </tr>
+          <tr>
+            <td><a href="../personas.html">User Personas</a></td>
+            <td>Perfiles completos de Valentina, Prof. Miguel, Andrea y Dra. Lucía.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="alert alert-info">
+        <p><strong>Descargar el documento en Word:</strong> <a href="primaria-secundaria-final.docx" download>Descargar primaria-secundaria-final.docx</a></p>
+        <p>Para regenerar el DOCX desde el HTML actualizado: <code>python3 scripts/html_to_docx.py</code></p>
+      </div>
+    </section>
+
+    <section>
+      <p><a href="../">&larr; Volver al inicio</a></p>
+    </section>
+
+  </article>
+
+</body>
+</html>
